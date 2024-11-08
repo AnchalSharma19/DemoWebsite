@@ -8,6 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -95,8 +105,10 @@
                 Job Estimate</button>
         </div>
         <div class="relative flex-1 mt-8 md:mt-0" data-aos="fade-left">
-            <img src="images/person.png" alt="Plumber Image" class="w-[1200px] h-[1200px] ml-auto">
+            <img src="images/person.png" alt="Plumber Image" class="w-full max-w-[1200px] h-auto ml-auto">
+
         </div>
+
     </section>
 
 
@@ -141,11 +153,11 @@
         </div>
     </section>
 
+
     <!-- Services Section Carousel -->
     <section class="relative z-30 p-8 md:p-16 bg-white-150 text-gray-800 mt-5">
         <div class="max-w-7xl mx-auto overflow-hidden relative">
 
-            <!-- Carousel Wrapper -->
             <div id="carouselTrack" class="carousel-track flex transition-transform duration-500 ease-out"
                 style="transform: translateX(0%);">
 
@@ -265,7 +277,7 @@
 
             <!-- Navigation Dots -->
             <div class="flex justify-center space-x-2 mt-6">
-                <span class="carousel-dot w-3 h-3 bg-blue-500 rounded-full cursor-pointer" data-slide="0"
+                <span class="carousel-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" data-slide="0"
                     onclick="goToSlide(0)"></span>
                 <span class="carousel-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" data-slide="1"
                     onclick="goToSlide(1)"></span>
@@ -276,8 +288,162 @@
     </section>
 
 
+    <!-- Plumbing Care -->
+
+    <section
+        class="flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-screen relative bg-cover bg-center mt-20"
+        style="background-image: url('images/bgImage.png.jpg');" data-aos="fade-up">
+
+        <div class="absolute top-0 left-0 w-full h-full bg-blue-900 opacity-60 z-0"></div>
+
+        <div class="bg-blue-600 py-3 sm:py-4 animate-slide-in absolute top-0 left-0 w-full flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 z-10"
+            data-aos="fade-down">
+            <h2 class="text-xl sm:text-3xl md:text-5xl pb-2 sm:pb-4 pt-2 sm:pt-4 text-center sm:text-left">Are you
+                interested in an estimate?</h2>
+            <button
+                class="mt-4 sm:mb-2 bg-white text-base sm:text-lg md:text-xl text-blue-500 py-2 px-4 sm:px-6 md:px-8 rounded-lg hover:bg-black transition duration-300 ease-in-out mb-5"
+                data-aos="zoom-in" data-aos-delay="300">
+                Request Job Estimate
+            </button>
+        </div>
+
+        <div class="main-content flex flex-col justify-center items-center bg-blue-600/75 p-5 md:p-8 mt-28 sm:mt-36 md:mt-0 z-10 w-full"
+            data-aos="fade-up">
+            <h1
+                class="text-3xl sm:text-4xl md:text-6xl font-semibold mb-4 sm:mb-0 md:mb-8 text-center sm:mt-18 md:mt-20 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
+                Regular <span class="text-blue-300">plumbing care</span> will save your <br>Time & Money
+            </h1>
+
+            <div class="flex flex-col md:flex-row justify-center items-center mt-10 space-y-8 md:space-y-0 md:gap-10">
+                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+                    <span class="text-7xl font-bold text-blue-300 counter" data-count="60">0</span><span
+                        class="text-2xl">%</span>
+                    <p class="mt-2 text-lg">Household water usage that goes to toilets.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+                    <span class="text-7xl font-bold text-blue-300 counter" data-count="180">0</span><span
+                        class="text-2xl">gal</span>
+                    <p class="mt-2 text-lg">The average US family can waste from household leaks.</p>
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+                    <span class="text-7xl font-bold text-blue-300 counter" data-count="120">0</span>
+                    <p class="mt-2 text-lg">Yearly savings by servicing your water leaks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Emergency Service-->
+
+    <section class="flex flex-col items-center justify-center text-white relative pb-16 bg-cover bg-center  "
+        style="background-image: url('images/bgScrewBackground.png');">
+
+        <div class="flex flex-col md:flex-row gap-6 relative z-40 -mt-20 sm:-mt-20 lg:-mt-20 px-4 sm:px-6 lg:px-8 mx-2 sm:mx-4 lg:mx-8"
+            data-aos="fade-up">
+
+            <!-- Card 1 -->
+            <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
+                <img src="images/specialOfferOne.png.jpg" alt="Faucet installation"
+                    class="w-full h-48 object-cover rounded-md">
+                <div class="p-4">
+                    <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
+                    <h3 class="text-lg font-semibold">Faucet installation</h3>
+                    <p class="text-blue-500 text-xl font-bold">$24 off</p>
+                    <button
+                        class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
+                <img src="images/specialOfferTwo.png.jpg" alt="Water filter cleaning"
+                    class="w-full h-48 object-cover rounded-md">
+                <div class="p-4">
+                    <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
+                    <h3 class="text-lg font-semibold">Water filter cleaning</h3>
+                    <p class="text-blue-500 text-xl font-bold">50% off</p>
+                    <button
+                        class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
+                <img src="images/specialOfferThree.png.jpg" alt="Drain cleaning"
+                    class="w-full h-48 object-cover rounded-md">
+                <div class="p-4">
+                    <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
+                    <h3 class="text-lg font-semibold">Drain cleaning</h3>
+                    <p class="text-blue-500 text-xl font-bold">$10 off</p>
+                    <button
+                        class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 24/7 Emergency Service Section -->
+        <div class="bg-white text-center p-10 rounded-lg  mt-12 mx-4 sm:mt-24 sm:mx-8 lg:mt-24 xl:w-3/4 mx-auto"
+            data-aos="fade-up">
+            <h2 class="text-5xl font-bold text-gray-900">Available for <span class="text-blue-600">24/7</span> Emergency
+                Service</h2>
+        </div>
+
+        <!-- Features Section -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 px-8 sm:px-12 lg:px-16 mx-4 sm:mx-8 lg:mx-12 bg-white"
+            data-aos="fade-up">
+            <!-- Feature Items -->
+            <div class="flex items-center space-x-4">
+                <img src="icons/shipped.png" alt="Service Icon" class="w-12 h-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900">FAST RELIABLE SERVICE</h3>
+                    <p class="text-gray-700 text-sm">Uisque molestie, arcu et iaculis mollis orci lacus facilisis pede,
+                        non euismod arcu ante quis massa in.</p>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <img src="icons/leaking.png" alt="Emergency Icon" class="w-12 h-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900">EMERGENCY SERVICES</h3>
+                    <p class="text-gray-700 text-sm">Est quando nominati at, id vel nisl porro omnesque. Vix dicit
+                        accusamus euripidis no.</p>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <img src="icons/workerIcon.png" alt="Personnel Icon" class="w-12 h-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900">SKILLED & TRAINED PERSONNEL</h3>
+                    <p class="text-gray-700 text-sm">Lestie, arcu et iaculis mollis, orci lacus facilisis pede, non
+                        euismod arcu ante quis massa nec, eum hinc.</p>
+                </div>
+            </div>
+
+            <div class="flex items-center space-x-4">
+                <img src="icons/warranty.png" alt="Warranty Icon" class="w-12 h-12">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900">ONE YEAR WARRANTY</h3>
+                    <p class="text-gray-700 text-sm">Cu duo movet praesent definitionem. Augue consul conceptam sit ea.
+                        Mei solum choro nullam.</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </section>
+
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 
