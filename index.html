@@ -10,441 +10,567 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@latest/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+        integrity="sha512-HoTQ5VEB6qw6HkA4fjdFCBIt6Ok/N9fEm2tp+CW4QtPyS8vRlPf8YFK+URf8eVFdMtYY7k2x3uO1fIRY5S6jAQ=="
+        crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
     <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class=" text-white font-sans ">
+<!-- Navbar -->
+<nav class="w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 bg-blue-500">
+    <div class="flex items-center space-x-2">
+        <img src="images/logo.png" alt="Logo" class="h-10 w-10">
+        <div class="text-2xl font-bold text-white">ProHauz</div>
+    </div>
 
-    <!-- Navbar -->
-    <nav class="w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 bg-blue-500">
-        <div class=" flex items-center space-x-2">
-            <img src="images/logo.png" alt="Logo" class="h-10 w-10">
-            <div class="text-2xl font-bold text-white">ProHauz</div>
+    <!-- Mobile Dropdown Menu Toggle (Hamburger) -->
+    <div class="lg:hidden absolute right-6">
+        <button id="menu-toggle" class="text-black">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Desktop Menu (Visible on large screens only) -->
+    <ul class="hidden lg:flex space-x-6 text-lg text-white">
+        <li><a href="#home" class="hover:text-black">Home</a></li>
+        <li><a href="#about" class="hover:text-black">About</a></li>
+        <li><a href="#blog" class="hover:text-black">Services</a></li>
+        <li><a href="#shop" class="hover:text-black">Blog</a></li>
+        <li><a href="#elements" class="hover:text-black">Contact Us</a></li>
+    </ul>
+
+    <!-- Call and Book Service Button (Visible on Large Screens) -->
+    <div class="flex items-center space-x-4">
+        <div class="hidden lg:block text-gray-200">Call: 800 555 284</div>
+        <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 lg:block hidden">
+            Book Service
+        </button>
+    </div>
+</nav>
+
+<!-- Mobile Dropdown Menu -->
+<div id="dropdown-menu"
+    class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
+    <a href="#home" class="dropdown-item text-white hover:text-gray-300">Home</a>
+    <a href="#about" class="dropdown-item text-white hover:text-gray-300">About</a>
+    <a href="#blog" class="dropdown-item text-white hover:text-gray-300">Services</a>
+    <a href="#shop" class="dropdown-item text-white hover:text-gray-300">Blog</a>
+    <a href="#elements" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
+    <div class="flex justify-center">
+        <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">
+            Book Service
+        </button>
+    </div>
+</div>
+
+
+<!-- Hero Section -->
+<section
+    class="flex flex-col md:flex-row items-center p-8 md:p-16 text-center md:text-left min-h-screen relative bg-cover bg-center "
+    style="background-image: url('images/tap.jpg'); background-color: rgba(0, 0, 0, 0.6);">
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black opacity-60"></div>
+
+    <!-- Left Content -->
+    <div class="relative flex-1 space-y-4 text-white ml-[20px] " data-aos="fade-right">
+        <h1 class="text-4xl md:text-7xl font-bold">
+            The <span class="text-blue-300">Plumber</span> You Deserve
+        </h1>
+        <p class="text-lg md:text-xl">
+            HAVE A PLUMBING ISSUE? <span class="font-semibold">CALL 24 HOUR EMERGENCY SERVICE.</span>
+        </p>
+
+        <div
+            class="flex flex-col items-center text-center space-y-4 sm:flex-row sm:justify-start sm:items-center sm:text-left sm:space-y-0 ">
+            <!-- Phone Icon -->
+            <div class="rounded-full p-2 w-12 h-12 flex items-center justify-center ">
+                <img src="icons/telephone.png" alt="Phone Icon" class="w-8 h-8">
+            </div>
+            <span class="text-xl md:text-2xl font-semibold">1-800-555-284</span>
         </div>
 
+        <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded text-2xl ml-[20px]">Request
+            Job Estimate</button>
+    </div>
+    <div class="relative flex-1 mt-8 md:mt-0" data-aos="fade-left">
+        <img src="images/person.png" alt="Plumber Image" class="w-full max-w-[1200px] h-auto ml-auto">
 
-        <!-- Mobile Dropdown Menu Toggle (Hamburger) -->
-        <div class="md:hidden absolute right-6">
-            <button id="menu-toggle" class="text-black">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-            </button>
+    </div>
+
+</section>
+
+
+<!-- Cards Section -->
+
+<section class="relative z-30 -mt-40 sm:-mt-32  p-8 md:p-16">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+        <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center justify-center mb-4">
+                <img src="images/personOne.png" alt="Residential Plumbing Icon"
+                    class="w-full h-52 object-cover rounded-lg">
+            </div>
+            <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
+            <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.</p>
+            <a href="#" class="text-blue-300 hover:underline">READ MORE &rarr;</a>
         </div>
 
-        <!-- Desktop Menu -->
-        <ul class="hidden md:flex space-x-6 text-lg text-white">
-            <li><a href="#home" class="hover:text-black">Home</a></li>
-            <li><a href="#about" class="hover:text-black">About</a></li>
-            <li><a href="#blog" class="hover:text-black">Services</a></li>
-            <li><a href="#shop" class="hover:text-black">Blog</a></li>
-            <li><a href="#elements" class="hover:text-black">Contact Us</a></li>
-        </ul>
-
-        <!-- Call and Book Service Button (Visible on Large Screens) -->
-        <div class="flex items-center space-x-4">
-            <div class="hidden md:block text-gray-200">Call: 800 555 284</div>
-            <!-- Show on large screens and hide on mobile -->
-            <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 md:block hidden">Book
-                Service</button>
+        <div class="bg-blue-400 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center justify-center mb-4">
+                <img src="images/personTwo.png" alt="Residential Plumbing Icon"
+                    class="w-full h-52 object-cover rounded-lg">
+            </div>
+            <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
+            <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.Trusted expert
+                residential plumbing </p>
+            <a href="#" class="text-blue-600 hover:underline">READ MORE &rarr;</a>
         </div>
-    </nav>
 
-    <!-- Mobile Dropdown Menu -->
-    <div id="dropdown-menu"
-        class="dropdown-menu md:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-1/2 mt-2 rounded-lg shadow-xl hidden">
-        <a href="#home" class="dropdown-item">Home</a>
-        <a href="#about" class="dropdown-item">About</a>
-        <a href="#blog" class="dropdown-item">Services</a>
-        <a href="#shop" class="dropdown-item">Blog</a>
-        <a href="#elements" class="dropdown-item">Contact Us</a>
-        <div class="flex justify-center flex-grow">
-            <button class="dropdown-menu bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800 items-center">
-                Book Service
-            </button>
+        <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center justify-center mb-4">
+                <img src="images/personThree.png" alt="Residential Plumbing Icon"
+                    class="w-full h-52 object-cover rounded-lg">
+            </div>
+            <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
+            <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.</p>
+            <a href="#" class="text-blue-300 hover:underline">READ MORE &rarr;</a>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services Section Carousel -->
+
+<section class="relative z-30 p-8 md:p-16 bg-white-150 text-gray-800 mt-5">
+    <div class="max-w-7xl mx-auto overflow-hidden relative">
+
+        <div id="carouselTrack" class="carousel-track flex transition-transform duration-500 ease-out"
+            style="transform: translateX(0%);">
+
+            <!-- Slide 1 -->
+            <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="images/serviceOne.png" alt="3D Plumbing Model" class="w-full h-auto">
+                </div>
+                <div class="pt-[-50px]">
+                    <h2 class="text-2xl font-semibold uppercase text-gray-500 mb-2">What We Offer</h2>
+                    <h1 class="text-5xl font-bold text-gray-800 mb-6 pb-7">
+                        Explore Our <span class="text-blue-500">Services & Solutions</span>
+                    </h1>
+                    <div class="space-y-6">
+                        <!-- Pipe Leaking Service -->
+                        <div class="flex items-start space-x-4">
+                            <div class="text-blue-500">
+                                <img src="icons/leaking.png" alt="Drain Cleaning Icon"
+                                    class="h-20 w-20 sm:h-16 sm:w-16">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Pipe Leaking</h3>
+                                <p class="text-gray-600">Your sewer pump is essential for removing sewage from your
+                                    sump pit to your septic tank or sewage system.</p>
+                            </div>
+                        </div>
+                        <!-- Drain Cleaning Service -->
+                        <div class="flex items-start space-x-4">
+                            <div class="text-blue-500">
+                                <img src="icons/sewer.png" alt="Drain Cleaning Icon" class="h-20 w-20 sm:h-16 sm:w-16">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Drain Cleaning</h3>
+                                <p class="text-gray-600">If your tub or sink is draining slower than usual, or won't
+                                    drain at all, your drain is either clogged or damaged.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="images/serviceTwo.png" alt="3D Plumbing Model" class="w-full h-auto">
+                </div>
+                <div class="pt-[-50px]">
+                    <h2 class="text-xl font-semibold uppercase text-gray-500 mb-2">What We Offer</h2>
+                    <h1 class="text-5xl font-bold text-gray-800 mb-6 pb-7">
+                        For Companies Only: Buy <span class="text-blue-500">Italian Flues</span>
+                    </h1>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-blue-500 pt-3">
+                                <img src="icons/toilet.png" alt="toilet" class="h-12 w-12 sm:h-12 sm:w-12">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Toilet Leaking</h3>
+                                <p class="text-gray-600">If your tub or sink is draining slower than usual, or won't
+                                    drain at all, your drain is either clogged or damaged.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="text-blue-500 pt-3">
+                                <img src="icons/tools.png" alt="Drain Cleaning Icon" class="h-16 w-16 sm:h-12 sm:w-12">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Bathtub Installation</h3>
+                                <p class="text-gray-600">Regular pipe cleaning helps prevent buildup and ensures
+                                    smooth water flow throughout your system.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <img src="images/serviceThree.png" alt="3D Plumbing Model" class="w-full h-auto">
+                </div>
+                <div class="pt-[-50px]">
+                    <h2 class="text-xl font-semibold uppercase text-gray-500 mb-2">What We Offer</h2>
+                    <h1 class="text-5xl font-bold text-gray-800 mb-6 pb-7">
+                        Need Professional Help With <span class="text-blue-500">Your Project</span>
+                    </h1>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="text-blue-500 pt-3">
+                                <img src="icons/toiletissue.png" alt="Pipe Replacement Icon"
+                                    class="h-16 w-16 sm:h-14 sm:w-14">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Overflowing Toilet</h3>
+                                <p class="text-gray-600">We provide top-quality pipe replacement to ensure your
+                                    plumbing system runs smoothly and efficiently.</p>
+                            </div>
+                        </div>
+                        <!-- Drain Cleaning Service -->
+                        <div class="flex items-start space-x-4">
+                            <div class="text-blue-500 pt-3">
+                                <img src="icons/pipeline.png" alt="Drain Cleaning Icon"
+                                    class="h-16 w-16 sm:h-14 sm:w-14">
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold">Solder Copper</h3>
+                                <p class="text-gray-600">If your tub or sink is draining slower than usual, or won't
+                                    drain at all, your drain is either clogged or damaged.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation Dots -->
+        <div class="flex justify-center space-x-2 mt-6">
+            <span class="carousel-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" data-slide="0"
+                onclick="goToSlide(0)"></span>
+            <span class="carousel-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" data-slide="1"
+                onclick="goToSlide(1)"></span>
+            <span class="carousel-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" data-slide="2"
+                onclick="goToSlide(2)"></span>
+        </div>
+    </div>
+</section>
+
+
+<!-- Plumbing Care Section -->
+<section
+    class="flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-screen relative bg-cover bg-center mt-20"
+    style="background-image: url('images/bgImage.png.jpg');" data-aos="fade-up">
+
+    <div class="absolute top-0 left-0 w-full h-full bg-blue-900 opacity-60 z-0"></div>
+
+    <div class="bg-blue-600 py-3 sm:py-4 animate-slide-in absolute top-0 left-0 w-full flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 z-10"
+        data-aos="fade-down">
+        <h2 class="text-xl sm:text-3xl md:text-5xl pb-2 sm:pb-4 pt-2 sm:pt-4 text-center sm:text-left text-white">Are
+            you
+            interested in an estimate?</h2>
+        <button
+            class="mt-4 sm:mb-2 bg-white text-base sm:text-lg md:text-xl text-blue-500 py-2 px-4 sm:px-6 md:px-8 rounded-lg hover:bg-black transition duration-300 ease-in-out mb-5"
+            data-aos="zoom-in" data-aos-delay="300">
+            Request Job Estimate
+        </button>
+    </div>
+
+    <div class="main-content flex flex-col justify-center items-center bg-blue-600/75 p-5 md:p-8 mt-28 sm:mt-36 md:mt-0 z-10 w-full"
+        data-aos="fade-up">
+        <h1
+            class="text-3xl sm:text-4xl md:text-6xl font-semibold mb-4 sm:mb-0 md:mb-8 text-center  text-white sm:mt-18 md:mt-20 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
+            Regular <span class="text-blue-300">plumbing care</span> will save your <br>Time & Money
+        </h1>
+
+        <!-- Adjusting layout for small screens -->
+        <div class="flex flex-col md:flex-row justify-center items-center mt-10 mb-20 space-y-8 md:space-y-0 md:gap-10">
+            <div class="text-center text-white" data-aos="fade-up" data-aos-delay="400">
+                <span class="text-7xl font-bold text-blue-300 counter" data-count="60">0</span><span
+                    class="text-2xl">%</span>
+                <p class="mt-2 text-lg">Household water usage that goes to toilets.</p>
+            </div>
+            <div class="text-center text-white" data-aos="fade-up" data-aos-delay="500">
+                <span class="text-7xl font-bold text-blue-300 counter" data-count="180">0</span><span
+                    class="text-2xl">gal</span>
+                <p class="mt-2 text-lg">The average US family can waste from household leaks.</p>
+            </div>
+            <div class="text-center text-white data-aos=" fade-up" data-aos-delay="600">
+                <span class="text-7xl font-bold text-blue-300 counter" data-count="120">0</span>
+                <p class="mt-2 text-lg">Yearly savings by servicing your water leaks.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Emergency Service Section -->
+<section class="flex flex-col items-center justify-center text-white relative pt-12 pb-16 bg-cover bg-center"
+    style="background-image: url('images/bgScrewBackground.png');">
+
+    <div class="flex flex-col md:flex-row gap-6 relative z-40 -mt-20 mb-10 sm:-mt-20 lg:-mt-20 px-4 sm:px-6 lg:px-8 mx-2 sm:mx-4 lg:mx-8"
+        data-aos="fade-up">
+
+        <!-- Card 1 -->
+        <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
+            <img src="images/specialOfferOne.png.jpg" alt="Faucet installation"
+                class="w-full h-48 object-cover rounded-md">
+            <div class="p-4">
+                <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
+                <h3 class="text-lg font-semibold">Faucet installation</h3>
+                <p class="text-blue-500 text-xl font-bold">$24 off</p>
+                <button
+                    class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
+            <img src="images/specialOfferTwo.png.jpg" alt="Water filter cleaning"
+                class="w-full h-48 object-cover rounded-md">
+            <div class="p-4">
+                <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
+                <h3 class="text-lg font-semibold">Water filter cleaning</h3>
+                <p class="text-blue-500 text-xl font-bold">50% off</p>
+                <button
+                    class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Contact Us
+                </button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
+            <img src="images/specialOfferThree.png.jpg" alt="Drain cleaning"
+                class="w-full h-48 object-cover rounded-md">
+            <div class="p-4">
+                <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
+                <h3 class="text-lg font-semibold">Drain cleaning</h3>
+                <p class="text-blue-500 text-xl font-bold">$10 off</p>
+                <button
+                    class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Contact Us
+                </button>
+            </div>
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section
-        class="flex flex-col md:flex-row items-center p-8 md:p-16 text-center md:text-left min-h-screen relative bg-cover bg-center "
-        style="background-image: url('images/tap.jpg'); background-color: rgba(0, 0, 0, 0.6);">
 
-        <!-- Dark Overlay -->
-        <div class="absolute inset-0 bg-black opacity-60"></div>
+    <!-- 24/7 Emergency Service Section -->
+    <h2
+        class="text-4xl mt-20 mb-12 sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl font-bold text-gray-900 text-center sm:text-left">
+        Available for <span class="text-blue-600">24/7</span> Emergency Service
+    </h2>
 
-        <!-- Left Content -->
-        <div class="relative flex-1 space-y-4 text-white ml-[20px] " data-aos="fade-right">
-            <h1 class="text-4xl md:text-7xl font-bold">
-                The <span class="text-blue-300">Plumber</span> You Deserve
-            </h1>
-            <p class="text-lg md:text-xl">
-                HAVE A PLUMBING ISSUE? <span class="font-semibold">CALL 24 HOUR EMERGENCY SERVICE.</span>
-            </p>
+    <!-- Features Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-10 px-10 sm:px-12 lg:px-16 mx-4 sm:mx-8 lg:mx-12 bg-white"
+        data-aos="fade-up">
 
-            <div
-                class="flex flex-col items-center text-center space-y-4 sm:flex-row sm:justify-start sm:items-center sm:text-left sm:space-y-0 ">
-                <!-- Phone Icon -->
-                <div class="rounded-full p-2 w-12 h-12 flex items-center justify-center ">
-                    <img src="icons/telephone.png" alt="Phone Icon" class="w-8 h-8">
-                </div>
-                <span class="text-xl md:text-2xl font-semibold">1-800-555-284</span>
-            </div>
-
-            <button
-                class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded text-2xl ml-[20px]">Request
-                Job Estimate</button>
-        </div>
-        <div class="relative flex-1 mt-8 md:mt-0" data-aos="fade-left">
-            <img src="images/person.png" alt="Plumber Image" class="w-full max-w-[1200px] h-auto ml-auto">
-
-        </div>
-
-    </section>
-
-
-    <!-- Cards Section -->
-
-    <section class="relative z-30 -mt-40 sm:-mt-32  p-8 md:p-16">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-
-            <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="flex items-center justify-center mb-4">
-                    <img src="images/personOne.png" alt="Residential Plumbing Icon"
-                        class="w-full h-52 object-cover rounded-lg">
-                </div>
-                <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
-                <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.</p>
-                <a href="#" class="text-blue-300 hover:underline">READ MORE &rarr;</a>
-            </div>
-
-            <div class="bg-blue-400 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="flex items-center justify-center mb-4">
-                    <img src="images/personTwo.png" alt="Residential Plumbing Icon"
-                        class="w-full h-52 object-cover rounded-lg">
-                </div>
-                <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
-                <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.Trusted expert
-                    residential plumbing </p>
-                <a href="#" class="text-blue-600 hover:underline">READ MORE &rarr;</a>
-            </div>
-
-            <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="flex items-center justify-center mb-4">
-                    <img src="images/personThree.png" alt="Residential Plumbing Icon"
-                        class="w-full h-52 object-cover rounded-lg">
-                </div>
-                <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
-                <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.</p>
-                <a href="#" class="text-blue-300 hover:underline">READ MORE &rarr;</a>
+        <!-- Feature Items -->
+        <div class="flex items-center space-x-4">
+            <img src="icons/shipped.png" alt="Service Icon" class="w-12 h-12">
+            <div>
+                <h3 class="text-xl font-semibold text-gray-900">FAST RELIABLE SERVICE</h3>
+                <p class="text-gray-700 text-sm">Uisque molestie, arcu et iaculis mollis orci lacus facilisis pede,
+                    non euismod arcu ante quis massa in.</p>
             </div>
         </div>
-    </section>
 
-
-    <!-- Services Section Carousel -->
-    <section class="relative z-30 p-8 md:p-16 bg-white-150 text-gray-800 mt-5">
-        <div class="max-w-7xl mx-auto overflow-hidden relative">
-
-            <div id="carouselTrack" class="carousel-track flex transition-transform duration-500 ease-out"
-                style="transform: translateX(0%);">
-
-                <!-- Slide 1 -->
-                <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
-                    <div class="relative">
-                        <img src="images/serviceOne.png" alt="3D Plumbing Model" class="w-full h-auto">
-                    </div>
-                    <div class="pt-[-50px]">
-                        <h2 class="text-2xl font-semibold uppercase text-gray-500 mb-2">What We Offer</h2>
-                        <h1 class="text-5xl font-bold text-gray-800 mb-6 pb-7">
-                            Explore Our <span class="text-blue-500">Services & Solutions</span>
-                        </h1>
-                        <div class="space-y-6">
-                            <!-- Pipe Leaking Service -->
-                            <div class="flex items-start space-x-4">
-                                <div class="text-blue-500">
-                                    <img src="icons/leaking.png" alt="Drain Cleaning Icon"
-                                        class="h-20 w-20 sm:h-16 sm:w-16">
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold">Pipe Leaking</h3>
-                                    <p class="text-gray-600">Your sewer pump is essential for removing sewage from your
-                                        sump pit to your septic tank or sewage system.</p>
-                                </div>
-                            </div>
-                            <!-- Drain Cleaning Service -->
-                            <div class="flex items-start space-x-4">
-                                <div class="text-blue-500">
-                                    <img src="icons/sewer.png" alt="Drain Cleaning Icon"
-                                        class="h-20 w-20 sm:h-16 sm:w-16">
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold">Drain Cleaning</h3>
-                                    <p class="text-gray-600">If your tub or sink is draining slower than usual, or won't
-                                        drain at all, your drain is either clogged or damaged.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 2 -->
-                <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
-                    <div class="relative">
-                        <img src="images/serviceTwo.png" alt="3D Plumbing Model" class="w-full h-auto">
-                    </div>
-                    <div class="pt-[-50px]">
-                        <h2 class="text-xl font-semibold uppercase text-gray-500 mb-2">What We Offer</h2>
-                        <h1 class="text-5xl font-bold text-gray-800 mb-6 pb-7">
-                            For Companies Only: Buy <span class="text-blue-500">Italian Flues</span>
-                        </h1>
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="text-blue-500 pt-3">
-                                    <img src="icons/toilet.png" alt="toilet" class="h-12 w-12 sm:h-12 sm:w-12">
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold">Toilet Leaking</h3>
-                                    <p class="text-gray-600">If your tub or sink is draining slower than usual, or won't
-                                        drain at all, your drain is either clogged or damaged.</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start space-x-4">
-                                <div class="text-blue-500 pt-3">
-                                    <img src="icons/tools.png" alt="Drain Cleaning Icon"
-                                        class="h-16 w-16 sm:h-12 sm:w-12">
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold">Bathtub Installation</h3>
-                                    <p class="text-gray-600">Regular pipe cleaning helps prevent buildup and ensures
-                                        smooth water flow throughout your system.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 3 -->
-                <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
-                    <div class="relative">
-                        <img src="images/serviceThree.png" alt="3D Plumbing Model" class="w-full h-auto">
-                    </div>
-                    <div class="pt-[-50px]">
-                        <h2 class="text-xl font-semibold uppercase text-gray-500 mb-2">What We Offer</h2>
-                        <h1 class="text-5xl font-bold text-gray-800 mb-6 pb-7">
-                            Need Professional Help With <span class="text-blue-500">Your Project</span>
-                        </h1>
-                        <div class="space-y-6">
-                            <div class="flex items-start space-x-4">
-                                <div class="text-blue-500 pt-3">
-                                    <img src="icons/toiletissue.png" alt="Pipe Replacement Icon"
-                                        class="h-16 w-16 sm:h-14 sm:w-14">
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold">Overflowing Toilet</h3>
-                                    <p class="text-gray-600">We provide top-quality pipe replacement to ensure your
-                                        plumbing system runs smoothly and efficiently.</p>
-                                </div>
-                            </div>
-                            <!-- Drain Cleaning Service -->
-                            <div class="flex items-start space-x-4">
-                                <div class="text-blue-500 pt-3">
-                                    <img src="icons/pipeline.png" alt="Drain Cleaning Icon"
-                                        class="h-16 w-16 sm:h-14 sm:w-14">
-                                </div>
-                                <div>
-                                    <h3 class="text-lg font-semibold">Solder Copper</h3>
-                                    <p class="text-gray-600">If your tub or sink is draining slower than usual, or won't
-                                        drain at all, your drain is either clogged or damaged.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Navigation Dots -->
-            <div class="flex justify-center space-x-2 mt-6">
-                <span class="carousel-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" data-slide="0"
-                    onclick="goToSlide(0)"></span>
-                <span class="carousel-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" data-slide="1"
-                    onclick="goToSlide(1)"></span>
-                <span class="carousel-dot w-3 h-3 bg-gray-300 rounded-full cursor-pointer" data-slide="2"
-                    onclick="goToSlide(2)"></span>
+        <div class="flex items-center space-x-4">
+            <img src="icons/leaking.png" alt="Emergency Icon" class="w-12 h-12">
+            <div>
+                <h3 class="text-xl font-semibold text-gray-900">EMERGENCY SERVICES</h3>
+                <p class="text-gray-700 text-sm">Est quando nominati at, id vel nisl porro omnesque. Vix dicit
+                    accusamus euripidis no.</p>
             </div>
         </div>
-    </section>
 
-
-    <!-- Plumbing Care -->
-
-    <section
-        class="flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-screen relative bg-cover bg-center mt-20"
-        style="background-image: url('images/bgImage.png.jpg');" data-aos="fade-up">
-
-        <div class="absolute top-0 left-0 w-full h-full bg-blue-900 opacity-60 z-0"></div>
-
-        <div class="bg-blue-600 py-3 sm:py-4 animate-slide-in absolute top-0 left-0 w-full flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 z-10"
-            data-aos="fade-down">
-            <h2 class="text-xl sm:text-3xl md:text-5xl pb-2 sm:pb-4 pt-2 sm:pt-4 text-center sm:text-left">Are you
-                interested in an estimate?</h2>
-            <button
-                class="mt-4 sm:mb-2 bg-white text-base sm:text-lg md:text-xl text-blue-500 py-2 px-4 sm:px-6 md:px-8 rounded-lg hover:bg-black transition duration-300 ease-in-out mb-5"
-                data-aos="zoom-in" data-aos-delay="300">
-                Request Job Estimate
-            </button>
+        <div class="flex items-center space-x-4">
+            <img src="icons/workerIcon.png" alt="Personnel Icon" class="w-12 h-12">
+            <div>
+                <h3 class="text-xl font-semibold text-gray-900">SKILLED & TRAINED PERSONNEL</h3>
+                <p class="text-gray-700 text-sm">Lestie, arcu et iaculis mollis, orci lacus facilisis pede, non
+                    euismod arcu ante quis massa nec, eum hinc.</p>
+            </div>
         </div>
 
-        <div class="main-content flex flex-col justify-center items-center bg-blue-600/75 p-5 md:p-8 mt-28 sm:mt-36 md:mt-0 z-10 w-full"
+        <div class="flex items-center space-x-4">
+            <img src="icons/warranty.png" alt="Warranty Icon" class="w-12 h-12">
+            <div>
+                <h3 class="text-xl font-semibold text-gray-900">ONE YEAR WARRANTY</h3>
+                <p class="text-gray-700 text-sm">Cu duo movet praesent definitionem. Augue consul conceptam sit
+                    ea.
+                    Mei solum choro nullam.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex justify-center mt-10 ">
+        <button
+            class="bg-blue-500 text-white px-6 py-3 rounded-lg text-xl hover:bg-blue-600 transition duration-300 ease-in-out">
+            Call Us Now!
+        </button>
+    </div>
+</section>
+
+
+<!-- Tips & Tricks -->
+<section id="fade-in-section"
+    class="flex items-center justify-center min-h-screen bg-cover bg-center opacity-0 lg:mt-40 md:mt-0 sm:mt-0"
+    style="background-image: url('images/testbackground.png'); background-size: cover; background-position: center; height: 100vh;">
+
+    <!-- Wrapper Div -->
+    <div class="flex flex-col gap-y-6 w-full max-w-7xl mx-auto px-4 sm:px-6 justify-center items-center "
+        data-aos="fade-up">
+
+        <!-- FAQ Section -->
+        <div class="bg-blue-100 p-8 rounded-lg shadow-lg w-full sm:w-full md:w-full lg:w-3/4 flex flex-col justify-between"
             data-aos="fade-up">
-            <h1
-                class="text-3xl sm:text-4xl md:text-6xl font-semibold mb-4 sm:mb-0 md:mb-8 text-center sm:mt-18 md:mt-20 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
-                Regular <span class="text-blue-300">plumbing care</span> will save your <br>Time & Money
-            </h1>
+            <h2 class="text-gray-700 text-sm font-semibold">FIX IT YOURSELF</h2>
+            <h1 class="text-4xl font-bold text-gray-800">Quick <span class="text-blue-500">tips & tricks</span></h1>
 
-            <div class="flex flex-col md:flex-row justify-center items-center mt-10 space-y-8 md:space-y-0 md:gap-10">
-                <div class="text-center" data-aos="fade-up" data-aos-delay="400">
-                    <span class="text-7xl font-bold text-blue-300 counter" data-count="60">0</span><span
-                        class="text-2xl">%</span>
-                    <p class="mt-2 text-lg">Household water usage that goes to toilets.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="500">
-                    <span class="text-7xl font-bold text-blue-300 counter" data-count="180">0</span><span
-                        class="text-2xl">gal</span>
-                    <p class="mt-2 text-lg">The average US family can waste from household leaks.</p>
-                </div>
-                <div class="text-center" data-aos="fade-up" data-aos-delay="600">
-                    <span class="text-7xl font-bold text-blue-300 counter" data-count="120">0</span>
-                    <p class="mt-2 text-lg">Yearly savings by servicing your water leaks.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- Emergency Service-->
-
-    <section class="flex flex-col items-center justify-center text-white relative pb-16 bg-cover bg-center  "
-        style="background-image: url('images/bgScrewBackground.png');">
-
-        <div class="flex flex-col md:flex-row gap-6 relative z-40 -mt-20 sm:-mt-20 lg:-mt-20 px-4 sm:px-6 lg:px-8 mx-2 sm:mx-4 lg:mx-8"
-            data-aos="fade-up">
-
-            <!-- Card 1 -->
-            <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
-                <img src="images/specialOfferOne.png.jpg" alt="Faucet installation"
-                    class="w-full h-48 object-cover rounded-md">
-                <div class="p-4">
-                    <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
-                    <h3 class="text-lg font-semibold">Faucet installation</h3>
-                    <p class="text-blue-500 text-xl font-bold">$24 off</p>
+            <div id="accordion" class="mt-6 space-y-2 flex-grow">
+                <!-- FAQ Item 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden" data-aos="zoom-in">
                     <button
-                        class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                        Contact Us
+                        class="flex justify-between items-center w-full p-4 bg-gray-100 hover:bg-gray-200 transition-colors"
+                        onclick="toggleAccordion(1)">
+                        <span class="text-black font-semibold">What system is right for me?</span>
+                        <span id="icon-1"
+                            class="transform transition-transform duration-300 text-blue-500 font-bold">+</span>
                     </button>
+                    <div id="content-1" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
+                        <p class="p-4 text-white bg-blue-500">
+                            Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
+                            procrastinate B2C users after installed base benefits. Dramatically visualize customer
+                            directed convergence without revolutionary ROI.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Card 2 -->
-            <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
-                <img src="images/specialOfferTwo.png.jpg" alt="Water filter cleaning"
-                    class="w-full h-48 object-cover rounded-md">
-                <div class="p-4">
-                    <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
-                    <h3 class="text-lg font-semibold">Water filter cleaning</h3>
-                    <p class="text-blue-500 text-xl font-bold">50% off</p>
+                <!-- FAQ Item 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden" data-aos="zoom-in">
                     <button
-                        class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                        Contact Us
+                        class="flex justify-between items-center w-full p-4 bg-gray-100 hover:bg-gray-200 transition-colors"
+                        onclick="toggleAccordion(2)">
+                        <span class="text-black font-semibold">What HVAC add-ons do I need?</span>
+                        <span id="icon-2"
+                            class="transform transition-transform duration-300 text-blue-500 font-bold">+</span>
                     </button>
+                    <div id="content-2" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
+                        <p class="p-4 text-white bg-blue-500 ">
+                            Professionally cultivate one-to-one customer service with robust ideas. Dynamically
+                            innovate resource-leveling customer service for state of the art customer service.
+                        </p>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Card 3 -->
-            <div class="bg-white text-black rounded-lg shadow-lg w-72 p-4 relative">
-                <img src="images/specialOfferThree.png.jpg" alt="Drain cleaning"
-                    class="w-full h-48 object-cover rounded-md">
-                <div class="p-4">
-                    <p class="text-red-600 font-bold text-xs">SPECIAL OFFER</p>
-                    <h3 class="text-lg font-semibold">Drain cleaning</h3>
-                    <p class="text-blue-500 text-xl font-bold">$10 off</p>
+                <!-- FAQ Item 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden" data-aos="zoom-in">
                     <button
-                        class="bg-red-500 text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                        Contact Us
+                        class="flex justify-between items-center w-full p-4 bg-gray-100 hover:bg-gray-200 transition-colors"
+                        onclick="toggleAccordion(3)">
+                        <span class="text-black font-semibold">How much will it cost?</span>
+                        <span id="icon-3"
+                            class="transform transition-transform duration-300 text-blue-500 font-bold">+</span>
                     </button>
+                    <div id="content-3" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
+                        <p class="p-4 text-white bg-blue-500">
+                            Objectively innovate empowered manufactured products whereas parallel platforms.
+                            Holisticly predominate extensible testing procedures for reliable supply chains.
+                            Dramatically engage top-line web services vis-a-vis cutting-edge deliverables.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden" data-aos="zoom-in">
+                    <button
+                        class="flex justify-between items-center w-full p-4 bg-gray-100 hover:bg-gray-200 transition-colors"
+                        onclick="toggleAccordion(4)">
+                        <span class="text-black font-semibold">What size HVAC system do I need?</span>
+                        <span id="icon-4"
+                            class="transform transition-transform duration-300 text-blue-500 font-bold">+</span>
+                    </button>
+                    <div id="content-4" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
+                        <p class="p-4 text-white bg-blue-500">
+                            Proactively envisioned multimedia based expertise and cross-media growth strategies.
+                            Seamlessly visualize quality intellectual capital without superior collaboration and
+                            idea-sharing. Holistically pontificate installed base portals after maintainable
+                            products. Phosfluorescently engage worldwide methodologies with web-enabled technology.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden" data-aos="zoom-in">
+                    <button
+                        class="flex justify-between items-center w-full p-4 bg-gray-100 hover:bg-gray-200 transition-colors"
+                        onclick="toggleAccordion(5)">
+                        <span class="text-black font-semibold">What is better: gas, electric, or oil?</span>
+                        <span id="icon-5"
+                            class="transform transition-transform duration-300 text-blue-500 font-bold">+</span>
+                    </button>
+                    <div id="content-5" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
+                        <p class="p-4 text-white bg-blue-500">
+                            Bring to the table win-win survival strategies to ensure proactive domination. At the
+                            end of the day, going forward, a new normal that has evolved from generation X is on the
+                            runway heading towards a streamlined cloud solution. User generated content in real-time
+                            will have multiple touchpoints for offshoring.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
-
-        <!-- 24/7 Emergency Service Section -->
-        <div class="bg-white text-center p-10 rounded-lg  mt-12 mx-4 sm:mt-24 sm:mx-8 lg:mt-24 xl:w-3/4 mx-auto"
-            data-aos="fade-up">
-            <h2 class="text-5xl font-bold text-gray-900">Available for <span class="text-blue-600">24/7</span> Emergency
-                Service</h2>
+        <!-- Video Section -->
+        <div class="w-full sm:w-full md:w-full lg:w-3/4 flex flex-col justify-between mt-8 sm:mt-0" data-aos="fade-up">
+            <iframe class="rounded-lg shadow-lg w-full" style="height: 500px;"
+                src="https://www.youtube.com/embed/oHg5SJYRHA0" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
 
-        <!-- Features Section -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 px-8 sm:px-12 lg:px-16 mx-4 sm:mx-8 lg:mx-12 bg-white"
-            data-aos="fade-up">
-            <!-- Feature Items -->
-            <div class="flex items-center space-x-4">
-                <img src="icons/shipped.png" alt="Service Icon" class="w-12 h-12">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900">FAST RELIABLE SERVICE</h3>
-                    <p class="text-gray-700 text-sm">Uisque molestie, arcu et iaculis mollis orci lacus facilisis pede,
-                        non euismod arcu ante quis massa in.</p>
-                </div>
-            </div>
+    </div>
+</section>
 
-            <div class="flex items-center space-x-4">
-                <img src="icons/leaking.png" alt="Emergency Icon" class="w-12 h-12">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900">EMERGENCY SERVICES</h3>
-                    <p class="text-gray-700 text-sm">Est quando nominati at, id vel nisl porro omnesque. Vix dicit
-                        accusamus euripidis no.</p>
-                </div>
-            </div>
 
-            <div class="flex items-center space-x-4">
-                <img src="icons/workerIcon.png" alt="Personnel Icon" class="w-12 h-12">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900">SKILLED & TRAINED PERSONNEL</h3>
-                    <p class="text-gray-700 text-sm">Lestie, arcu et iaculis mollis, orci lacus facilisis pede, non
-                        euismod arcu ante quis massa nec, eum hinc.</p>
-                </div>
-            </div>
-
-            <div class="flex items-center space-x-4">
-                <img src="icons/warranty.png" alt="Warranty Icon" class="w-12 h-12">
-                <div>
-                    <h3 class="text-xl font-semibold text-gray-900">ONE YEAR WARRANTY</h3>
-                    <p class="text-gray-700 text-sm">Cu duo movet praesent definitionem. Augue consul conceptam sit ea.
-                        Mei solum choro nullam.</p>
-                </div>
-            </div>
-        </div>
-
-        </div>
-    </section>
-
-    <!-- Scripts -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-pfaGz+K2+dTb8n6yxL2bZ9bEZb9qynRu9ui7e4/s0Em0fVlxkgjxd38fLnJIAEYek+1PCAg0YuNZoAfkIBpXg=="
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>

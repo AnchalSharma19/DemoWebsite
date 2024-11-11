@@ -1,5 +1,9 @@
 
-AOS.init();
+AOS.init({
+    duration: 800, // Animation duration
+    easing: 'ease-in-out', // Easing type
+    once: true,
+});
 
 // Dropdown Menu
 
@@ -15,7 +19,7 @@ menuToggle.addEventListener('click', () => {
     // Ensure the animation happens only once per toggle
     setTimeout(() => {
         dropdownMenu.classList.remove('animate__animated', 'animate__fadeInRight');
-    }, 2000); // The animation lasts around 2 second
+    }, 2000);
 });
 
 // Close dropdown if clicked outside
@@ -96,4 +100,37 @@ window.addEventListener('scroll', function () {
 });
 
 
+function toggleAccordion(id) {
+    const content = document.getElementById(`content-${id}`);
+    const icon = document.getElementById(`icon-${id}`);
 
+    if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.textContent = '-';
+    } else {
+        content.classList.add('hidden');
+        icon.textContent = '+';
+    }
+}
+
+
+
+// Fade-in animation on load
+window.addEventListener('DOMContentLoaded', () => {
+    const section = document.getElementById('fade-in-section');
+    section.classList.add('opacity-100', 'transition-opacity', 'duration-1000');
+});
+
+// Toggle Accordion function with animation
+function toggleAccordion(index) {
+    const content = document.getElementById(`content-${index}`);
+    const icon = document.getElementById(`icon-${index}`);
+
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.classList.remove('rotate-45');
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.classList.add('rotate-45');
+    }
+}
