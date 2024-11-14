@@ -1,15 +1,70 @@
 html {
     scroll-behavior: smooth;
-
     margin: 0;
 }
 
-body {}
+:root {
+    /* Background Colors */
+    --bgColorPrimary: #ffffff;
+    --bgColorSecondary: #f3f4f6;
+    --bgButtonPrimary: #dc2625;
+    --bgButtonSecondary: #3c82f6;
+
+    /* Text Colors */
+    --textPrimary: #2763e7;
+    --textSecondary: #3e83f6;
+    --textGrey: #667183;
+    --textWhite: #ffffff;
+    --textBlack: #000000;
+}
+
+
+.text-primary {
+    color: var(--textPrimary);
+}
+
+.text-secondary {
+    color: var(--textSecondary);
+}
+
+.text-light {
+    color: var(--textWhite);
+}
+
+.text-dark {
+    color: var(--textBlack);
+}
+
+.text-grey {
+    color: var(--textGrey);
+}
+
+.bg-logo {
+    background-color: var(--bgButtonSecondary);
+}
+
+.bg-primary {
+    background-color: var(--bgColorPrimary);
+}
+
+.bg-secondary {
+    background-color: var(--bgColorSecondary);
+}
+
+.bg-buttonPrimary {
+    background-color: var(--bgButtonPrimary);
+}
+
+.bg-buttonSecondary {
+    background-color: var(--bgButtonSecondary);
+}
+
+
 
 #dropdown-menu {
     display: none;
     position: absolute;
-    top: 5rem;
+    top: 5.5rem;
     right: 0;
     width: 50%;
     height: 100vh;
@@ -39,6 +94,51 @@ body {}
 .dropdown-item:hover {
     background-color: #3b82f6;
 }
+
+/* Style for the dropdown */
+.group:hover .group-hover\:block {
+    display: block;
+}
+
+ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content;
+}
+
+ul li ul li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+ul li ul li a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown-item>a {
+    cursor: pointer;
+}
+
+.dropdown-item>a:hover+div,
+.dropdown-item:hover>div {
+    display: block;
+}
+
+/* Hero section */
+
+.hero-section {
+    background-image: url('images/tap.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+
 
 /* Service */
 
@@ -82,7 +182,50 @@ body {}
     transition: max-height 0.3s ease-out;
 }
 
-section {
-    margin-top: 0px;
-    /* Add more margin as needed */
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.animate__animated {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.animate__fadeInLeft {
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.animate__fadeInRight {
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }

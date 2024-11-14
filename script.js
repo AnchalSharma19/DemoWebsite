@@ -23,11 +23,25 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Close dropdown if clicked outside
-window.addEventListener('click', (e) => {
-    if (!dropdownMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-        dropdownMenu.classList.remove('show');  // Hide the dropdown when clicking outside
-    }
+document.querySelectorAll('.dropdown-item > a').forEach(item => {
+    item.addEventListener('click', () => {
+        const dropdown = item.nextElementSibling;
+        dropdown.classList.toggle('hidden');
+    });
 });
+
+
+document.querySelectorAll('.dropdown-item > a').forEach(item => {
+    item.addEventListener('click', (event) => {
+        event.preventDefault();  // Prevents page navigation
+
+        const dropdown = item.nextElementSibling;
+
+        // Toggle the visibility of the clicked dropdown only
+        dropdown.classList.toggle('hidden');
+    });
+});
+
 
 
 // Services 
@@ -55,6 +69,32 @@ window.addEventListener('load', () => {
 });
 
 
+
+const carouselTrack = document.getElementById('carouselTrack');
+const dots = document.querySelectorAll('.carousel-dot');
+let currentSlide = 0;
+const totalSlides = dots.length;
+
+function updateSlide(slideIndex) {
+    // Calculate translation percentage and apply it
+    const translatePercentage = -100 * slideIndex;
+    carouselTrack.style.transform = `translateX(${translatePercentage}%)`;
+
+    // Update dot colors for active/inactive states
+    dots.forEach(dot => dot.classList.remove('bg-blue-500', 'bg-gray-300'));
+    dots[slideIndex].classList.add('bg-blue-500');
+}
+
+function nextSlide() {
+    // Increment slide and loop back to the first slide if necessary
+    currentSlide = (currentSlide + 1) % totalSlides;
+    updateSlide(currentSlide);
+}
+
+// Initialize the first slide as active
+updateSlide(currentSlide);
+
+
 // Select all elements with the 'counter' class
 document.querySelectorAll('.counter').forEach(counter => {
     const updateCount = () => {
@@ -77,7 +117,7 @@ document.querySelectorAll('.counter').forEach(counter => {
 
 AOS.init({
     offset: 200, // Start the animation when the element is 200px away from the viewport
-    duration: 1000, // Animation duration
+    duration: 800, // Animation duration
     easing: 'ease-in-out', // Easing function for the animation
     once: true, // Animate only once (not on every scroll)
 });
@@ -94,9 +134,7 @@ document.addEventListener("scroll", function () {
 window.addEventListener('scroll', function () {
     let scrollPosition = window.scrollY;
     const section = document.querySelector('section');
-
-    // Move the background image at a slower pace for parallax effect
-    section.style.backgroundPosition = `center ${scrollPosition * 0.8}px`;  // Adjust the 0.5 factor for the desired effect
+    section.style.backgroundPosition = `center ${scrollPosition * 0.8}px`;  // Adjust the 0.5 factor for
 });
 
 
@@ -121,6 +159,7 @@ window.addEventListener('DOMContentLoaded', () => {
     section.classList.add('opacity-100', 'transition-opacity', 'duration-1000');
 });
 
+
 // Toggle Accordion function with animation
 function toggleAccordion(index) {
     const content = document.getElementById(`content-${index}`);
@@ -134,3 +173,50 @@ function toggleAccordion(index) {
         icon.classList.add('rotate-45');
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    new Splide('#testimonial-carousel', {
+        type: 'loop',
+        perPage: 1,
+        autoplay: true,
+        interval: 5000,
+        pauseOnHover: false,
+    }).mount();
+});
+
+
+
+
+// CUSTOMER REVIEW
+// Get elements
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const reviews = document.getElementById('reviews');
+
+// Initialize carousel position
+let currentIndex = 0;
+const reviewCount = document.querySelectorAll('#reviews > div').length;
+
+function updateCarouselPosition() {
+    const offset = -currentIndex * 100; // Move left by 100% width per slide
+    reviews.style.transform = `translateX(${offset}%)`;
+}
+
+// Handle next button click
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % reviewCount; // Loop back to the first review
+    updateCarouselPosition();
+});
+
+// Handle prev button click
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + reviewCount) % reviewCount; // Loop back to the last review
+    updateCarouselPosition();
+});
+
+// Auto move reviews every 5 seconds
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % reviewCount;
+    updateCarouselPosition();
+}, 5000);
