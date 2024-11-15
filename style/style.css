@@ -1,0 +1,237 @@
+html {
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+:root {
+    /* Background Colors */
+    --bgColorPrimary: #ffffff;
+    --bgColorSecondary: #f3f4f6;
+    --bgButtonPrimary: #dc2625;
+    --bgButtonSecondary: #3c82f6;
+
+    /* Text Colors */
+    --textPrimary: #2763e7;
+    --textSecondary: #3e83f6;
+    --textGrey: #667183;
+    --textWhite: #ffffff;
+    --textBlack: #000000;
+}
+
+
+.text-primary {
+    color: var(--textPrimary);
+}
+
+.text-secondary {
+    color: var(--textSecondary);
+}
+
+.text-light {
+    color: var(--textWhite);
+}
+
+.text-dark {
+    color: var(--textBlack);
+}
+
+.text-grey {
+    color: var(--textGrey);
+}
+
+.bg-logo {
+    background-color: var(--bgButtonSecondary);
+}
+
+.bg-primary {
+    background-color: var(--bgColorPrimary);
+}
+
+.bg-secondary {
+    background-color: var(--bgColorSecondary);
+}
+
+.bg-buttonPrimary {
+    background-color: var(--bgButtonPrimary);
+}
+
+.bg-buttonSecondary {
+    background-color: var(--bgButtonSecondary);
+}
+
+
+
+#dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 5.5rem;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    overflow-y: auto;
+    background-color: #000000;
+    padding: 1rem 2rem;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+#dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    display: block;
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #3b82f6;
+}
+
+/* Style for the dropdown */
+.group:hover .group-hover\:block {
+    display: block;
+}
+
+ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content;
+}
+
+ul li ul li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: #333;
+    text-decoration: none;
+}
+
+ul li ul li a:hover {
+    background-color: #f2f2f2;
+}
+
+.dropdown-item>a {
+    cursor: pointer;
+}
+
+.dropdown-item>a:hover+div,
+.dropdown-item:hover>div {
+    display: block;
+}
+
+/* Hero section */
+
+.hero-section {
+    background-image: url('images/tap.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+}
+
+
+
+/* Service */
+
+.carousel-dot {
+    transition: background-color 0.3s;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-in {
+    animation: slideIn 1s ease-out;
+}
+
+
+/* Fade-in animation on load */
+.opacity-0 {
+    opacity: 0;
+}
+
+.opacity-100 {
+    opacity: 1;
+}
+
+/* Accordion icon rotation */
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+/* Transition for max-height */
+.transition-max-height {
+    transition: max-height 0.3s ease-out;
+}
+
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.animate__animated {
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.animate__fadeInLeft {
+    animation: fadeInLeft 1s ease-in-out forwards;
+}
+
+.animate__fadeInRight {
+    animation: fadeInRight 1s ease-in-out forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.progress-container {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+}

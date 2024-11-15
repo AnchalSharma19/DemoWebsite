@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
         integrity="sha512-HoTQ5VEB6qw6HkA4fjdFCBIt6Ok/N9fEm2tp+CW4QtPyS8vRlPf8YFK+URf8eVFdMtYY7k2x3uO1fIRY5S6jAQ=="
         crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <!-- Swiper CSS -->
@@ -22,7 +24,7 @@
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
 
 </head>
 
@@ -49,11 +51,11 @@
 
         <!-- Desktop Menu  -->
         <ul class="hidden lg:flex space-x-6 text-lg text-white">
-            <li><a href="#home" class="hover:text-black">Home</a></li>
+            <li><a href="index.html" class="hover:text-black">Home</a></li>
             <li class="relative group">
-                <a href="#about" class="hover:text-dark">About</a>
+                <a href="#" class="hover:text-dark">About</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="pages/aboutUs/aboutUs.html" class="block px-4 py-2 hover:bg-gray-200">About Us</a></li>
+                    <li><a href="pages/aboutUs.html" class="block px-4 py-2 hover:bg-gray-200">About Us</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">About Me</a></li>
                     <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Get Quote</a></li>
                 </ul>
@@ -92,11 +94,9 @@
     <!-- Mobile Dropdown Menu -->
     <div id="dropdown-menu"
         class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
-        <a href="#home" class="dropdown-item text-white hover:text-gray-300">Home</a>
-
-        <!-- About Dropdown -->
+        <a href="index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <div class="dropdown-item">
-            <a href="#about" class="text-white hover:text-gray-300">About</a>
+            <a href="#" class="text-white hover:text-gray-300">About</a>
             <div class="ml-4 space-y-2 hidden" id="aboutDropdown">
                 <a href="pages/aboutUs/aboutUs.html" class="block text-white hover:text-gray-300">About Us</a>
                 <a href="#" class="block text-white hover:text-gray-300">About Me</a>
@@ -128,8 +128,6 @@
         </div>
 
         <a href="#elements" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
-
-        <!-- Book Service Button -->
         <div class="flex justify-center">
             <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">Book Service</button>
         </div>
@@ -143,8 +141,6 @@
         style="background-image: url('images/tap.jpg'); background-repeat:no-repeat; background-size: cover; ">
 
         <div class="absolute inset-0 bg-black opacity-60"></div>
-
-        <!-- Left Content -->
         <div class="relative flex-1 space-y-4 text-white ml-[20px]" data-aos="fade-right">
             <h1 class="font-bold text-4xl">
                 The <span class="text-blue-400">Plumber</span> You Deserve
@@ -171,9 +167,7 @@
 
         <div class="relative flex-1 mt-8 md:mt-0" data-aos="fade-left">
             <img src="images/person.png" alt="Plumber Image" class="w-full max-w-[1200px] h-auto ml-auto">
-
         </div>
-
     </section>
 
 
@@ -748,87 +742,7 @@
     </section>
 
 
-    <!-- Our Team -->
-
-    <section class="bg-gray-100 flex items-center justify-center min-h-screen">
-        <!-- Team Section -->
-        <section class="relative container mx-auto py-16 px-6 bg-cover bg-center"
-            style="background-image: url('images/testbackground.png');">
-            <h2 class="text-4xl font-bold text-gray-800 text-center mb-12 animate__animated animate__fadeInDown">
-                Meet our <span class="text-primary">team</span>
-            </h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Team Member Card 1 -->
-                <div
-                    class="bg-white rounded-lg shadow-lg p-6 space-y-4 transform transition duration-500 hover:scale-105 animate__animated animate__fadeInUp">
-                    <img src="images/team1.png" alt="Steve Bruce" class="w-full rounded-md">
-                    <h3 class="text-xl font-semibold text-gray-800">
-                        <span class="text-primary">Steve</span> Bruce
-                    </h3>
-                    <p class="text-gray-500">Plumber</p>
-                    <div class="flex space-x-4 text-blue-500">
-                        <a href="#" class="hover:text-blue-700">🔵</a>
-                        <a href="#" class="hover:text-blue-700">📧</a>
-                        <a href="#" class="hover:text-blue-700">💬</a>
-                        <a href="#" class="hover:text-blue-700">📞</a>
-                    </div>
-                </div>
-
-                <!-- Team Member Card 2 -->
-                <div
-                    class="bg-white rounded-lg shadow-lg p-6 space-y-4 transform transition duration-500 hover:scale-105 animate__animated animate__fadeInUp">
-                    <img src="images/team2.png" alt="Denis Irwin" class="w-full rounded-md">
-                    <h3 class="text-xl font-semibold text-gray-800">
-                        <span class="text-primary">Denis</span> Irwin
-                    </h3>
-                    <p class="text-gray-500">Plumber</p>
-                    <div class="flex space-x-4 text-blue-500">
-                        <a href="#" class="hover:text-blue-700">🔵</a>
-                        <a href="#" class="hover:text-blue-700">📧</a>
-                        <a href="#" class="hover:text-blue-700">💬</a>
-                        <a href="#" class="hover:text-blue-700">📞</a>
-                    </div>
-                </div>
-
-                <!-- Team Member Card 3 -->
-                <div
-                    class="bg-white rounded-lg shadow-lg p-6 space-y-4 transform transition duration-500 hover:scale-105 animate__animated animate__fadeInUp">
-                    <img src="images/team3.png" alt="Andy Cole" class="w-full rounded-md">
-                    <h3 class="text-xl font-semibold text-gray-800">
-                        <span class="text-primary">Andy</span> Cole
-                    </h3>
-                    <p class="text-gray-500">Plumber</p>
-                    <div class="flex space-x-4 text-blue-500">
-                        <a href="#" class="hover:text-blue-700">🔵</a>
-                        <a href="#" class="hover:text-blue-700">📧</a>
-                        <a href="#" class="hover:text-blue-700">💬</a>
-                        <a href="#" class="hover:text-blue-700">📞</a>
-                    </div>
-                </div>
-
-                <!-- Team Member Card 4 -->
-                <div
-                    class="bg-white rounded-lg shadow-lg p-6 space-y-4 transform transition duration-500 hover:scale-105 animate__animated animate__fadeInUp">
-                    <img src="images/team4.png" alt="Peter Schmeichel" class="w-full rounded-md">
-                    <h3 class="text-xl font-semibold text-gray-800">
-                        <span class="text-primary">Peter</span> Schmeichel
-                    </h3>
-                    <p class="text-gray-500">Plumber</p>
-                    <div class="flex space-x-4 text-blue-500">
-                        <a href="#" class="hover:text-blue-700">🔵</a>
-                        <a href="#" class="hover:text-blue-700">📧</a>
-                        <a href="#" class="hover:text-blue-700">💬</a>
-                        <a href="#" class="hover:text-blue-700">📞</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </section>
-
-
     <!-- Contact Section-->
-
-
     <section
         class="relative w-full h-full bg-cover bg-center text-white py-12 md:py-24 flex items-center justify-center min-h-screen "
         style="background-image: url('images/bgImageThree.png');">
@@ -886,106 +800,80 @@
     </section>
 
 
-    <!-- Footer Map-->
+    <!-- Footer -->
 
-    <div class="flex justify-center items-center pt-0">
-        <div class="relative w-full h-96 md:h-[500px] shadow-lg">
-            <!-- Google Map Embed -->
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.54004429857!2d77.04417523878142!3d28.52725274095767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1731564600292!5m2!1sen!2sin"
-                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                class="rounded-none"></iframe>
+    <div class="bg-gray-800 text-white py-8 px-4 md:px-12">
+        <div class="container mx-auto flex flex-col md:flex-row md:justify-between space-y-8 md:space-y-0 mt-20">
+            <div class="md:w-1/4 flex flex-col items-center md:items-start space-y-4">
 
-            <!-- Marker Icon (Overlay) -->
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="currentColor"
-                    viewBox="0 0 24 24">
-                    <path
-                        d="M12 2C8.1 2 5 5.1 5 9c0 5.3 6.1 12.5 6.3 12.7.2.2.4.3.7.3s.5-.1.7-.3C12.9 21.5 19 14.3 19 9c0-3.9-3.1-7-7-7zm0 10c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z" />
-                </svg>
+                <div class="text-center md:text-left">
+                    <img src="./images//logo.png" alt="Logo" class="h-20 w-auto mx-auto md:mx-0">
+                    <p class="text-sm mt-2 text-gray-400">ProHauz</p>
+                </div>
+
+                <div class="bg-black p-4 rounded text-center md:text-left">
+                    <h3 class="text-lg font-semibold text-white mb-2">Opening Hours</h3>
+                    <p class="text-gray-300">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p class="text-gray-300">Sat - Sun: Closed</p>
+                </div>
+
+
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" aria-label="Facebook" class="text-white hover:text-blue-400">
+                        <i class="fab fa-facebook-f text-2xl"></i>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="text-white hover:text-blue-400">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="text-white hover:text-blue-400">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-white hover:text-blue-400">
+                        <i class="fab fa-linkedin-in text-2xl"></i>
+                    </a>
+                    <a href="#" aria-label="LinkedIn" class="text-white hover:text-blue-400">
+                        <i class="fab fa-youtube text-2xl"></i>
+                    </a>
+                </div>
             </div>
+
+
+            <div class="md:w-1/4 text-center md:text-left">
+                <div class="grid grid-cols-2 gap-4">
+                    <a href="#" class="text-white hover:text-white">Home</a>
+                    <a href="#" class="text-white hover:text-white">Contact us</a>
+                    <a href="#" class="text-white hover:text-white">About Us</a>
+                    <a href="#" class="text-white hover:text-white">Location</a>
+                    <a href="#" class="text-white hover:text-white">Services</a>
+                    <a href="#" class="text-white hover:text-white">Why us</a>
+                    <a href="#" class="text-white hover:text-white">Blog</a>
+                    <a href="#" class="text-white hover:text-white">Plumbing Terms</a>
+                </div>
+            </div>
+
+            <div class="md:w-1/4 flex justify-center md:justify-end">
+                <div class="w-full md:w-70 h-40 bg-gray-700 rounded overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224346.54004429857!2d77.04417523878142!3d28.52725274095767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204dce!2sNew%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1731653412254!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-8 flex justify-center space-x-4">
+            <img src="./icons/visa.png" alt="Visa" class="h-12">
+            <img src="./icons/american-express.png" alt="American Express" class="h-12">
+            <img src="./icons/card.png" alt="MasterCard" class="h-12">
+            <img src="./icons/discover.png" alt="Discover" class="h-12">
+            <img src="./icons/money.png" alt="Cash" class="h-12">
+            <img src="./icons/checkbook.png" alt="Check" class="h-12">
         </div>
     </div>
 
-
-    <!--Footer-->
-    <div class="bg-blue-900 text-white">
-
-        <footer class="max-w-7xl mx-auto px-6 py-16">
-            <!-- Contact Us Section -->
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-semibold pb-3">Contact us now to get a quote</h2>
-
-                <!-- Quote Request Form -->
-                <form class="mt-6 flex justify-center items-center space-x-4">
-                    <input type="text" placeholder="Enter your quote request..."
-                        class="w-2/3 md:w-1/2 px-4 py-3 text-black rounded-md focus:outline-none" required>
-                    <button type="submit"
-                        class="px-8 py-3 bg-buttonPrimary text-white font-semibold rounded hover:bg-red-800 transition">
-                        Send
-                    </button>
-                </form>
-            </div>
-
-            <!-- Footer Links -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10 border-t border-white-600 pt-10">
-                <!-- Contact Us Column -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-                    <div class="flex items-center space-x-3 mb-2">
-                        <span class="text-red-500">📞</span>
-                        <p>1-222-333-444</p>
-                    </div>
-                    <div class="flex items-center space-x-3 mb-2">
-                        <span class="text-red-500">📧</span>
-                        <p>example@gmail-themes.com</p>
-                    </div>
-                    <div class="flex items-center space-x-3 mb-2">
-                        <span class="text-red-500">📍</span>
-                        <p>12 New Delhi, ND 101010</p>
-                    </div>
-                    <div class="flex space-x-4 mt-4">
-                        <a href="#" class="h-8 w-8"><img src="icons/facebook.png" alt=""></a>
-                        <a href="#" class="h-8 w-8"><img src="icons/twitter.png" alt=""></a>
-                        <a href="#" class="h-8 w-8"><img src="icons/youtube.png" alt=""></a>
-                    </div>
-                </div>
-
-                <!-- Popular Services Column -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Popular Services</h3>
-                    <ul class="space-y-2">
-                        <li>Furnace Inspection</li>
-                        <li>Dry Sanitation</li>
-                        <li>Water Filter</li>
-                        <li>Basic Sanitation</li>
-                    </ul>
-                </div>
-
-                <!-- Emergency Tips Column -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Emergency Tips</h3>
-                    <ul class="space-y-2">
-                        <li>Pipe Leaking</li>
-                        <li>Bathroom Drain Cleaning</li>
-                        <li>Garden Irrigation</li>
-                        <li>Law Drainage</li>
-                    </ul>
-                </div>
-
-                <!-- Emergency Service Column -->
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Emergency Service</h3>
-                    <div class="flex items-center space-x-3 mt-4">
-                        <span class="text-red-500">📞</span>
-                        <p class="font-semibold text-xl">1-222-323-444</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+    <div class=" text-center text-m text-light bg-blue-500">
+        <p class="pt-7 pb-7">Copyright © 2024 by Company. All Rights Reserved.</p>
     </div>
-
-
 
 
     <!-- Scripts -->
@@ -997,7 +885,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.9/dist/js/splide.min.js"></script>
 
-    <script src="script.js"></script>
+    <script src="./script/script.js"></script>
     </section>
 </body>
 
