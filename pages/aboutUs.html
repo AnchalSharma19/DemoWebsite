@@ -23,6 +23,7 @@
             <div class="text-2xl font-bold text-light">ProHauz</div>
         </div>
 
+        <!-- Hamburger -->
         <div class="lg:hidden absolute right-6">
             <button id="menu-toggle" class="text-black">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -35,40 +36,28 @@
         <!-- Desktop Menu  -->
         <ul class="hidden lg:flex space-x-6 text-lg text-white">
             <li><a href="../index.html" class="hover:text-black">Home</a></li>
-            <li class="relative group">
-                <a href="../index.html" class="hover:text-dark">About</a>
-                <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="aboutUs.html" class="block px-4 py-2 hover:bg-gray-200">About Us</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">About Me</a></li>
-                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Get Quote</a></li>
-                </ul>
-            </li>
+            <li><a href="aboutUs.html" class="hover:text-black">About Us</a></li>
+
             <li class="relative group">
                 <a href="#services" class="hover:text-black">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="#consulting" class="block px-4 py-2 hover:bg-gray-200">Single Service</a></li>
-                    <li><a href="#design" class="block px-4 py-2 hover:bg-gray-200">Special Offer</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Installation Services</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Specialized Plumbing Services</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Residential Services</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing Services</a></li>
+                    <li><a href="#" class="block px-4 py-2 hover:bg-gray-200">Maintenance Services</a></li>
                 </ul>
             </li>
 
-            <li class="relative group">
-                <a href="#blog" class="hover:text-black">Blog</a>
-                <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="#consulting" class="block px-4 py-2 hover:bg-gray-200">Standard List</a></li>
-                    <li><a href="#design" class="block px-4 py-2 hover:bg-gray-200">Columns List</a></li>
-                    <li><a href="#development" class="block px-4 py-2 hover:bg-gray-200">Simple List</a></li>
-                    <li><a href="#marketing" class="block px-4 py-2 hover:bg-gray-200">Grid List</a></li>
-                    <li><a href="#marketing" class="block px-4 py-2 hover:bg-gray-200">Single Post</a></li>
-                    <li><a href="#marketing" class="block px-4 py-2 hover:bg-gray-200">Projects</a></li>
-                    <li><a href="#marketing" class="block px-4 py-2 hover:bg-gray-200">Single Project</a></li>
-                </ul>
-            </li>
-            <li><a href="#elements" class="hover:text-black">Contact Us</a></li>
+            <li><a href="#" class="hover:text-black">Blog</a></li>
+            <li><a href="#" class="hover:text-black">Contact Us</a></li>
         </ul>
 
         <div class="flex items-center space-x-4">
             <div class="hidden lg:block text-gray-200">Call: 800 555 284</div>
-            <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 lg:block hidden">
+            <button
+                class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
                 Book Service
             </button>
         </div>
@@ -78,37 +67,24 @@
     <div id="dropdown-menu"
         class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
+        <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
         <div class="dropdown-item">
-            <a href="../index.html" class="text-white hover:text-gray-300">About</a>
-            <div class="ml-4 space-y-2 hidden" id="aboutDropdown">
-                <a href="aboutUs.html" class="block text-white hover:text-gray-300">About Us</a>
-                <a href="#" class="block text-white hover:text-gray-300">About Me</a>
-                <a href="#" class="block text-white hover:text-gray-300">Get Quote</a>
-            </div>
-        </div>
-        <div class="dropdown-item">
-            <a href="#services" class="text-white hover:text-gray-300">Services</a>
+            <a href="index.html" class="text-white hover:text-gray-300">Services</a>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
-                <a href="#consulting" class="block text-white hover:text-gray-300">Single Service</a>
-                <a href="#design" class="block text-white hover:text-gray-300">Special Offer</a>
+                <a href="#consulting" class="block text-white hover:text-gray-300">Plumbing Services</a>
+                <a href="#design" class="block text-white hover:text-gray-300">Installation Services</a>
+                <a href="#design" class="block text-white hover:text-gray-300">Specialized Plumbing Services</a>
+                <a href="#design" class="block text-white hover:text-gray-300">Residential Services</a>
+                <a href="#design" class="block text-white hover:text-gray-300">Commercial Plumbing Services</a>
+                <a href="#design" class="block text-white hover:text-gray-300">Maintenance Services</a>
             </div>
         </div>
-        <div class="dropdown-item">
-            <a href="#blog" class="text-white hover:text-gray-300">Blog</a>
-            <div class="ml-4 space-y-2 hidden" id="blogDropdown">
-                <a href="#standard-list" class="block text-white hover:text-gray-300">Standard List</a>
-                <a href="#columns-list" class="block text-white hover:text-gray-300">Columns List</a>
-                <a href="#simple-list" class="block text-white hover:text-gray-300">Simple List</a>
-                <a href="#grid-list" class="block text-white hover:text-gray-300">Grid List</a>
-                <a href="#single-post" class="block text-white hover:text-gray-300">Single Post</a>
-                <a href="#projects" class="block text-white hover:text-gray-300">Projects</a>
-                <a href="#single-project" class="block text-white hover:text-gray-300">Single Project</a>
-            </div>
-        </div>
-
+        <a href="#" class="dropdown-item text-white hover:text-gray-300">Blog</a>
         <a href="#elements" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
         <div class="flex justify-center">
-            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-800">Book Service</button>
+            <button
+                class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">Book
+                Service</button>
         </div>
     </div>
 
@@ -117,7 +93,6 @@
     <div class="flex items-center justify-center bg-gray-100" style="height: 600px;">
         <div class="relative h-full w-full bg-cover bg-center" style="background-image: url('../images/AboutUs.png');">
             <div class="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
-                <p class="text-sm uppercase tracking-wider mb-2">Home</p>
                 <h1 class="text-4xl md:text-4xl font-bold">About Us</h1>
             </div>
         </div>
@@ -245,9 +220,9 @@
     <div class="container mx-auto py-12 px-4">
         <h2 class="text-3xl font-bold text-center mb-12">AREAS <span class="text-primary">SERVED</span></h2>
         <br>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="relative group">
-                <img src="../images/areaServedOne.png.jpg" alt="area one" class="w-full h-72 object-cover rounded-lg">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+            <div class="relative group ">
+                <img src="../images/areaServedOne.png.jpg" alt="area one" class="w-full h-72 object-cover rounded-lg ">
                 <div
                     class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 class="text-white text-lg font-semibold mb-2">New York Metro Area</h3>
@@ -346,9 +321,9 @@
 
             <div class="md:w-1/4 text-center md:text-left">
                 <div class="grid grid-cols-2 gap-4">
-                    <a href="#" class="text-white hover:text-white">Home</a>
+                    <a href="../index.html" class="text-white hover:text-white">Home</a>
                     <a href="#" class="text-white hover:text-white">Contact us</a>
-                    <a href="#" class="text-white hover:text-white">About Us</a>
+                    <a href="../pages/aboutUs.html" class="text-white hover:text-white">About Us</a>
                     <a href="#" class="text-white hover:text-white">Location</a>
                     <a href="#" class="text-white hover:text-white">Services</a>
                     <a href="#" class="text-white hover:text-white">Why us</a>
@@ -377,17 +352,11 @@
         </div>
     </div>
 
-    <div class=" text-center text-m text-light bg-blue-500">
-        <p class="pt-7 pb-7">Copyright © 2024 by Company. All Rights Reserved.</p>
+    <div class="text-center text-m text-white bg-blue-500 py-5">
+        <p>Copyright © 2024 by Company. All Rights Reserved.</p>
+        <a href="privacyPolicy.html">Privacy & Policy</a>
+        <a href="terms&condition.html" class="ml-3">Terms & Conditions</a>
     </div>
-
-
-
-
-
-
-
-
 
     <script>
 

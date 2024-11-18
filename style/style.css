@@ -235,3 +235,25 @@ ul li ul li a:hover {
     height: 130px;
     margin: 0 auto;
 }
+
+.carousel-container {
+    display: flex;
+    gap: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-card {
+    min-width: calc((100% - 4rem) / 1);
+}
+
+@media (min-width: 1024px) {
+    .testimonial-card {
+        min-width: calc((100% - 8rem) / 3);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .testimonial-card {
+        min-width: calc((100% - 4rem) / 2);
+    }
+}
