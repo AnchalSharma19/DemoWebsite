@@ -231,4 +231,14 @@ document.addEventListener('DOMContentLoaded', function () {
     }).mount();
 });
 
-
+// service page
+const { motion } = framerMotion;
+document.querySelectorAll('[id^="card"]').forEach(card => {
+    card.addEventListener('mouseover', () => {
+        card.style.transform = 'scale(1.05)';
+        card.style.transition = 'transform 0.3s ease-in-out';
+    });
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'scale(1)';
+    });
+});
