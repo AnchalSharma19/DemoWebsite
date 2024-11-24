@@ -4,14 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>AboutUs</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js/dist/progressbar.min.js"></script>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="../style/style.css">
     <script src="../script/script.js" defer></script>
 </head>
 
-<body>
+<body class="mt-0 flex flex-col">
 
     <!-- Navbar -->
     <nav
@@ -35,30 +39,21 @@
         <ul class="hidden lg:flex space-x-6 text-lg text-white">
             <li><a href="../index.html" class="hover:text-black">Home</a></li>
             <li><a href="aboutUs.html" class="hover:text-black">About Us</a></li>
-
             <li class="relative group">
-                <a href="" class="hover:text-black">Services</a>
+                <a href="services.html" class="hover:text-black">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="./services.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a>
-                    </li>
-                    <li><a href="./services.html" class="block px-4 py-2 hover:bg-gray-200">Installation
-                            Services</a>
-                    </li>
-                    <li><a href="./services.html" class="block px-4 py-2 hover:bg-gray-200">Specialized Plumbing
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a></li>
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Installation Services</a></li>
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Specialized Plumbing
                             Services</a></li>
-                    <li><a href="./services.html" class="block px-4 py-2 hover:bg-gray-200">Residential
-                            Services</a>
-                    </li>
-                    <li><a href="./services.html" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Residential Services</a></li>
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing
                             Services</a></li>
-                    <li><a href="./services.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance
-                            Services</a>
-                    </li>
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance Services</a></li>
                 </ul>
             </li>
-
-            <li><a href="#" class="hover:text-black">Blog</a></li>
-            <li><a href="./contactUs.html" class="hover:text-black">Contact Us</a></li>
+            <li><a href="blog.html" class="hover:text-black">Blog</a></li>
+            <li><a href="contactUs.html" class="hover:text-black">Contact Us</a></li>
         </ul>
 
         <div class="flex items-center space-x-4">
@@ -74,7 +69,7 @@
     <div id="dropdown-menu"
         class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
-        <a href="../pages/aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
+        <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
         <div class="dropdown-item">
             <a href="services.html" class="text-white hover:text-gray-300">Services</a>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
@@ -86,7 +81,7 @@
                 <a href="services.html" class="block text-white hover:text-gray-300">Maintenance Services</a>
             </div>
         </div>
-        <a href="#" class="dropdown-item text-white hover:text-gray-300">Blog</a>
+        <a href="blog.html" class="dropdown-item text-white hover:text-gray-300">Blog</a>
         <a href="contactUs.html" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
         <div class="flex justify-center">
             <button

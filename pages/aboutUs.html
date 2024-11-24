@@ -7,10 +7,12 @@
     <title>AboutUs</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js/dist/progressbar.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="../script/script.js" defer></script>
     <link rel="stylesheet" href="../style/style.css">
+    <script src="../script/script.js" defer></script>
 </head>
 
 <body class="mt-0 flex flex-col">
@@ -37,7 +39,6 @@
         <ul class="hidden lg:flex space-x-6 text-lg text-white">
             <li><a href="../index.html" class="hover:text-black">Home</a></li>
             <li><a href="aboutUs.html" class="hover:text-black">About Us</a></li>
-
             <li class="relative group">
                 <a href="services.html" class="hover:text-black">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
@@ -51,8 +52,7 @@
                     <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance Services</a></li>
                 </ul>
             </li>
-
-            <li><a href="#" class="hover:text-black">Blog</a></li>
+            <li><a href="blog.html" class="hover:text-black">Blog</a></li>
             <li><a href="contactUs.html" class="hover:text-black">Contact Us</a></li>
         </ul>
 
@@ -81,8 +81,8 @@
                 <a href="services.html" class="block text-white hover:text-gray-300">Maintenance Services</a>
             </div>
         </div>
-        <a href="#" class="dropdown-item text-white hover:text-gray-300">Blog</a>
-        <a href="#elements" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
+        <a href="blog.html" class="dropdown-item text-white hover:text-gray-300">Blog</a>
+        <a href="contactUs.html" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
         <div class="flex justify-center">
             <button
                 class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">Book
@@ -367,38 +367,34 @@
         <a href="terms&condition.html" class="ml-3">Terms & Conditions</a>
     </div>
 
-
-
-    <script>
-
-        // Progress Bars
-        function createCircle(containerId, value) {
-            const circle = new ProgressBar.Circle(containerId, {
-                color: '#60A5FA',
-                strokeWidth: 8,
-                trailColor: '#4B5563',
-                trailWidth: 8,
-                easing: 'easeInOut',
-                duration: 1400,
-                from: { color: '#60A5FA', width: 8 },
-                to: { color: '#60A5FA', width: 8 },
-                text: {
-                    autoStyleContainer: false
-                },
-                step: (state, circle) => {
-                    circle.path.setAttribute('stroke', state.color);
-                }
-            });
-
-            circle.animate(value);
-        }
-
-        createCircle('#circle1', 0.45);
-        createCircle('#circle2', 0.9);
-        createCircle('#circle3', 0.5);
-        createCircle('#circle4', 0.4);
-    </script>
-
 </body>
+<script>
+    // Progress Bars
+    function createCircle(containerId, value) {
+        const circle = new ProgressBar.Circle(containerId, {
+            color: '#60A5FA',
+            strokeWidth: 8,
+            trailColor: '#4B5563',
+            trailWidth: 8,
+            easing: 'easeInOut',
+            duration: 1400,
+            from: { color: '#60A5FA', width: 8 },
+            to: { color: '#60A5FA', width: 8 },
+            text: {
+                autoStyleContainer: false
+            },
+            step: (state, circle) => {
+                circle.path.setAttribute('stroke', state.color);
+            }
+        });
+
+        circle.animate(value);
+    }
+
+    createCircle('#circle1', 0.45);
+    createCircle('#circle2', 0.9);
+    createCircle('#circle3', 0.5);
+    createCircle('#circle4', 0.4);
+</script>
 
 </html>

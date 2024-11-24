@@ -7,27 +7,35 @@ AOS.init({
 
 
 // Dropdown Menu
-const menuToggle = document.getElementById('menu-toggle');
-const dropdownMenu = document.getElementById('dropdown-menu');
+// Dropdown Menu
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menu-toggle');
+    const dropdownMenu = document.getElementById('dropdown-menu');
 
-menuToggle.addEventListener('click', (event) => {
-    event.stopPropagation();
-    dropdownMenu.classList.toggle('show');
-    dropdownMenu.classList.add('animate__animated', 'animate__fadeInRight');
+    if (menuToggle && dropdownMenu) {
+        menuToggle.addEventListener('click', (event) => {
+            event.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+            dropdownMenu.classList.toggle('show');
+        });
 
-    setTimeout(() => {
-        dropdownMenu.classList.remove('animate__animated', 'animate__fadeInRight');
-    }, 2000);
-});
+        document.addEventListener('click', (event) => {
+            if (!dropdownMenu.contains(event.target) && event.target !== menuToggle) {
+                dropdownMenu.classList.add('hidden');
+                dropdownMenu.classList.remove('show');
+            }
+        });
+    }
 
-
-document.querySelectorAll('.dropdown-item > a').forEach(item => {
-    item.addEventListener('click', (event) => {
-        event.preventDefault();
-        const dropdown = item.nextElementSibling;
-        if (dropdown) {
-            dropdown.classList.toggle('hidden');
-        }
+    // Services dropdown
+    document.querySelectorAll('.dropdown-item > a').forEach(item => {
+        item.addEventListener('click', (event) => {
+            event.preventDefault();
+            const dropdown = item.nextElementSibling;
+            if (dropdown) {
+                dropdown.classList.toggle('hidden');
+            }
+        });
     });
 });
 
@@ -37,6 +45,7 @@ document.addEventListener('click', (event) => {
         dropdownMenu.classList.remove('show');
     }
 });
+
 
 
 
@@ -242,3 +251,4 @@ document.querySelectorAll('[id^="card"]').forEach(card => {
         card.style.transform = 'scale(1)';
     });
 });
+
