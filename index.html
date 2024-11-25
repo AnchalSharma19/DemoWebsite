@@ -55,31 +55,51 @@
             <li class="relative group">
                 <a href="./pages/services.html" class="hover:text-black">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a>
+                    <li><a href="./pages/plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing
+                            Services</a>
                     </li>
-                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Installation
+                    <li><a href="./pages/installationService.html"
+                            class="block px-4 py-2 hover:bg-gray-200">Installation
                             Services</a></li>
-                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Specialized Plumbing
+                    <li><a href="./pages/specializedPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Specialized
+                            Plumbing
                             Services</a></li>
-                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Residential
+                    <li><a href="./pages/residentialServices.html" class="block px-4 py-2 hover:bg-gray-200">Residential
                             Services</a></li>
-                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing
+                    <li><a href="./pages/commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial
+                            Plumbing
                             Services</a></li>
-                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance
+                    <li><a href="./pages/maintenanceServices.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance
                             Services</a></li>
                 </ul>
             </li>
 
+            <li class="relative group">
+                <a href="./pages/areaServed.html" class="hover:text-black">Area Served</a>
+                <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
+                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">New York Metro
+                            Area</a>
+                    </li>
+                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Suburban Chicago</a>
+                    </li>
+                    <li><a href="./pages/services.html" class="block px-4 py-2 hover:bg-gray-200">Washington</a></li>
+                </ul>
+            </li>
+
+
             <li><a href="./pages/blog.html" class="hover:text-black">Blog</a></li>
+            <li><a href="./pages/gallery.html" class="hover:text-black">Gallery</a></li>
             <li><a href="./pages/contactUs.html" class="hover:text-black">Contact Us</a></li>
         </ul>
 
         <div class="flex items-center space-x-4">
             <div class="hidden lg:block text-gray-200">Call: 800 555 284</div>
-            <button
-                class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                Book Service
-            </button>
+            <a href="./pages/contactUs.html">
+                <button
+                    class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Book Service
+                </button>
+            </a>
         </div>
     </nav>
 
@@ -101,12 +121,25 @@
                 <a href="./pages/services.html" class="block text-white hover:text-gray-300">Maintenance Services</a>
             </div>
         </div>
+
+        <div class="dropdown-item">
+            <a href="./pages/areaServed.html" class="text-white hover:text-gray-300">Area Served</a>
+            <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
+                <a href="./pages/services.html" class="block text-white hover:text-gray-300">New York Metro Area</a>
+                <a href="./pages/services.html" class="block text-white hover:text-gray-300">Suburban Chicago</a>
+                <a href="./pages/services.html" class="block text-white hover:text-gray-300">Washington</a>
+            </div>
+        </div>
+
         <a href="./pages/blog.html" class="dropdown-item text-white hover:text-gray-300">Blog</a>
         <a href="./pages/contactUs.html" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
         <div class="flex justify-center">
-            <button
-                class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">Book
-                Service</button>
+            <a href="./pages/contactUs.html">
+                <button
+                    class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Book Service
+                </button>
+            </a>
         </div>
     </div>
 
@@ -431,11 +464,11 @@
 
         <!-- 24/7 Emergency Service Section -->
         <h2
-            class="text-3xl mt-20 mb-12 sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-gray-900 text-center sm:text-left">
+            class="text-3xl mt-20  sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-gray-900 text-center sm:text-left">
             Available for <span class="text-primary">24/7</span> Emergency Service
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-10 px-10 sm:px-12 lg:px-16 mx-4 sm:mx-8 lg:mx-12 bg-white pb-20"
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-10 px-10 sm:px-12 lg:px-16 mx-4 sm:mx-8 lg:mx-12 bg-white "
             data-aos="fade-up">
 
             <div class="flex items-center space-x-4">
@@ -477,13 +510,78 @@
         </div>
     </section>
 
+    <!-- Area Served -->
+    <div class="container mx-auto py-12 px-4 mb-20">
+        <h2 class="text-3xl font-bold text-center mb-12">AREAS <span class="text-primary">SERVED</span></h2>
+        <br>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+            <div class="relative group ">
+                <img src="./images/areaServedOne.png.jpg" alt="area one" class="w-full h-72 object-cover rounded-lg ">
+                <div
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-white text-lg font-semibold mb-2">New York Metro Area</h3>
+                    <p class="text-white text-center mb-4">Providing quality services in downtown Chicago and
+                        surrounding neighborhoods.</p>
+                </div>
+            </div>
+
+
+            <div class="relative group">
+                <img src="./images/areaServedTwo.png.jpg" alt="area two" class="w-full h-72 object-cover rounded-lg">
+                <div
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-white text-lg font-semibold mb-2">Suburban Chicago</h3>
+                    <p class="text-white text-center mb-4">Serving the suburbs with top-notch home services.</p>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <img src="./images/areaServedThree.png.jpg" alt="area three"
+                    class="w-full h-72 object-cover rounded-lg">
+                <div
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-white text-lg font-semibold mb-2">New Delhi</h3>
+                    <p class="text-white text-center mb-4">Serving the suburbs with top-notch home services.</p>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <img src="./images/areaServedFour.png.jpg" alt="area four" class="w-full h-72 object-cover rounded-lg">
+                <div
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-white text-lg font-semibold mb-2">Suburban Chicago</h3>
+                    <p class="text-white text-center mb-4">Serving the suburbs with top-notch home services.</p>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <img src="./images/areaServedFive.png.jpg" alt="area five" class="w-full h-72 object-cover rounded-lg">
+                <div
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-white text-lg font-semibold mb-2">Washington</h3>
+                    <p class="text-white text-center mb-4">Serving the suburbs with top-notch home services.</p>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <img src="./images/areaServedsix.png.jpg" alt="area six" class="w-full h-72 object-cover rounded-lg">
+                <div
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 class="text-white text-lg font-semibold mb-2">Dubai</h3>
+                    <p class="text-white text-center mb-4">Serving the suburbs with top-notch home services.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <!-- FAQ -->
     <section id="fade-in-section"
-        class="flex items-center justify-center min-h-screen bg-cover bg-center opacity-0 lg:mt-40 md:mt-0 sm:mt-0 mt-20"
-        style="background-size: cover; background-position: center; height: 100vh;">
+        class="flex items-center justify-center bg-cover bg-center opacity-0  md:mt-0 sm:mt-0 "
+        style="background-size: cover; background-position: center;">
 
-        <div class="flex flex-col gap-y-6 w-full max-w-7xl mx-auto px-4 sm:px-6 justify-center items-center "
+        <div class="flex flex-col gap-y-6 w-full max-w-7xl mx-auto px-4 sm:px-6 justify-center items-center"
             data-aos="fade-up">
 
             <div class="bg-blue-100 p-8 rounded-lg shadow-lg w-full sm:w-full md:w-full lg:w-3/4 flex flex-col justify-between"
@@ -502,7 +600,7 @@
                                 class="transform transition-transform duration-300 text-blue-500 font-bold">+</span>
                         </button>
                         <div id="content-1" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
-                            <p class="p-4 text-white bg-blue-500 ">
+                            <p class="p-4 text-white bg-blue-500">
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum facilis perferendis
                                 repudiandae eaque hic magnam nobis aliquam. Suscipit, veritatis dolor?
                             </p>
@@ -519,7 +617,7 @@
                                 class="transform transition-transform duration-300 text-blue-500 font-bold">+</span>
                         </button>
                         <div id="content-2" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
-                            <p class="p-4 text-white bg-blue-500 ">
+                            <p class="p-4 text-white bg-blue-500">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, velit aspernatur optio
                                 atque nam dolore dolorem reprehenderit expedita, inventore laborum possimus quos eaque
                                 enim fuga accusamus est incidunt laboriosam veritatis.
@@ -581,19 +679,9 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Video Section -->
-            <div class="w-full sm:w-full md:w-full lg:w-3/4 flex flex-col justify-between mt-8 sm:mt-0 md:mb-20"
-                data-aos="fade-up">
-                <iframe class="rounded-lg shadow-lg w-full" style="height: 500px;"
-                    src="https://www.youtube.com/embed/oHg5SJYRHA0" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
         </div>
     </section>
-    <br>
-    <br>
+
 
 
     <!-- Customer Experience -->
@@ -601,7 +689,7 @@
     <br>
     <div class="bg-white-100 mt-20 sm:mt-20">
         <section class="max-w-6xl mx-auto px-4 py-12">
-            <h2 class="text-3xl font-bold text-center text-primary mb-10">Customer <span class="text-dark">Review</span>
+            <h2 class="text-3xl font-bold text-center text-primary mb-10">CUSTOMER <span class="text-dark">REVIEW</span>
             </h2>
 
             <div class="relative overflow-hidden">
@@ -889,13 +977,11 @@
             <div class="md:w-1/3 text-center md:text-left">
                 <div class="grid grid-cols-2 gap-4">
                     <a href="index.html" class="text-white ">Home</a>
-                    <a href="#" class="text-white ">Contact us</a>
+                    <a href="./pages/contactUs.html" class="text-white ">Contact us</a>
                     <a href="./pages/aboutUs.html" class="text-white ">About Us</a>
-                    <a href="#" class="text-white ">Location</a>
+                    <a href="#" class="text-white ">Area Served</a>
                     <a href="./pages/services.html" class="text-white ">Services</a>
-                    <a href="#" class="text-white ">Why us</a>
-                    <a href="#" class="text-white ">Blog</a>
-                    <a href="./pages/terms&condition.html" class="text-white ">Plumbing Terms</a>
+                    <a href="./pages/blog.html" class="text-white ">Blog</a>
                 </div>
             </div>
 
@@ -907,7 +993,6 @@
                     <a href=""> <img src="./icons/discover.png" alt="Discover" class="h-12"></a>
                     <a href=""><img src="./icons/money.png" alt="Cash" class="h-12"></a>
                     <a href=""> <img src="./icons/checkbook.png" alt="Check" class="h-12"></a>
-
                 </div>
             </div>
         </div>

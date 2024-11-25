@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>AboutUs</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -16,7 +16,6 @@
 </head>
 
 <body class="mt-0 flex flex-col">
-
 
     <!-- Navbar -->
     <nav
@@ -43,18 +42,14 @@
             <li class="relative group">
                 <a href="services.html" class="hover:text-black">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a>
-                    </li>
-                    <li><a href="" class="block px-4 py-2 hover:bg-gray-200">Installation Services</a></li>
-                    <li><a href="specializedPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Specialized
-                            Plumbing
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a></li>
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Installation Services</a></li>
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Specialized Plumbing
                             Services</a></li>
-                    <li><a href="residentialServices.html" class="block px-4 py-2 hover:bg-gray-200">Residential
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Residential Services</a></li>
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing
                             Services</a></li>
-                    <li><a href="commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing
-                            Services</a></li>
-                    <li><a href="maintenanceServices.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance
-                            Services</a></li>
+                    <li><a href="services.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance Services</a></li>
                 </ul>
             </li>
 
@@ -121,8 +116,6 @@
     </div>
 
 
-    <!-- Services -->
-
     <div class="flex items-center justify-center mt-20" style="height: 600px;">
         <div class="relative h-full w-full bg-cover bg-center"
             style="background-image: url('../images/ourServices.png');">
@@ -133,195 +126,100 @@
         </div>
     </div>
 
-    <div class=" text-gray-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900">
-                    Your Comfort is Our <span class="text-blue-500">#1 Priority</span>
-                </h2>
-                <p class="text-lg text-gray-600 mt-4 mb-20">Phasellus congue purus sed scelerisque.</p>
+
+    <!-- Main Content -->
+    <div class="grid lg:grid-cols-3 gap-8 mt-20 ml-10 mr-10 mb-20">
+        <!-- Sidebar -->
+        <aside class="lg:col-span-1 space-y-4">
+            <div class="bg-white shadow-md rounded-lg">
+                <ul class="divide-y divide-gray-200" id="sidebar-menu">
+                    <li>
+                        <a href="plumbingServices.html"
+                            class="block py-4 px-6 font-medium border-l-4 border-transparent text-gray-700 hover:text-blue-500 hover:border-blue-500">
+                            Plumbing Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="installationService.html"
+                            class="block py-4 px-6 font-medium border-l-4 border-transparent text-gray-700 hover:text-blue-500 hover:border-blue-500">
+                            Installation Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="specializedPlumbing.html"
+                            class="block py-4 px-6 font-medium border-l-4 border-transparent text-gray-700 hover:text-blue-500 hover:border-blue-500">
+                            Specialized Plumbing Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="residentialServices.html"
+                            class="block py-4 px-6 font-medium border-l-4 border-transparent text-gray-700 hover:text-blue-500 hover:border-blue-500">
+                            Residential Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="commercialPlumbing.html"
+                            class="block py-4 px-6 font-medium border-l-4 border-transparent text-gray-700 hover:text-blue-500 hover:border-blue-500">
+                            Commercial Plumbing Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="maintenanceServices.html"
+                            class="block py-4 px-6 font-medium border-l-4 border-transparent text-gray-700 hover:text-blue-500 hover:border-blue-500">
+                            Maintenance Services
+                        </a>
+                    </li>
+                </ul>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="../icons/pipeline.png" alt="Pipe Leaking Icon"
-                            class="mx-auto h-20 w-20 text-blue-500">
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">PIPE LEAKING</h3>
-                    <p class="text-sm text-gray-600 mt-2">
-                        Your sewer pump is essential for removing sewage from your sump pit to your septic tank or
-                        sewage.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="../icons/sewer.png" alt="Drain Cleaning Icon" class="mx-auto h-20 w-20 text-blue-500">
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">DRAIN CLEANING</h3>
-                    <p class="text-sm text-gray-600 mt-2">
-                        If your tub or sink is draining slower than usual, or won't drain at all, your drain is either
-                        clogged.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="../icons/toiletissue.png" alt="Toilet Leaking Icon"
-                            class="mx-auto h-20 w-20 text-blue-500">
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">TOILET LEAKING</h3>
-                    <p class="text-sm text-gray-600 mt-2">
-                        If you live in an apartment building, you're sure to see a sign put up by management to keep
-                        your
-                        faucet.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="../icons/tools.png" alt="Bathtub Installation Icon"
-                            class="mx-auto h-20 w-20 text-blue-500">
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">BATHTUB INSTALLATION</h3>
-                    <p class="text-sm text-gray-600 mt-2">
-                        If your old bathtub has seen better days but you're hesitating to replace it because of the high
-                        costs.
-                    </p>
+            <div class="bg-black shadow-md rounded-lg flex items-center justify-center text-white p-4 space-x-4">
+                <img src="../icons/telephone.png" alt="Telephone Icon" class="h-12 w-12">
+                <div>
+                    <h3 class="text-sm font-semibold">Talk to an expert</h3>
+                    <p class="text-sm">800 555 284</p>
                 </div>
             </div>
-        </div>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="lg:col-span-2 bg-white rounded-lg p-6">
+            <h2 class="text-2xl font-bold">Residential
+                Services</h2>
+            <p class="mt-4 text-gray-600">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, suscipit et. Dolorum officiis
+                possimus quam, delectus esse fugiat, vel laborum maxime eos id perferendis non, consequatur atque beatae
+                cupiditate consequuntur!
+            </p>
+            <div class="mt-6">
+                <img src="../images/residentailServices.png" alt="services" class="rounded-lg shadow">
+            </div>
+
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold">Lorem ipsum dolor.</h3>
+                <p class="mt-4 text-gray-600">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatibus quas voluptatum sunt,
+                    adipisci quod natus delectus animi. Optio ullam repudiandae atque quis possimus illo voluptatum
+                    corrupti, harum expedita reprehenderit dicta suscipit inventore a saepe? Iste ratione ullam
+                    explicabo quo.
+                </p>
+
+                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="flex items-start space-x-4">
+                        <span class="text-red-600 text-xl">✔️</span>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet laudantium.</p>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="text-red-600 text-xl">✔️</span>
+                        <p class="text-gray-600">Lorem ipsum dolor sit amet laudantium.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
     </div>
 
 
-
-    <!-- Services Cards-->
-
-    <section class="py-12 mt-10 md:ml-20 md:mr-20 md:mb-20">
-        <div class="text-center mb-8">
-            <h2 class="text-2xl md:text-4xl font-bold mb-20">
-                Outstanding <span class="text-blue-500">Residential</span> &
-                <span class="text-blue-500">Commercial</span> Services
-            </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 px-4 ">
-
-            <div id="card-1"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/plumbingServices.png" alt="Plumbing Services" class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/plumbingServicesIcon.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Plumbing Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta non quas voluptas dolore.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="plumbingServices.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="card-2"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/installationServices.png" alt="Installation Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/installtionServiceIcon.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Installation Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, modi!
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="installationService.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="card-3"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/specializedPlumbing.jpg" alt="Specialized Plumbing Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/plumberIcon.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Specialized Plumbing Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="specializedPlumbing.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="card-4"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/residentailServices.png" alt="Residential Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/residentialServices.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Residential Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolores magnam ea totam nostrum.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="residentialServices.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="card-5"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/commercialPlumbing.png" alt="Commercial Plumbing Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/commercialPlumbingIcon.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Commercial Plumbing Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus esse id incidunt
-                        perspiciatis, dicta eaque et repudiandae ut placeat.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="commercialPlumbing.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
-                    </div>
-                </div>
-            </div>
-
-            <div id="card-6"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/maintainancePlumbing.png" alt="Maintenance Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/maintenance.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Maintenance Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, dolore consequuntur.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="maintenanceServices.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
 
     <!-- Footer Map -->

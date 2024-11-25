@@ -252,3 +252,17 @@ document.querySelectorAll('[id^="card"]').forEach(card => {
     });
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuItems = document.querySelectorAll("#sidebar-menu a");
+
+    menuItems.forEach(item => {
+        item.addEventListener("click", () => {
+            menuItems.forEach(i => i.classList.remove("text-blue-600", "border-blue-500"));
+            i.classList.add("text-gray-700", "border-transparent");
+
+            item.classList.add("text-blue-600", "border-blue-500");
+            item.classList.remove("text-gray-700", "border-transparent");
+        });
+    });
+});

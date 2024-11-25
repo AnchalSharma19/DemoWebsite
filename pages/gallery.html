@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
+    <title>Gallery</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -121,202 +121,112 @@
     </div>
 
 
-    <!-- Services -->
-
+    <!-- Gallery -->
     <div class="flex items-center justify-center mt-20" style="height: 600px;">
         <div class="relative h-full w-full bg-cover bg-center"
-            style="background-image: url('../images/ourServices.png');">
+            style="background-image: url('../images/galleryBackground.png');">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
-                <h1 class="text-4xl md:text-4xl font-bold">Services</h1>
+                <h1 class="text-4xl md:text-4xl font-bold">Gallery</h1>
             </div>
         </div>
     </div>
 
-    <div class=" text-gray-800">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl sm:text-4xl font-extrabold text-gray-900">
-                    Your Comfort is Our <span class="text-blue-500">#1 Priority</span>
-                </h2>
-                <p class="text-lg text-gray-600 mt-4 mb-20">Phasellus congue purus sed scelerisque.</p>
-            </div>
+    <!-- Gallery Cards-->
+    <section class="p-4 mt-20 ml-20 mr-20 mb-20">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="../icons/pipeline.png" alt="Pipe Leaking Icon"
-                            class="mx-auto h-20 w-20 text-blue-500">
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">PIPE LEAKING</h3>
-                    <p class="text-sm text-gray-600 mt-2">
-                        Your sewer pump is essential for removing sewage from your sump pit to your septic tank or
-                        sewage.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="../icons/sewer.png" alt="Drain Cleaning Icon" class="mx-auto h-20 w-20 text-blue-500">
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">DRAIN CLEANING</h3>
-                    <p class="text-sm text-gray-600 mt-2">
-                        If your tub or sink is draining slower than usual, or won't drain at all, your drain is either
-                        clogged.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="../icons/toiletissue.png" alt="Toilet Leaking Icon"
-                            class="mx-auto h-20 w-20 text-blue-500">
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">TOILET LEAKING</h3>
-                    <p class="text-sm text-gray-600 mt-2">
-                        If you live in an apartment building, you're sure to see a sign put up by management to keep
-                        your
-                        faucet.
-                    </p>
-                </div>
-
-                <div class="text-center">
-                    <div class="mb-4">
-                        <img src="../icons/tools.png" alt="Bathtub Installation Icon"
-                            class="mx-auto h-20 w-20 text-blue-500">
-                    </div>
-                    <h3 class="text-lg font-semibold text-gray-800">BATHTUB INSTALLATION</h3>
-                    <p class="text-sm text-gray-600 mt-2">
-                        If your old bathtub has seen better days but you're hesitating to replace it because of the high
-                        costs.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-    <!-- Services Cards-->
-
-    <section class="py-12 mt-10 md:ml-20 md:mr-20 md:mb-20">
-        <div class="text-center mb-8">
-            <h2 class="text-2xl md:text-4xl font-bold mb-20">
-                Outstanding <span class="text-blue-500">Residential</span> &
-                <span class="text-blue-500">Commercial</span> Services
-            </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-8 px-4 ">
-
-            <div id="card-1"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/plumbingServices.png" alt="Plumbing Services" class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/plumbingServicesIcon.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Plumbing Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dicta non quas voluptas dolore.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="plumbingServices.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="../images/galleryOne.png" alt="Repair Inspections & Testing"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
+                            <span class="text-blue-500 text-lg">&rarr;</span>
+                        </div>
+                        <span class="text-lg font-bold">Repair</span>
+                        <span class="text-sm">Inspections & Testing</span>
                     </div>
                 </div>
             </div>
 
-            <div id="card-2"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/installationServices.png" alt="Installation Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/installtionServiceIcon.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Installation Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, modi!
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="installationService.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
+
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="../images/galleryTwo.png" alt="Electrical Maintenance"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
+                            <span class="text-blue-500 text-lg">&rarr;</span>
+                        </div>
+                        <span class="text-lg font-bold">Electrical</span>
+                        <span class="text-sm">Maintenance</span>
                     </div>
                 </div>
             </div>
 
-            <div id="card-3"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/specializedPlumbing.jpg" alt="Specialized Plumbing Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/plumberIcon.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Specialized Plumbing Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="specializedPlumbing.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
+
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="../images/galleryThree.png" alt="Safety Testing"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
+                            <span class="text-blue-500 text-lg">&rarr;</span>
+                        </div>
+                        <span class="text-lg font-bold">Safety</span>
+                        <span class="text-sm">Testing</span>
                     </div>
                 </div>
             </div>
 
-            <div id="card-4"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/residentailServices.png" alt="Residential Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/residentialServices.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Residential Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum dolores magnam ea totam nostrum.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="residentialServices.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
+
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="../images/galleryFour.png" alt="Industrial Tools"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
+                            <span class="text-blue-500 text-lg">&rarr;</span>
+                        </div>
+                        <span class="text-lg font-bold">Industrial</span>
+                        <span class="text-sm">Tools</span>
                     </div>
                 </div>
             </div>
 
-            <div id="card-5"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/commercialPlumbing.png" alt="Commercial Plumbing Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/commercialPlumbingIcon.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Commercial Plumbing Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam accusamus esse id incidunt
-                        perspiciatis, dicta eaque et repudiandae ut placeat.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="commercialPlumbing.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
+
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="../images/galleryFive.png" alt="Wiring Installation"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
+                            <span class="text-blue-500 text-lg">&rarr;</span>
+                        </div>
+                        <span class="text-lg font-bold">Wiring</span>
+                        <span class="text-sm">Installation</span>
                     </div>
                 </div>
             </div>
 
-            <div id="card-6"
-                class="bg-white shadow-lg rounded-lg overflow-hidden w-full transition-transform transform hover:scale-105">
-                <img src="../images/maintainancePlumbing.png" alt="Maintenance Services"
-                    class="w-full h-40 object-cover">
-                <div class="p-4">
-                    <div class="flex items-center justify-center h-10 w-10 mb-3 rounded-full mx-auto">
-                        <img src="../icons/maintenance.png" alt="Icon" class="w-10">
-                    </div>
-                    <h3 class="text-lg font-semibold text-center">Maintenance Services</h3>
-                    <p class="text-gray-600 mt-2 text-sm text-center">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor, dolore consequuntur.
-                    </p>
-                    <div class="text-center mt-4">
-                        <a href="maintenanceServices.html" class="text-blue-500 font-medium hover:underline">Learn More
-                            →</a>
+
+            <div class="relative group overflow-hidden rounded-lg shadow-lg">
+                <img src="../images/gallerySix.png" alt="High Voltage Safety"
+                    class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105" />
+                <div
+                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
+                            <span class="text-blue-500 text-lg">&rarr;</span>
+                        </div>
+                        <span class="text-lg font-bold">High Voltage</span>
+                        <span class="text-sm">Safety</span>
                     </div>
                 </div>
             </div>
