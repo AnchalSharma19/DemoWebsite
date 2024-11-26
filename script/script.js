@@ -6,18 +6,18 @@ AOS.init({
 });
 
 
-// Dropdown Menu
-// Dropdown Menu
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const dropdownMenu = document.getElementById('dropdown-menu');
 
     if (menuToggle && dropdownMenu) {
+        // Toggle the dropdown menu when the hamburger button is clicked
         menuToggle.addEventListener('click', (event) => {
-            event.stopPropagation();
-            dropdownMenu.classList.toggle('hidden');
-            dropdownMenu.classList.toggle('show');
+            event.stopPropagation(); // Prevent event from propagating
+            dropdownMenu.classList.toggle('hidden'); // Toggle visibility
+            dropdownMenu.classList.toggle('show');   // Add/Remove show class for visibility
         });
+
 
         document.addEventListener('click', (event) => {
             if (!dropdownMenu.contains(event.target) && event.target !== menuToggle) {
@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Services dropdown
     document.querySelectorAll('.dropdown-item > a').forEach(item => {
         item.addEventListener('click', (event) => {
             event.preventDefault();
@@ -38,14 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-// Close the dropdown when clicking outside
-document.addEventListener('click', (event) => {
-    if (!dropdownMenu.contains(event.target) && event.target !== menuToggle) {
-        dropdownMenu.classList.remove('show');
-    }
-});
-
 
 
 

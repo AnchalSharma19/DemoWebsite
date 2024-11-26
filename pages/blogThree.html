@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maintenance Services</title>
+    <title>Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/progressbar.js@1.1.0/dist/progressbar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
@@ -16,6 +16,7 @@
 </head>
 
 <body class="mt-0 flex flex-col">
+
 
     <!-- Navbar -->
     <nav
@@ -131,110 +132,147 @@
     </div>
 
 
+    <!-- Blog -->
     <div class="flex items-center justify-center mt-20" style="height: 600px;">
         <div class="relative h-full w-full bg-cover bg-center"
-            style="background-image: url('../images/ourServices.png');">
+            style="background-image: url('../images/blogImage.png');">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
-                <h1 class="text-4xl md:text-4xl font-bold">Services</h1>
+                <h1 class="text-4xl md:text-4xl font-bold">Blog</h1>
             </div>
         </div>
     </div>
 
 
-    <!-- Main Content -->
-    <div class="grid lg:grid-cols-3 gap-8 mt-20 ml-10 mr-10 mb-20">
-        <aside class="lg:col-span-1 space-y-6">
-            <div class="bg-gray-50 shadow-lg rounded-lg p-6 border-l-4 border-blue-600">
-                <h2 class="text-lg font-bold text-gray-800 mb-4">Service Areas</h2>
-                <ul class="space-y-2">
-                    <li>
-                        <a href="plumbingServices.html"
-                            class="block px-4 py-3 bg-blue-100 text-blue-600 font-medium rounded-lg hover:bg-blue-200">
-                            Plumbing Services
-                        </a>
-                    </li>
-                    <li>
-                        <a href="installationService.html"
-                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                            Installation Services
-                        </a>
-                    </li>
-                    <li>
-                        <a href="specializedPlumbing.html"
-                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                            Specialized Plumbing
-                        </a>
-                    </li>
-                    <li>
-                        <a href="residentialServices.html"
-                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                            Residential Services
-                        </a>
-                    </li>
-                    <li>
-                        <a href="commercialPlumbing.html"
-                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                            Commercial Plumbing
-                        </a>
-                    </li>
-                    <li>
-                        <a href="maintenanceServices.html"
-                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                            Maintenance Services
-                        </a>
-                    </li>
-                </ul>
+    <!-- Blog Post -->
+    <div class="container mx-auto px-4 py-8 mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div class="md:col-span-2">
+                <div class="blog-post">
+                    <img src="../images/blogImageThree.png" alt="Blog Image"
+                        class="w-full h-auto rounded-lg transform transition-transform duration-300 hover:scale-95" />
+                    <div class="mt-4">
+                        <p class="text-sm flex items-center space-x-6 mb-4">
+                            <span class="flex items-center">
+                                <i class="fas fa-user text-blue-600 hover:text-blue-800 transition mr-2"></i>
+                                <span class="text-gray-600">User</span>
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-calendar-alt text-blue-600 hover:text-blue-800 transition mr-2"></i>
+                                <span class="text-gray-600">January 10, 2018</span>
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-comment text-blue-600 hover:text-blue-800 transition mr-2"></i>
+                                <span class="text-gray-600">3 Comments</span>
+                            </span>
+                        </p>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis qui totam magnam dolorem
+                            fugiat eveniet dicta commodi iure corrupti, tempora vero, minus perferendis! Commodi
+                            doloremque repellendus distinctio cumque itaque obcaecati ipsum provident consequuntur
+                            praesentium molestias quo hic, dolorem id laudantium.
+                        </p>
+                        <br>
+                        <p class="text-gray-600 mt-2">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis qui totam magnam dolorem
+                            fugiat eveniet dicta commodi iure corrupti, tempora vero, minus perferendis! Commodi.
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+                <div class="blog-post mt-10 mb-5">
+                    <img src="../images/plumbingImage.png" alt="Blog Image"
+                        class="w-full h-96 rounded-lg object-cover transform transition-transform duration-300 hover:scale-95" />
+                    <div class="mt-4">
+
+                        <div class="mt-4">
+                            <h2 class="text-2xl font-bold mt-2">ProHauz is the only theme you will ever need</h2>
+                            <p class="text-gray-600 mt-2">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi repudiandae nisi
+                                nulla vitae expedita vero consequuntur harum obcaecati atque, aspernatur explicabo
+                                dolorem commodi veritatis facilis quae cumque, iusto quisquam. Officiis quisquam
+                                perferendis dolorem distinctio est esse eius ratione consequuntur commodi provident,
+                                reiciendis delectus illo magnam quia dolor in nihil! Iste.
+                                <br>
+                                <br>
+                                <hr class="my-6 border-t-2 border-gray-300 ">
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="bg-black text-white rounded-lg p-6 shadow-lg flex items-center">
-                <img src="../icons/telephone.png" alt="Phone" class="h-12 w-12 mr-4">
+
+            <!-- Sidebar -->
+            <div>
+                <div class="mb-6">
+                    <input type="text" placeholder="Looking for..."
+                        class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300" />
+                </div>
+
                 <div>
-                    <h3 class="text-lg font-semibold">Talk to an Expert</h3>
-                    <p class="mt-1">Call us at 800 555 284</p>
+                    <h3 class="text-lg font-bold mb-4">Recent Posts</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <img src="../images/blogImageOne.png" alt="Post Thumbnail"
+                                class="w-16 h-16 rounded-lg object-cover" />
+                            <div>
+                                <a href="blogOne.html" class="text-gray-800 hover:text-blue-600 font-medium">
+                                    The Best Water Filters of 2018 – Our Choice
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <img src="../images/blogImageTwo.png" alt="Post Thumbnail"
+                                class="w-16 h-16 rounded-lg object-cover" />
+                            <div>
+                                <a href="blogTwo.html" class="text-gray-800 hover:text-blue-600 font-medium">
+                                    Your Faucets Could Be Making Your Home…
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <img src="../images/blogImageThree.png" alt="Post Thumbnail"
+                                class="w-16 h-16 rounded-lg object-cover" />
+                            <div>
+                                <a href="blogThree.html" class="text-gray-800 hover:text-blue-600 font-medium">
+                                    Different Types of Plumbing Control
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </aside>
+        </div>
+    </div>
 
 
-
-        <!-- Main Content -->
-        <main class="lg:col-span-2 bg-white rounded-lg p-6">
-            <h2 class="text-2xl font-bold">Maintenance
-                Services</h2>
-            <p class="mt-4 text-gray-600">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur, suscipit et. Dolorum officiis
-                possimus quam, delectus esse fugiat, vel laborum maxime eos id perferendis non, consequatur atque beatae
-                cupiditate consequuntur!
+    <div class="container mx-auto mt-0 p-6 flex justify-start pl-0 mb-20">
+        <div class="max-w-4xl w-full bg-white p-6">
+            <h2 class="text-2xl font-bold mb-2">Leave a reply</h2>
+            <p class="text-gray-600 mb-4">
+                Your email address will not be published. Required fields are marked *
             </p>
-            <div class="mt-6">
-                <img src="../images/maintainancePlumbing.png" alt="services" class="rounded-lg shadow">
+
+            <textarea placeholder="Write your message"
+                class="w-full h-40 p-4 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+                <input type="text" placeholder="Name"
+                    class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="email" placeholder="Email"
+                    class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="url" placeholder="Website"
+                    class="w-full p-3 bg-gray-100 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
             </div>
 
-            <div class="mt-8">
-                <h3 class="text-lg font-semibold">Lorem ipsum dolor.</h3>
-                <p class="mt-4 text-gray-600">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatibus quas voluptatum sunt,
-                    adipisci quod natus delectus animi. Optio ullam repudiandae atque quis possimus illo voluptatum
-                    corrupti, harum expedita reprehenderit dicta suscipit inventore a saepe? Iste ratione ullam
-                    explicabo quo.
-                </p>
-
-                <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="flex items-start space-x-4">
-                        <span class="text-red-600 text-xl">✔️</span>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet laudantium.</p>
-                    </div>
-                    <div class="flex items-start space-x-4">
-                        <span class="text-red-600 text-xl">✔️</span>
-                        <p class="text-gray-600">Lorem ipsum dolor sit amet laudantium.</p>
-                    </div>
-                </div>
-            </div>
-        </main>
+            <button
+                class="mt-6 px-6 py-3 bg-red-600 text-white font-semibold rounded-md hover:bg-red-700 transition duration-300">
+                Submit Comment
+            </button>
+        </div>
     </div>
-    </div>
-
 
 
 

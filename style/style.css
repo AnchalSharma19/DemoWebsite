@@ -63,7 +63,7 @@ html {
 
 #dropdown-menu {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 5.5rem;
     right: 0;
     width: 50%;
