@@ -73,11 +73,17 @@ html {
     padding: 1rem 2rem;
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    z-index: 9999;
+    /* Ensure dropdown is above other elements */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
 #dropdown-menu.show {
     display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .dropdown-item {
@@ -95,9 +101,27 @@ html {
     background-color: #3b82f6;
 }
 
-/* Style for the dropdown */
-.group:hover .group-hover\:block {
-    display: block;
+/* Ensure that the button is displayed properly */
+.contact-btn-container {
+    text-align: center;
+    margin-top: 20px;
+    /* Adds space above the button */
+}
+
+.contact-btn-container button {
+    background-color: #E63946;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.125rem;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-btn-container button:hover {
+    background-color: #D62828;
+    transform: scale(1.05);
 }
 
 ul li ul {
@@ -127,12 +151,6 @@ ul li ul li a:hover {
 .dropdown-item:hover>div {
     display: block;
 }
-
-
-.show {
-    display: block;
-}
-
 
 /* Hero section */
 
