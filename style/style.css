@@ -98,14 +98,12 @@ html {
 }
 
 .dropdown-item:hover {
-    background-color: #3b82f6;
+    background-color: #1e3a8a;
 }
 
-/* Ensure that the button is displayed properly */
 .contact-btn-container {
     text-align: center;
     margin-top: 20px;
-    /* Adds space above the button */
 }
 
 .contact-btn-container button {
@@ -151,6 +149,56 @@ ul li ul li a:hover {
 .dropdown-item:hover>div {
     display: block;
 }
+
+
+/* Small screen styles for the hamburger menu items */
+@media (max-width: 768px) {
+    #dropdown-menu {
+        width: 70%;
+        padding: 1.5rem;
+        background-color: #000;
+    }
+
+    .dropdown-item {
+        font-size: 1rem;
+        padding: 0.8rem 1.2rem;
+        text-align: left;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dropdown-item:hover {
+        background-color: #1e3a8a;
+        /* Hover background color */
+        color: #dbeafe;
+        /* Hover text color */
+    }
+
+    /* Nested dropdown items */
+    .dropdown-item>div a {
+        font-size: 0.875rem;
+        /* Slightly smaller font size */
+        padding: 0.4rem 1rem;
+        /* Adjusted padding for nested items */
+    }
+
+    .dropdown-item>div a:hover {
+        background-color: #1d4ed8;
+        /* Nested item hover color */
+    }
+
+    /* Full-width Book Service button */
+    .contact-btn-container button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+
+    .contact-btn-container button:hover {
+        transform: scale(1.02);
+    }
+}
+
 
 /* Hero section */
 
