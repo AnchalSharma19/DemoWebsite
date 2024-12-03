@@ -178,7 +178,7 @@ document.addEventListener("scroll", function () {
 window.addEventListener('scroll', function () {
     let scrollPosition = window.scrollY;
     const section = document.querySelector('section');
-    section.style.backgroundPosition = `center ${scrollPosition * 0.8}px`;  // Adjust the 0.5 factor for
+    section.style.backgroundPosition = `center ${scrollPosition * 0.8}px`;
 });
 
 
