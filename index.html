@@ -18,10 +18,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
-    <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="./style/style.css">
@@ -29,9 +27,10 @@
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav
-        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40 ">
+        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40">
         <div class="flex items-center">
             <img src="./images/logo.png" alt="Logo" class="h-10 w-10 mr-3">
             <div class="text-2xl font-bold text-light">ProHauz</div>
@@ -47,51 +46,46 @@
             </button>
         </div>
 
-        <!-- Desktop Menu  -->
+        <!-- Desktop Menu -->
         <ul class="hidden lg:flex space-x-6 text-lg text-white">
             <li><a href="index.html" class="hover:text-black">Home</a></li>
             <li><a href="./pages/aboutUs.html" class="hover:text-black">About Us</a></li>
 
+            <!-- Services Dropdown -->
             <li class="relative group">
                 <a href="./pages/services.html" class="hover:text-black">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
                     <li><a href="./pages/plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing
-                            Services</a>
-                    </li>
+                            Services</a></li>
                     <li><a href="./pages/installationService.html"
-                            class="block px-4 py-2 hover:bg-gray-200">Installation
-                            Services</a></li>
+                            class="block px-4 py-2 hover:bg-gray-200">Installation Services</a></li>
                     <li><a href="./pages/specializedPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Specialized
-                            Plumbing
-                            Services</a></li>
+                            Plumbing Services</a></li>
                     <li><a href="./pages/residentialServices.html" class="block px-4 py-2 hover:bg-gray-200">Residential
                             Services</a></li>
                     <li><a href="./pages/commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial
-                            Plumbing
-                            Services</a></li>
+                            Plumbing Services</a></li>
                     <li><a href="./pages/maintenanceServices.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance
                             Services</a></li>
                 </ul>
             </li>
 
+            <!-- Area Served Dropdown -->
             <li class="relative group">
                 <a href="./pages/areaServed.html" class="hover:text-black">Area Served</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
                     <li><a href="./pages/areaServedOne.html" class="block px-4 py-2 hover:bg-gray-200">New York Metro
-                            Area</a>
+                            Area</a></li>
+                    <li><a href="./pages/areaServedTwo.html" class="block px-4 py-2 hover:bg-gray-200">Albany</a></li>
+                    <li><a href="./pages/areaServedThree.html" class="block px-4 py-2 hover:bg-gray-200">Yonkers</a>
                     </li>
-                    <li><a href="./pages/areaServedTwo.html" class="block px-4 py-2 hover:bg-gray-200">Suburban
-                            Chicago</a>
+                    <li><a href="./pages/areaServedFour.html" class="block px-4 py-2 hover:bg-gray-200">Buffalo</a></li>
+                    <li><a href="./pages/areaServedFive.html" class="block px-4 py-2 hover:bg-gray-200">Syracuse</a>
                     </li>
-                    <li><a href="./pages/areaServedThree.html" class="block px-4 py-2 hover:bg-gray-200">Washington</a>
+                    <li><a href="./pages/areaServedSix.html" class="block px-4 py-2 hover:bg-gray-200">Rochester</a>
                     </li>
-                    <li><a href="./pages/areaServedFour.html" class="block px-4 py-2 hover:bg-gray-200">Jersey City</a>
-                    </li>
-                    <li><a href="./pages/areaServedFive.html" class="block px-4 py-2 hover:bg-gray-200">Norwalk</a></li>
-                    <li><a href="./pages/areaServedSix.html" class="block px-4 py-2 hover:bg-gray-200">San Josh</a></li>
                 </ul>
             </li>
-
 
             <li><a href="./pages/blog.html" class="hover:text-black">Blog</a></li>
             <li><a href="./pages/gallery.html" class="hover:text-black">Gallery</a></li>
@@ -130,14 +124,14 @@
 
         <div class="dropdown-item">
             <a href="./pages/areaServed.html" class="text-white hover:text-gray-300">Area Served</a>
-            <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
+            <div class="ml-4 space-y-2 hidden" id="areaServedDropdown">
                 <a href="./pages/areaServedOne.html" class="block text-white hover:text-gray-300">New York Metro
                     Area</a>
-                <a href="./pages/areaServedTwo.html" class="block text-white hover:text-gray-300">Suburban Chicago</a>
-                <a href="./pages/areaServedThree.html" class="block text-white hover:text-gray-300">Washington</a>
-                <a href="./pages/areaServedFour.html" class="block text-white hover:text-gray-300">Jersey City</a>
-                <a href="./pages/areaServedFive.html" class="block text-white hover:text-gray-300">Norwalk</a>
-                <a href="./pages/areaServedSix.html" class="block text-white hover:text-gray-300">San Josh</a>
+                <a href="./pages/areaServedTwo.html" class="block text-white hover:text-gray-300">Albany</a>
+                <a href="./pages/areaServedThree.html" class="block text-white hover:text-gray-300">Yonkers</a>
+                <a href="./pages/areaServedFour.html" class="block text-white hover:text-gray-300">Buffalo</a>
+                <a href="./pages/areaServedFive.html" class="block text-white hover:text-gray-300">Syracuse</a>
+                <a href="./pages/areaServedSix.html" class="block text-white hover:text-gray-300">Rochester</a>
             </div>
         </div>
 
@@ -202,9 +196,11 @@
                     <img src="images/personOne.png" alt="Residential Plumbing Icon"
                         class="w-full h-52 object-cover rounded-lg">
                 </div>
-                <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
-                <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.</p>
-                <a href="#" class="text-blue-300 hover:underline">READ MORE &rarr;</a>
+                <h3 class="text-xl font-semibold mb-2">PLUMBING SERVICES</h3>
+                <p class="text-sm mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur repellat
+                    laborum dolor dolores placeat recusandae beatae cumque maxime ab illum repudiandae vero deleniti,
+                    .</p>
+                <a href="./pages/plumbingServices.html" class="text-blue-300 hover:underline">READ MORE &rarr;</a>
             </div>
 
             <div class="bg-blue-400 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up"
@@ -213,10 +209,9 @@
                     <img src="images/personTwo.png" alt="Residential Plumbing Icon"
                         class="w-full h-52 object-cover rounded-lg">
                 </div>
-                <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
-                <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.Trusted expert
-                    residential plumbing </p>
-                <a href="#" class="text-blue-600 hover:underline">READ MORE &rarr;</a>
+                <h3 class="text-xl font-semibold mb-2">INSTALLATION SERVICES</h3>
+                <p class="text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, magni!</p>
+                <a href="./pages/installationService.html" class="text-blue-600 hover:underline">READ MORE &rarr;</a>
             </div>
 
             <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up"
@@ -225,15 +220,15 @@
                     <img src="images/personThree.png" alt="Residential Plumbing Icon"
                         class="w-full h-52 object-cover rounded-lg">
                 </div>
-                <h3 class="text-xl font-semibold mb-2">RESIDENTIAL PLUMBING</h3>
-                <p class="text-sm mb-4">Trusted expert residential plumbing & repair, serving homes.</p>
-                <a href="#" class="text-blue-300 hover:underline">READ MORE &rarr;</a>
+                <h3 class="text-xl font-semibold mb-2">SPECIALIZED PLUMBING SERVICES</h3>
+                <p class="text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, vero?</p>
+                <a href="./pages/specializedPlumbing.html" class="text-blue-300 hover:underline">READ MORE &rarr;</a>
             </div>
         </div>
         <div class="flex justify-center items-center mt-7">
             <a href="./pages/services.html"><button
                     class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                    Read More
+                    More Services
                 </button></a>
         </div>
 
@@ -389,10 +384,7 @@
                 Are
                 you
                 interested in an estimate?</h2>
-            <a href="./pages/contactUs.html"><button
-                    class="mt-4 sm:mb-2 bg-red-500 text-base sm:text-lg md:text-xl text-white py-2 px-4 sm:px-6 md:px-8 rounded-md transition duration-300 ease-in-out mb-5 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                    Request Job Estimate
-                </button></a>
+
         </div>
 
         <div class="main-content flex flex-col justify-center items-center bg-blue-600/75 p-5 md:p-8 mt-28 sm:mt-36 md:mt-0 z-10 w-full"
@@ -424,7 +416,8 @@
 
 
     <!-- Blog -->
-    <section class="flex flex-col items-center justify-center text-white relative pt-12 pb-16 bg-cover bg-center"
+    <section
+        class="cards-section flex flex-col items-center justify-center text-white relative pt-12 pb-16 bg-cover bg-center"
         style="background-image: url('images/bgScrewBackground.png');">
 
         <div class="flex flex-col md:flex-row gap-6 relative z-40 -mt-20 mb-10 sm:-mt-20 lg:-mt-20 px-4 sm:px-6 lg:px-8 mx-2 sm:mx-4 lg:mx-8"
@@ -439,7 +432,7 @@
                     <h3 class="text-lg font-semibold">The Best Water Filters of 2018 – Our Choice</h3>
                     <a href="./pages/blogOne.html"><button
                             class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                            Know More
+                            Read More
                         </button></a>
                 </div>
             </div>
@@ -453,7 +446,7 @@
                     <h3 class="text-lg font-semibold">Your Faucets Could Be Making Your Home Unsafe</h3>
                     <a href="./pages/blogTwo.html"><button
                             class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                            Know More
+                            Read More
                         </button></a>
                 </div>
             </div>
@@ -466,15 +459,16 @@
                     <h3 class="text-lg font-semibold">Different Types of Plumbing Control</h3>
                     <a href="./pages/blogThree.html"><button
                             class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                            Know More
+                            Read More
                         </button></a>
                 </div>
             </div>
         </div>
         <a href="./pages/blog.html"><button
                 class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                All Blogs
+                All Blog
             </button></a>
+        <br>
 
 
 
@@ -483,6 +477,7 @@
             class="text-3xl mt-20  sm:text-3xl md:text-3xl lg:text-3xl xl:text-3xl font-bold text-gray-900 text-center sm:text-left">
             Available for <span class="text-primary">24/7</span> Emergency Service
         </h2>
+        <br>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10 mb-10 px-10 sm:px-12 lg:px-16 mx-4 sm:mx-8 lg:mx-12 bg-white "
             data-aos="fade-up">
@@ -491,7 +486,8 @@
                 <img src="icons/shipped.png" alt="Service Icon" class="w-12 h-12">
                 <div>
                     <h3 class="text-xl font-semibold text-gray-900">FAST RELIABLE SERVICE</h3>
-                    <p class="text-gray-700 text-base">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    <p class="text-gray-700 text-base">Lorem ipsum dolor sit, amet consectetur adipisicing
+                        elit.
                         Accusamus, animi?</p>
                 </div>
             </div>
@@ -500,7 +496,8 @@
                 <img src="icons/leaking.png" alt="Emergency Icon" class="w-12 h-12">
                 <div>
                     <h3 class="text-xl font-semibold text-gray-900">EMERGENCY SERVICES</h3>
-                    <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. At
+                    <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. At
                         accusamus quod maiores eaque adipisci sequi a debitis ut facilis perferendis!</p>
                 </div>
             </div>
@@ -509,7 +506,8 @@
                 <img src="icons/workerIcon.png" alt="Personnel Icon" class="w-12 h-12">
                 <div>
                     <h3 class="text-xl font-semibold text-gray-900">SKILLED & TRAINED PERSONNEL</h3>
-                    <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse
+                    <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Esse
                         error
                         quae iure nisi soluta aliquam.</p>
                 </div>
@@ -519,7 +517,8 @@
                 <img src="icons/warranty.png" alt="Warranty Icon" class="w-12 h-12">
                 <div>
                     <h3 class="text-xl font-semibold text-gray-900">ONE YEAR WARRANTY</h3>
-                    <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi
+                    <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Commodi
                         in sint ut totam! Necessitatibus earum dolorem alias non sunt voluptatibus.</p>
                 </div>
             </div>
@@ -547,7 +546,7 @@
                 <img src="./images/areaServedTwo.png.jpg" alt="area two" class="w-full h-72 object-cover rounded-lg">
                 <div
                     class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-white text-lg font-semibold mb-2">Suburban Chicago</h3>
+                    <h3 class="text-white text-lg font-semibold mb-2">Albany</h3>
                     <a href="./pages/areaServedTwo.html"><img src="./icons/next.png" alt="arrow icon"
                             class="h-12 w-12"></a>
                 </div>
@@ -558,7 +557,7 @@
                     class="w-full h-72 object-cover rounded-lg">
                 <div
                     class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-white text-lg font-semibold mb-2">New Delhi</h3>
+                    <h3 class="text-white text-lg font-semibold mb-2">Yonkers</h3>
                     <a href="./pages/areaServedThree.html"><img src="./icons/next.png" alt="arrow icon"
                             class="h-12 w-12"></a>
                 </div>
@@ -568,7 +567,7 @@
                 <img src="./images/areaServedFour.png.jpg" alt="area four" class="w-full h-72 object-cover rounded-lg">
                 <div
                     class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-white text-lg font-semibold mb-2">Jersey City</h3>
+                    <h3 class="text-white text-lg font-semibold mb-2">Buffalo</h3>
                     <a href="./pages/areaServedFour.html"><img src="./icons/next.png" alt="arrow icon"
                             class="h-12 w-12"></a>
                 </div>
@@ -578,7 +577,7 @@
                 <img src="./images/areaServedFive.png.jpg" alt="area five" class="w-full h-72 object-cover rounded-lg">
                 <div
                     class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-white text-lg font-semibold mb-2">Norwalk</h3>
+                    <h3 class="text-white text-lg font-semibold mb-2">Syracuse</h3>
                     <a href="./pages/areaServedFive.html"><img src="./icons/next.png" alt="arrow icon"
                             class="h-12 w-12"></a>
                 </div>
@@ -588,7 +587,7 @@
                 <img src="./images/areaServedsix.png.jpg" alt="area six" class="w-full h-72 object-cover rounded-lg">
                 <div
                     class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-white text-lg font-semibold mb-2">San Josh</h3>
+                    <h3 class="text-white text-lg font-semibold mb-2">Rochester</h3>
                     <a href="./pages/areaServedSix.html"><img src="./icons/next.png" alt="arrow icon"
                             class="h-12 w-12"></a>
                 </div>
@@ -725,8 +724,8 @@
                         <div class="flex justify-center mt-2 text-yellow-500">
                             <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit...</p>
+                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Laboriosam dicta ipsa quisquam unde vero esse ducimus fugiat molestiae repellendus est.</p>
                         <div class="flex justify-center mt-4 space-x-3 text-gray-500">
                             <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
                             <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
@@ -744,7 +743,7 @@
                             <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         </div>
                         <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit...</p>
+                            elit</p>
                         <div class="flex justify-center mt-4 space-x-3 text-gray-500">
                             <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
                             <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
@@ -761,8 +760,8 @@
                         <div class="flex justify-center mt-2 text-yellow-500">
                             <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit...</p>
+                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                            Quam, hic earum incidunt voluptatibus iusto eveniet?</p>
                         <div class="flex justify-center mt-4 space-x-3 text-gray-500">
                             <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
                             <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
@@ -797,8 +796,8 @@
                         <div class="flex justify-center mt-2 text-yellow-500">
                             <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
                         </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit...</p>
+                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Cumque non laudantium suscipit architecto fuga itaque recusandae sapiente.</p>
                         <div class="flex justify-center mt-4 space-x-3 text-gray-500">
                             <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
                             <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
@@ -854,18 +853,15 @@
                     Trusted <span class="text-primary">Plumbing</span> Professionals
                 </h1>
                 <p class=" text-gray-700">
-                    Courtesy may not be the first thing people think of when it comes to plumbing,
-                    but for us, it's one of the most important tools we carry.
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat, iste quibusdam officiis
+                    voluptatibus ipsam autem.
                 </p>
                 <p class="text-gray-600">
-                    Nothing wears on homeowners like the idea of handling plumbing problems.
-                    From the water heater to sewer line, we take the pressure off of you (and put it back in your
-                    shower
-                    lines).
-                    Our plumbers are the most recognized professionals in the world because we’re committed to
-                    amazing
-                    service
-                    and nothing wears on homeowners like the idea of handling plumbing problems.
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, nemo eaque repellat assumenda
+                    distinctio sequi temporibus accusantium blanditiis cumque non ipsum eligendi hic exercitationem
+                    natus optio. Ea cumque fugiat illo, consequuntur quibusdam laudantium, impedit quae, reprehenderit
+                    recusandae soluta saepe nam sed praesentium pariatur ullam asperiores dolores eaque? Fugit,
+                    consequuntur rem.
                 </p>
                 <p class="text-blue-500 text-sm">CALL ANYTIME... DAY OR NIGHT</p>
                 <div class="flex items-center ">
@@ -1004,6 +1000,7 @@
                     <a href="./pages/areaServed.html" class="text-white ">Area Served</a>
                     <a href="./pages/services.html" class="text-white ">Services</a>
                     <a href="./pages/blog.html" class="text-white ">Blog</a>
+                    <a href="./pages/sitemap.html" class="text-white ">Sitemap</a>
                 </div>
             </div>
 

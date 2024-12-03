@@ -122,6 +122,20 @@ html {
     transform: scale(1.05);
 }
 
+ul li.relative.group:hover>ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: max-content;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 2s ease, visibility 0s;
+}
+
+
 ul li ul {
     display: none;
     position: absolute;
@@ -151,6 +165,24 @@ ul li ul li a:hover {
 }
 
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+}
+
+.cards-section {
+    position: relative;
+    z-index: 10;
+    margin-top: 80px;
+}
+
+
+
+
+
 /* Small screen styles for the hamburger menu items */
 @media (max-width: 768px) {
     #dropdown-menu {
@@ -169,25 +201,18 @@ ul li ul li a:hover {
 
     .dropdown-item:hover {
         background-color: #1e3a8a;
-        /* Hover background color */
         color: #dbeafe;
-        /* Hover text color */
     }
 
-    /* Nested dropdown items */
     .dropdown-item>div a {
         font-size: 0.875rem;
-        /* Slightly smaller font size */
         padding: 0.4rem 1rem;
-        /* Adjusted padding for nested items */
     }
 
     .dropdown-item>div a:hover {
         background-color: #1d4ed8;
-        /* Nested item hover color */
     }
 
-    /* Full-width Book Service button */
     .contact-btn-container button {
         width: 100%;
         font-size: 1rem;

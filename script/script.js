@@ -18,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
             dropdownMenu.classList.toggle('show');   // Add/Remove show class for visibility
         });
 
-
         document.addEventListener('click', (event) => {
             if (!dropdownMenu.contains(event.target) && event.target !== menuToggle) {
                 dropdownMenu.classList.add('hidden');
@@ -37,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
 
 
 // Services 
