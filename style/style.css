@@ -122,17 +122,24 @@ html {
     transform: scale(1.05);
 }
 
+
+ul li.relative.group {
+    position: relative;
+}
+
+
 ul li.relative.group:hover>ul {
     display: block;
     opacity: 1;
     visibility: visible;
     position: absolute;
     top: 100%;
+    top: 17px;
     left: 0;
     width: max-content;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: opacity 2s ease, visibility 0s;
+    transition: opacity 0.3s ease, visibility 0s;
 }
 
 
@@ -142,6 +149,9 @@ ul li ul {
     top: 100%;
     left: 0;
     width: max-content;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0s;
 }
 
 ul li ul li a {
@@ -149,10 +159,12 @@ ul li ul li a {
     display: block;
     color: #333;
     text-decoration: none;
+    border: 0.1px solid grey;
 }
 
 ul li ul li a:hover {
     background-color: #f2f2f2;
+    color: #3e83f6;
 }
 
 .dropdown-item>a {
@@ -165,6 +177,8 @@ ul li ul li a:hover {
 }
 
 
+
+
 .navbar {
     position: fixed;
     top: 0;
@@ -173,13 +187,12 @@ ul li ul li a:hover {
     z-index: 50;
 }
 
+
 .cards-section {
     position: relative;
     z-index: 10;
     margin-top: 80px;
 }
-
-
 
 
 
@@ -328,9 +341,10 @@ ul li ul li a:hover {
 }
 
 .progress-container {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     margin: 0 auto;
+    background-color: #000;
 }
 
 .carousel-container {
@@ -338,6 +352,7 @@ ul li ul li a:hover {
     gap: 2rem;
     transition: transform 0.5s ease;
 }
+
 
 .testimonial-card {
     min-width: calc((100% - 4rem) / 1);

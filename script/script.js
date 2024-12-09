@@ -158,7 +158,6 @@ updateCarousel();
 
 
 
-
 AOS.init({
     offset: 200,
     duration: 800,
@@ -230,6 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // service page
+
 const { motion } = framerMotion;
 document.querySelectorAll('[id^="card"]').forEach(card => {
     card.addEventListener('mouseover', () => {
