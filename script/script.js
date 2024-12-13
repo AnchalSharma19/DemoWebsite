@@ -79,6 +79,46 @@ function nextSlide() {
 updateSlide(currentSlide);
 
 
+// Swipe functionality
+let startX = 0;
+let currentX = 0;
+let isDragging = false;
+
+const handleTouchStart = (e) => {
+    startX = e.touches[0].clientX;
+    isDragging = true;
+};
+
+const handleTouchMove = (e) => {
+    if (!isDragging) return;
+    currentX = e.touches[0].clientX;
+    const diffX = currentX - startX;
+
+    carouselTrack.style.transform = `translateX(${-(currentSlide * 100) + diffX / window.innerWidth * 100}%)`;
+};
+
+const handleTouchEnd = () => {
+    if (!isDragging) return;
+    const diffX = currentX - startX;
+
+    if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+            currentSlide = Math.max(0, currentSlide - 1);
+        } else {
+            currentSlide = Math.min(totalSlides - 1, currentSlide + 1);
+        }
+    }
+
+    updateSlide(currentSlide);
+    isDragging = false;
+};
+
+carouselTrack.addEventListener('touchstart', handleTouchStart);
+carouselTrack.addEventListener('touchmove', handleTouchMove);
+carouselTrack.addEventListener('touchend', handleTouchEnd);
+
+
+
 
 // Select all elements with the 'counter' class
 document.querySelectorAll('.counter').forEach(counter => {
