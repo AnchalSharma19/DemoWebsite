@@ -155,7 +155,7 @@
 
     <!-- Main Content -->
     <div class="grid lg:grid-cols-3 gap-8 mt-20 ml-10 mr-10 mb-20">
-        <aside class="lg:col-span-1 space-y-6">
+        <aside class="lg:col-span-1 space-y-6 order-last lg:order-first">
             <div class="bg-gray-50 shadow-lg rounded-lg p-6 border-l-4 border-blue-600">
                 <h2 class="text-lg font-bold text-gray-800 mb-4">Service Areas</h2>
                 <ul class="space-y-2">
@@ -216,12 +216,26 @@
                 possimus quam, delectus esse fugiat, vel laborum maxime eos id perferendis non, consequatur atque beatae
                 cupiditate consequuntur!
             </p>
-            <div class="mt-6">
-                <img src="../images/residentailServices.png" alt="services" class="rounded-lg shadow">
+
+            <div class="relative w-full overflow-hidden carousel-container rounded-lg mt-6">
+                <div class="flex transition-transform duration-500" id="carousel-images">
+                    <img src="../images/residentailServices.png" alt="Roof Image 1"
+                        class="w-full h-64 md:h-80 object-cover flex-shrink-0">
+                    <img src="../images/specializedPlumbing.jpg" alt="Roof Image 2"
+                        class="w-full h-64 md:h-80 object-cover flex-shrink-0">
+                </div>
+
+                <button
+                    class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white font-bold rounded p-2 focus:outline-none"
+                    id="prev-btn">&larr;</button>
+                <button
+                    class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white font-bold rounded p-2 focus:outline-none"
+                    id="next-btn">&rarr;</button>
             </div>
 
+
             <div class="mt-8">
-                <h3 class="text-lg font-semibold">Lorem ipsum dolor.</h3>
+                <h3 class="text-2xl font-semibold">Lorem ipsum dolor.</h3>
                 <p class="mt-4 text-gray-600">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui voluptatibus quas voluptatum sunt,
                     adipisci quod natus delectus animi. Optio ullam repudiandae atque quis possimus illo voluptatum
@@ -231,11 +245,11 @@
 
                 <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div class="flex items-start space-x-4">
-                        <span class="text-red-600 text-xl">✔️</span>
+                        <img src="../icons/plumbingServicesIcon.png" alt="icon" class="h-10">
                         <p class="text-gray-600">Lorem ipsum dolor sit amet laudantium.</p>
                     </div>
                     <div class="flex items-start space-x-4">
-                        <span class="text-red-600 text-xl">✔️</span>
+                        <img src="../icons/plumbingServicesIcon.png" alt="icon" class="h-10">
                         <p class="text-gray-600">Lorem ipsum dolor sit amet laudantium.</p>
                     </div>
                 </div>
@@ -329,5 +343,35 @@
     </div>
 
 </body>
+
+<script>
+    const carouselImages = document.getElementById('carousel-images');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let currentInd = 0;
+
+    function updateCarouselPosition() {
+        const imageWidth = document.querySelector('.carousel-container').offsetWidth;
+        carouselImages.style.transform = `translateX(-${imageWidth * currentInd}px)`;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        if (currentInd < carouselImages.children.length - 1) {
+            currentInd++;
+            updateCarouselPosition();
+        }
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentInd > 0) {
+            currentInd--;
+            updateCarouselPosition();
+        }
+    });
+
+    window.addEventListener('resize', updateCarouselPosition);
+
+</script>
+
 
 </html>
