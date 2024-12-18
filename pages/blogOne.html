@@ -20,7 +20,7 @@
 
     <!-- Navbar -->
     <nav
-        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40 ">
+        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40">
         <a href="../index.html">
             <div class="flex items-center">
                 <img src="../images/logo.png" alt="Logo" class="h-10 w-10 mr-3">
@@ -28,8 +28,8 @@
             </div>
         </a>
 
-        <!-- Hamburger -->
-        <div class="lg:hidden absolute right-6">
+        <!-- Hamburger menu -->
+        <div class="lg:hidden absolute right-6 hamburger-menu hidden">
             <button id="menu-toggle" class="text-black">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -38,35 +38,36 @@
             </button>
         </div>
 
-        <!-- Desktop Menu  -->
-        <ul class="hidden lg:flex space-x-6 text-lg text-white">
-            <li><a href="../index.html" class="hover:text-black">Home</a></li>
-            <li><a href="aboutUs.html" class="hover:text-black">About Us</a></li>
+        <!-- Desktop Navbar -->
+        <ul class="hidden lg:flex space-x-6 ml-12 text-lg text-white desktop-navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+
+            <!-- Services Dropdown -->
             <li class="relative group">
-                <a href="services.html" class="hover:text-black">Services</a>
+                <a href="ourservices.html">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a>
-                    </li>
+                    <li><a href="plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing
+                            Services</a></li>
                     <li><a href="installationService.html" class="block px-4 py-2 hover:bg-gray-200">Installation
                             Services</a></li>
                     <li><a href="specializedPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Specialized
-                            Plumbing
-                            Services</a></li>
+                            Plumbing Services</a></li>
                     <li><a href="residentialServices.html" class="block px-4 py-2 hover:bg-gray-200">Residential
                             Services</a></li>
-                    <li><a href="commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing
-                            Services</a></li>
+                    <li><a href="commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial
+                            Plumbing Services</a></li>
                     <li><a href="maintenanceServices.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance
                             Services</a></li>
                 </ul>
             </li>
 
+            <!-- Area Served Dropdown -->
             <li class="relative group">
-                <a href="areaServed.html" class="hover:text-black">Area Served</a>
+                <a href="areaServed.html">Area Served</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
                     <li><a href="areaServedOne.html" class="block px-4 py-2 hover:bg-gray-200">New York Metro
-                            Area</a>
-                    </li>
+                            Area</a></li>
                     <li><a href="areaServedTwo.html" class="block px-4 py-2 hover:bg-gray-200">Albany</a></li>
                     <li><a href="areaServedThree.html" class="block px-4 py-2 hover:bg-gray-200">Yonkers</a>
                     </li>
@@ -78,19 +79,23 @@
                 </ul>
             </li>
 
-            <li><a href="blog.html" class="hover:text-black">Blog</a></li>
-            <li><a href="gallery.html" class="hover:text-black">Gallery</a></li>
-            <li><a href="contactUs.html" class="hover:text-black">Contact Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
 
+        <!-- Contact and Button -->
         <div class="flex items-center space-x-4">
-            <div class="hidden lg:block text-gray-200">Call: 800 555 284</div>
-            <button
-                class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
-                Book Service
-            </button>
+            <div class="hidden lg:block text-gray-200 phone-hidden">Call: 800 555 284</div>
+            <a href="contactUs.html">
+                <button
+                    class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:font-bold hover:bg-red-600 hover:scale-105 hover:shadow-lg btn-hidden">
+                    Book Service
+                </button>
+            </a>
         </div>
     </nav>
+
 
     <!-- Mobile Dropdown Menu -->
     <div id="dropdown-menu"
@@ -98,7 +103,7 @@
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
         <div class="dropdown-item">
-            <a href="services.html" class="text-white hover:text-gray-300">Services</a>
+            <a href="ourservices.html" class="text-white hover:text-gray-300">Services</a>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
                 <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing Services</a>
                 <a href="installationService.html" class="block text-white hover:text-gray-300">Installation
@@ -337,9 +342,10 @@
                     <a href="contactUs.html" class="text-white ">Contact us</a>
                     <a href="aboutUs.html" class="text-white ">About Us</a>
                     <a href="areaServed.html" class="text-white ">Area Served</a>
-                    <a href="services.html" class="text-white ">Services</a>
+                    <a href="ourservices.html" class="text-white ">Services</a>
                     <a href="blog.html" class="text-white ">Blog</a>
                     <a href="sitemap.html" class="text-white ">Sitemap</a>
+                    <a href="gallery.html" class="text-white ">Gallery</a>
                 </div>
             </div>
 

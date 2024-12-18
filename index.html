@@ -16,6 +16,8 @@
         crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
@@ -24,13 +26,16 @@
 
     <link rel="stylesheet" href="./style/style.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/keen-slider.min.css" rel="stylesheet" />
+
 </head>
 
 <body>
 
     <!-- Navbar -->
+
     <nav
-        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40 ">
+        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40">
         <a href="index.html">
             <div class="flex items-center">
                 <img src="./images/logo.png" alt="Logo" class="h-10 w-10 mr-3">
@@ -38,8 +43,8 @@
             </div>
         </a>
 
-        <!-- Hamburger -->
-        <div class="lg:hidden absolute right-6">
+        <!-- Hamburger menu -->
+        <div class="lg:hidden absolute right-6 hamburger-menu hidden">
             <button id="menu-toggle" class="text-black">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -48,14 +53,14 @@
             </button>
         </div>
 
-        <!-- Desktop Menu -->
-        <ul class="hidden lg:flex space-x-6  ml-12 text-lg text-white">
-            <li><a href="index.html" class="hover:text-black">Home</a></li>
-            <li><a href="./pages/aboutUs.html" class="hover:text-black">About Us</a></li>
+        <!-- Desktop Navbar -->
+        <ul class="hidden lg:flex space-x-6 ml-12 text-lg text-white desktop-navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="./pages/aboutUs.html">About Us</a></li>
 
             <!-- Services Dropdown -->
             <li class="relative group">
-                <a href="./pages/services.html" class="hover:text-black">Services</a>
+                <a href="./pages/ourservices.html">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
                     <li><a href="./pages/plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing
                             Services</a></li>
@@ -74,7 +79,7 @@
 
             <!-- Area Served Dropdown -->
             <li class="relative group">
-                <a href="./pages/areaServed.html" class="hover:text-black">Area Served</a>
+                <a href="./pages/areaServed.html">Area Served</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
                     <li><a href="./pages/areaServedOne.html" class="block px-4 py-2 hover:bg-gray-200">New York Metro
                             Area</a></li>
@@ -89,16 +94,17 @@
                 </ul>
             </li>
 
-            <li><a href="./pages/blog.html" class="hover:text-black">Blog</a></li>
-            <li><a href="./pages/gallery.html" class="hover:text-black">Gallery</a></li>
-            <li><a href="./pages/contactUs.html" class="hover:text-black">Contact Us</a></li>
+            <li><a href="./pages/blog.html">Blog</a></li>
+            <li><a href="./pages/gallery.html">Gallery</a></li>
+            <li><a href="./pages/contactUs.html">Contact Us</a></li>
         </ul>
 
+        <!-- Contact and Button -->
         <div class="flex items-center space-x-4">
-            <div class="hidden lg:block text-gray-200">Call: 800 555 284</div>
+            <div class="hidden lg:block text-gray-200 phone-hidden">Call: 800 555 284</div>
             <a href="./pages/contactUs.html">
                 <button
-                    class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:font-bold hover:bg-red-600 hover:scale-105 hover:shadow-lg btn-hidden">
                     Book Service
                 </button>
             </a>
@@ -112,7 +118,7 @@
         <a href="index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <a href="./pages/aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
         <div class="dropdown-item">
-            <a href="./pages/services.html" class="text-white hover:text-gray-300">Services</a>
+            <a href="./pages/ourservices.html" class="text-white hover:text-gray-300">Services</a>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
                 <a href="./pages/services.html" class="block text-white hover:text-gray-300">Plumbing Services</a>
                 <a href="./pages/services.html" class="block text-white hover:text-gray-300">Installation Services</a>
@@ -152,108 +158,120 @@
     </div>
 
 
+
     <!--   Hero Section -->
 
     <section
-        class="flex flex-col md:flex-row items-center p-8 md:p-16 text-center md:text-left min-h-screen relative bg-cover bg-center mt-20  mx-auto"
+        class="hero-section flex flex-col md:flex-row items-center p-8 md:p-16 text-center md:text-left min-h-screen relative bg-cover bg-center mt-20 md:mt-10 mx-auto"
         style="background-image: url('images/tap.jpg'); background-repeat:no-repeat; background-size: cover; ">
 
-        <div class="absolute inset-0 bg-black opacity-60 "></div>
-        <div class="relative flex-1 space-y-4 text-white " data-aos="fade-right">
-            <h1 class="font-bold  text-4xl md:text-7xl">
+        <div class="absolute inset-0 bg-black opacity-60"></div>
+        <div class="relative flex-1 space-y-4 text-white" data-aos="fade-right">
+            <h1 class="font-bold text-4xl md:text-7xl">
                 The <span class="text-blue-400">Plumber</span> <br> You Deserve
             </h1>
 
-            <p style="font-size: 16px;">
-                HAVE A PLUMBING ISSUE? <span class="font-semibold">CALL 24 HOUR EMERGENCY SERVICE.</span>
-            </p>
-
             <div
-                class="flex flex-col items-center text-center space-y-4 sm:flex-row sm:justify-start sm:items-center sm:text-left sm:space-y-0">
+                class="flex flex-col items-center text-center space-y-4 sm:flex-row sm:justify-start sm:items-center sm:text-left sm:space-y-0 pt-3">
                 <div class="rounded-full p-2 w-12 h-12 flex items-center justify-center">
                     <img src="icons/telephone.png" alt="Phone Icon" class="w-8 h-8">
                 </div>
-                <span class="text-xl font-semibold">1-800-555-284</span>
+                <span class="text-xl font-semibold ">1-800-555-284</span>
             </div>
             <br>
-            <a href="./pages/contactUs.html"><button
-                    class="bg-buttonPrimary text-lg hover:bg-red-700 text-white font-bold py-3 px-6 rounded text-base ml-[20px] transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+            <a href="./pages/contactUs.html">
+                <button
+                    class="bg-buttonPrimary text-lg hover:bg-red-700 text-white font-bold py-4 px-10 rounded text-xl ml-[20px] transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
                     Request Job Estimate
-                </button></a>
+                </button>
+            </a>
         </div>
-
 
         <div class="relative flex-1 mt-8 md:mt-0" data-aos="fade-left">
             <img src="images/person.png" alt="Plumber Image" class="w-full max-w-[1200px] h-auto ml-auto">
         </div>
     </section>
 
+
     <!-- Cards Section -->
 
     <section class="relative z-30 -mt-40 sm:-mt-32 p-8 md:p-16">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
 
-            <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="flex items-center justify-center mb-4">
-                    <img src="images/personOne.png" alt="Residential Plumbing Icon"
-                        class="w-full h-52 object-cover rounded-lg">
+            <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="images/personOne.png" alt="Residential Plumbing Icon"
+                            class="w-full h-52 object-cover rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">PLUMBING SERVICES</h3>
+                    <p class="text-sm mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur
+                        repellat
+                        laborum dolor dolores placeat recusandae beatae cumque maxime ab illum repudiandae vero
+                        deleniti, .
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">PLUMBING SERVICES</h3>
-                <p class="text-sm mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur repellat
-                    laborum dolor dolores placeat recusandae beatae cumque maxime ab illum repudiandae vero deleniti, .
-                </p>
-                <a href="./pages/plumbingServices.html" class="text-white font-bold hover:underline">READ MORE
+                <a href="./pages/plumbingServices.html" class="text-white font-bold hover:underline mt-4">READ MORE
                     &rarr;</a>
             </div>
 
-            <div class="bg-blue-400 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="flex items-center justify-center mb-4">
-                    <img src="images/personTwo.png" alt="Residential Plumbing Icon"
-                        class="w-full h-52 object-cover rounded-lg">
+            <div class="bg-blue-400 text-white rounded-lg shadow-lg p-6 flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="images/personTwo.png" alt="Residential Plumbing Icon"
+                            class="w-full h-52 object-cover rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">INSTALLATION SERVICES</h3>
+                    <p class="text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, magni!
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">INSTALLATION SERVICES</h3>
-                <p class="text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, magni!</p>
-                <a href="./pages/installationService.html" class="text-white font-bold hover:underline">READ MORE
+                <a href="./pages/installationService.html" class="text-white font-bold hover:underline mt-4">READ
+                    MORE
                     &rarr;</a>
             </div>
 
-            <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 relative" data-aos="fade-up"
-                data-aos-delay="100">
-                <div class="flex items-center justify-center mb-4">
-                    <img src="images/personThree.png" alt="Residential Plumbing Icon"
-                        class="w-full h-52 object-cover rounded-lg">
+            <div class="bg-blue-600 text-white rounded-lg shadow-lg p-6 flex flex-col justify-between"
+                data-aos="fade-up" data-aos-delay="100">
+                <div>
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="images/personThree.png" alt="Residential Plumbing Icon"
+                            class="w-full h-52 object-cover rounded-lg">
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">SPECIALIZED PLUMBING SERVICES</h3>
+                    <p class="text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, vero?
+                    </p>
                 </div>
-                <h3 class="text-xl font-semibold mb-2">SPECIALIZED PLUMBING SERVICES</h3>
-                <p class="text-sm mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, vero?</p>
-                <a href="./pages/specializedPlumbing.html" class="text-white font-bold hover:underline">READ MORE
+                <a href="./pages/specializedPlumbing.html" class="text-white font-bold hover:underline mt-4">READ
+                    MORE
                     &rarr;</a>
             </div>
         </div>
-        <div class="flex justify-center items-center mt-7">
+
+        <div class="flex justify-center items-center text-md md:text-lg  mt-7">
             <a href="./pages/services.html"><button
-                    class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    class="bg-buttonPrimary text-white px-6 py-3 rounded mt-3 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
                     More Services
                 </button></a>
         </div>
     </section>
 
+
     <!-- Services Section Carousel -->
 
-    <section class="relative z-30 p-8  bg-white-150 text-gray-800 mt-0 pt-0" onclick="nextSlide()">
+    <section class="relative z-30 p-8  bg-white-150 text-gray-800 mt-7 md:mt-0 pt-0 " onclick="nextSlide()">
         <div class="max-w-7xl mx-auto overflow-hidden relative">
-            <h2 class="text-3xl font-bold uppercase text-dark text-center mb-4">What We <span
+            <h2 class="text-3xl font-bold uppercase text-dark text-center mb-7">What We <span
                     class="text-primary">Offer</span></h2>
 
             <div id="carouselTrack" class="carousel-track flex transition-transform duration-500 ease-out"
                 style="transform: translateX(0%);">
 
-                <!-- Slide 1 -->
-
-                <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center ">
                     <div class="relative">
-                        <img src="images/serviceOne.png" alt="3D Plumbing Model" class="w-full h-auto">
+                        <img src="images/serviceOne.png" alt="3D Plumbing Model"
+                            class="w-96 h-128 object-contain lg:ml-32">
                     </div>
                     <div class="pt-[-50px]">
                         <h3 class="text-3xl font-bold text-gray-800 pb-8">
@@ -266,8 +284,10 @@
                                         class="h-20 w-20 sm:h-16 sm:w-16">
                                 </div>
                                 <div>
-                                    <h3 class="text-lg font-semibold">Pipe Leaking</h3>
-                                    <p class="text-gray">Your sewer pump is essential for removing sewage from your sump
+                                    <h3 class="text-lg font-semibold ">Pipe Leaking</h3>
+                                    <p class="text-gray lg:pr-20">Your sewer pump is essential for removing sewage
+                                        from
+                                        your sump
                                         pit to your septic tank or sewage system.</p>
                                 </div>
                             </div>
@@ -278,7 +298,9 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold">Drain Cleaning</h3>
-                                    <p class="text-gray">If your tub or sink is draining slower than usual, or won't
+                                    <p class="text-gray lg:pr-20">If your tub or sink is draining slower than usual,
+                                        or
+                                        won't
                                         drain at all, your drain is either clogged or damaged.</p>
                                 </div>
                             </div>
@@ -286,10 +308,11 @@
                     </div>
                 </div>
 
-                <!-- Slide 2 -->
+
                 <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
                     <div class="relative">
-                        <img src="images/serviceTwo.png" alt="3D Plumbing Model" class="w-full h-auto">
+                        <img src="images/serviceTwo.png" alt="3D Plumbing Model"
+                            class="w-96 h-128 object-contain lg:ml-32">
                     </div>
                     <div class="pt-[-50px]">
                         <h3 class="text-3xl font-bold text-gray-800 mb-2 pb-7">
@@ -302,7 +325,9 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold">Toilet Leaking</h3>
-                                    <p class="text-gray">If your tub or sink is draining slower than usual, or won't
+                                    <p class="text-gray lg:pr-20">If your tub or sink is draining slower than usual,
+                                        or
+                                        won't
                                         drain at all, your drain is either clogged or damaged.</p>
                                 </div>
                             </div>
@@ -313,7 +338,8 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold">Bathtub Installation</h3>
-                                    <p class="text-gray">Regular pipe cleaning helps prevent buildup and ensures smooth
+                                    <p class="text-gray lg:pr-20">Regular pipe cleaning helps prevent buildup and
+                                        ensures smooth
                                         water flow throughout your system.</p>
                                 </div>
                             </div>
@@ -321,10 +347,11 @@
                     </div>
                 </div>
 
-                <!-- Slide 3 -->
+
                 <div class="min-w-full p-8 grid md:grid-cols-2 gap-12 items-center">
                     <div class="relative">
-                        <img src="images/serviceThree.png" alt="3D Plumbing Model" class="w-full h-auto">
+                        <img src="images/serviceThree.png" alt="3D Plumbing Model"
+                            class="w-96 h-128 object-contain lg:ml-32">
                     </div>
                     <div class="pt-[-50px]">
                         <h3 class="text-3xl font-bold text-gray-800 mb-2 pb-7">
@@ -338,7 +365,9 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold">Overflowing Toilet</h3>
-                                    <p class="text-gray">We provide top-quality pipe replacement to ensure your plumbing
+                                    <p class="text-gray lg:pr-20">We provide top-quality pipe replacement to ensure
+                                        your
+                                        plumbing
                                         system runs smoothly and efficiently.</p>
                                 </div>
                             </div>
@@ -349,7 +378,9 @@
                                 </div>
                                 <div>
                                     <h3 class="text-lg font-semibold">Solder Copper</h3>
-                                    <p class="text-gray">If your tub or sink is draining slower than usual, or won't
+                                    <p class="text-gray lg:pr-20">If your tub or sink is draining slower than usual,
+                                        or
+                                        won't
                                         drain at all, your drain is either clogged or damaged.</p>
                                 </div>
                             </div>
@@ -358,7 +389,7 @@
                 </div>
             </div>
 
-            <!-- Navigation Dots -->
+
             <div class="flex justify-center space-x-2 mt-4">
                 <span class="carousel-dot w-3 h-3 bg-gray-300 border border-black rounded-full cursor-pointer"
                     data-slide="0" onclick="goToSlide(0)"></span>
@@ -371,58 +402,61 @@
     </section>
 
 
-
     <!-- Plumbing Care Section -->
+
     <section
-        class="flex flex-col  mt-7 md:flex-row items-center justify-center text-center md:text-left min-h-screen relative bg-cover bg-center "
+        class="flex flex-col  mt-7 md:flex-row items-center justify-center text-center md:text-left min-h-[80vh] relative bg-cover bg-center "
         style="background-image: url('images/bgImage.png.jpg');" data-aos="fade-up">
 
         <div class="absolute top-0 left-0 w-full h-full bg-blue-900 opacity-80 z-0"></div>
 
         <div class="bg-blue-600 py-3 sm:py-4 animate-slide-in absolute top-0 left-0 w-full flex flex-col sm:flex-row justify-between items-center px-4 sm:px-8 z-10"
             data-aos="fade-down">
-            <h2 class="text-xl sm:text-3xl md:text-3xl pb-2 sm:pb-4 pt-2 sm:pt-4 md:ml-20 sm:text-left text-light">
+            <h2
+                class="text-xl font-bold :text-3xl md:text-3xl pb-2 sm:pb-4 pt-2 sm:pt-4 md:ml-20 sm:text-left text-light">
                 Are
                 you
                 interested in an estimate?</h2>
 
         </div>
-
         <div class="main-content flex flex-col justify-center items-center bg-blue-600/75 p-5 md:p-8 mt-28 sm:mt-36 md:mt-0 z-10 w-full"
             data-aos="fade-up">
             <h1
-                class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-0 md:mb-8 text-center  text-white sm:mt-18 md:mt-20 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
-                Regular <span style="color: #FFF689;">plumbing care</span> will save your <br>Time & Money
+                class="text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 sm:mb-0 md:mb-8 text-center  text-white sm:mt-18 md:mt-36 px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:py-8">
+                Regular <span style="color: #FFF689;">plumbing care</span> will save <br> your Time & Money
             </h1>
-            <div
-                class="flex flex-col md:flex-row justify-center items-center mt-10 mb-20 space-y-8 md:space-y-0 md:gap-10">
+
+            <div class="flex flex-col md:flex-row  items-center mt-10 mb-20 space-y-8 md:space-y-0 md:gap-20">
                 <div class="text-center text-white" data-aos="fade-up" data-aos-delay="400">
-                    <span class="text-7xl font-bold counter" style="color: #FFF689;" data-count="60">0</span><span
+                    <span class="text-6xl font-bold counter" style="color: #FFF689;" data-count="60">0</span><span
                         class="text-2xl">%</span>
-                    <p class="mt-2 text-lg">Household <span class="font-bold">water usage</span> that goes to toilets.
+                    <p class="mt-2 text-lg w-56">Household <span class="font-bold">water usage </span>that goes to
+                        toilets.
                     </p>
                 </div>
                 <div class="text-center text-white" data-aos="fade-up" data-aos-delay="500">
-                    <span class="text-7xl font-bold text-blue-300 counter" style="color: #FFF689;"
+                    <span class="text-6xl font-bold text-blue-300 counter" style="color: #FFF689;"
                         data-count="180">0</span><span class="text-2xl">gal</span>
 
-                    <p class="mt-2 text-lg">The average US family can waste from <span class="font-bold">household
+                    <p class="mt-2 text-lg w-56">The average US family can waste from <span class="font-bold">household
                             leaks.</span></p>
                 </div>
                 <div class="text-center text-white" data-aos="fade-up" data-aos-delay="600">
-                    <span class="text-7xl font-bold text-blue-300 counter" style="color: #FFF689;"
+                    <span class="text-6xl font-bold text-blue-300 counter" style="color: #FFF689;"
                         data-count="120">0</span>
-                    <p class="mt-2 text-lg">Yearly savings by servicing your <span class="font-bold">water leaks.</span>
+                    <p class="mt-2 text-lg w-56">Yearly savings by servicing your <span class="font-bold">water
+                            leaks.</span>
                     </p>
                 </div>
             </div>
         </div>
+
     </section>
 
 
     <!-- Blog -->
     <section
-        class="cards-section flex flex-col items-center justify-center text-white relative pt-12 pb-16 bg-cover bg-center"
+        class="cards-section flex flex-col items-center justify-center text-white relative pt-16 pb-16 bg-cover bg-center"
         style="background-image: url('images/bgScrewBackground.png');">
 
         <div class="flex flex-col md:flex-row gap-6 relative z-40 -mt-20 mb-10 sm:-mt-20 lg:-mt-20 px-4 sm:px-6 lg:px-8 mx-2 sm:mx-4 lg:mx-8"
@@ -434,7 +468,7 @@
                     class="w-full h-48 object-cover rounded-md">
                 <div class="p-4">
                     <p class="text-red-600 font-bold text-xs">BLOG</p>
-                    <h3 class="text-lg font-semibold">The Best Water Filters of 2018 – Our Choice</h3>
+                    <h3 class="text-md font-semibold mt-2">The Best Water Filters of 2018 – Our Choice</h3>
                     <a href="./pages/blogOne.html"><button
                             class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
                             Read More
@@ -448,7 +482,7 @@
                     class="w-full h-48 object-cover rounded-md">
                 <div class="p-4">
                     <p class="text-red-600 font-bold text-xs">BLOG</p>
-                    <h3 class="text-lg font-semibold">Your Faucets Could Be Making Your Home Unsafe</h3>
+                    <h3 class="text-md font-semibold mt-2">Your Faucets Could Be Making Your Home Unsafe</h3>
                     <a href="./pages/blogTwo.html"><button
                             class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
                             Read More
@@ -461,7 +495,7 @@
                 <img src="images/blogImageThree.png" alt="Drain cleaning" class="w-full h-48 object-cover rounded-md">
                 <div class="p-4">
                     <p class="text-red-600 font-bold text-xs">BLOG</p>
-                    <h3 class="text-lg font-semibold">Different Types of Plumbing Control</h3>
+                    <h3 class="text-md font-semibold mt-2">Different Types of Plumbing Control</h3>
                     <a href="./pages/blogThree.html"><button
                             class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
                             Read More
@@ -470,14 +504,14 @@
             </div>
         </div>
         <a href="./pages/blog.html"><button
-                class="bg-buttonPrimary text-white px-4 py-2 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                class="bg-buttonPrimary text-white px-6 py-3 rounded mt-4 transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
                 All Blog
             </button></a>
         <br>
 
         <!-- 24/7 Emergency Service Section -->
 
-        <h2 class="text-3xl mt-10  font-bold text-gray-900 text-center sm:text-left">
+        <h2 class="text-3xl mt-12  font-bold text-gray-900 text-center sm:text-left">
             AVAILABLE FOR <span class="text-primary">24/7</span> EMERGENCY SERVICE
         </h2>
         <br>
@@ -610,7 +644,8 @@
             <div class="bg-blue-100 p-8 rounded-lg shadow-lg w-full sm:w-full md:w-full lg:w-3/4 flex flex-col justify-between"
                 data-aos="fade-up">
                 <h2 class="text-gray-700 text-sm font-semibold">FIX IT YOURSELF</h2>
-                <h1 class="text-3xl font-bold text-primary">FAQ<span class="text-dark"> - Find Your Answers</span></h1>
+                <h1 class="text-3xl font-bold text-primary">FAQ<span class="text-dark"> - Find Your Answers</span>
+                </h1>
 
                 <div id="accordion" class="mt-6 space-y-2 flex-grow">
                     <!-- FAQ Item 1 -->
@@ -639,8 +674,10 @@
                         </button>
                         <div id="content-2" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
                             <p class="p-4 text-white bg-blue-500">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, velit aspernatur optio
-                                atque nam dolore dolorem reprehenderit expedita, inventore laborum possimus quos eaque
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde, velit aspernatur
+                                optio
+                                atque nam dolore dolorem reprehenderit expedita, inventore laborum possimus quos
+                                eaque
                                 enim fuga accusamus est incidunt laboriosam veritatis.
                             </p>
                         </div>
@@ -656,7 +693,8 @@
                         </button>
                         <div id="content-3" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
                             <p class="p-4 text-white bg-blue-500">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis omnis, libero quisquam
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis omnis, libero
+                                quisquam
                                 eos id laudantium.
                             </p>
                         </div>
@@ -672,7 +710,8 @@
                         </button>
                         <div id="content-4" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
                             <p class="p-4 text-white bg-blue-500">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos debitis repellat
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos debitis
+                                repellat
                                 obcaecati beatae laborum officiis hic tempore iure quis, architecto distinctio eum
                                 exercitationem soluta? Ut officiis harum tempore debitis.
                             </p>
@@ -690,7 +729,8 @@
                         <div id="content-5" class="max-h-0 overflow-hidden transition-max-height duration-300 ease-out">
                             <p class="p-4 text-white bg-blue-500">
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam voluptatum ipsam
-                                tenetur aliquid veniam pariatur eum rerum ex velit perspiciatis ipsa quis odio dolore,
+                                tenetur aliquid veniam pariatur eum rerum ex velit perspiciatis ipsa quis odio
+                                dolore,
                                 natus esse, officiis aspernatur placeat ea.
                             </p>
                         </div>
@@ -701,149 +741,224 @@
     </section>
 
 
-
     <!-- Customer Experience -->
-    <br>
-    <br>
-    <div class="bg-white-100 ">
-        <section class="max-w-6xl mx-auto px-4 py-12">
-            <h2 class="text-3xl font-bold text-center text-primary mb-10">CUSTOMER <span class="text-dark">REVIEW</span>
+
+    <section class="bg-white">
+        <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+
+            <h2 class="text-3xl font-bold text-center text-primary mb-10 pb-4 mt-4">CUSTOMER <span
+                    class="text-dark">REVIEW</span>
             </h2>
 
-            <div class="relative overflow-hidden">
-                <div id="carousel" class="carousel-container flex gap-x-8 transition-transform duration-500"
-                    style="transform: translateX(0%);">
-                    <div
-                        class="testimonial-card w-full max-w-xs bg-white rounded-lg shadow-md p-6 text-center border border-blue-600 animate__animated animate__fadeIn">
-                        <img class=" mx-auto rounded-md" src="images/customerOne.jpg" alt="User Image"
-                            style="height: 150px; width: 150px; ">
-                        <h3 class="mt-4 text-lg font-semibold">Harsh P.</h3>
-                        <div class="flex justify-center mt-2 text-yellow-500">
-                            <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Laboriosam dicta ipsa quisquam unde vero esse ducimus fugiat molestiae repellendus est.</p>
-                        <div class="flex justify-center mt-4 space-x-3 text-gray-500">
-                            <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-instagram text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-youtube text-blue-600"></i></a>
-                        </div>
+            <div class="mt-8">
+                <div id="keen-slider" class="keen-slider">
+                    <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+                        <blockquote class="rounded-lg bg-blue-200 p-6 shadow-sm sm:p-8">
+                            <div class="flex items-center gap-4">
+                                <img alt="" src="./images/customerOne.jpg" class="size-5 rounded-full object-cover "
+                                    style="border-radius: 50%; height: 130px; width: 130px;" />
+                                <div>
+                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                    </div>
+
+                                    <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-gray-800">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt,
+                                a
+                                consequuntur recusandae ab saepe illo est quia obcaecati nequ.
+                            </p>
+                        </blockquote>
                     </div>
 
-                    <div
-                        class="testimonial-card w-full max-w-xs bg-white rounded-lg shadow-md p-6 text-center border border-blue-600 animate__animated animate__fadeIn">
-                        <img class=" mx-auto rounded-md" src="images/customerTwo.jpg" alt="User Image"
-                            style="height: 150px; width: 150px; ">
-                        <h3 class="mt-4 text-lg font-semibold">Willy</h3>
-                        <div class="flex justify-center mt-2 text-yellow-500">
-                            <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit</p>
-                        <div class="flex justify-center mt-4 space-x-3 text-gray-500">
-                            <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-instagram text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-youtube text-blue-600"></i></a>
-                        </div>
+                    <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+                        <blockquote class="rounded-lg bg-blue-300 p-6 shadow-sm sm:p-8">
+                            <div class="flex items-center gap-4">
+                                <img alt="" src="./images/customerTwo.jpg" class="size-5 rounded-full object-cover "
+                                    style="border-radius: 50%; height: 130px; width: 130px;" />
+                                <div>
+                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                    </div>
+
+                                    <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-gray-800">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt,
+                                a
+                                consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius.
+                            </p>
+                        </blockquote>
                     </div>
 
-                    <div
-                        class="testimonial-card w-full max-w-xs bg-white rounded-lg shadow-md p-6 text-center border border-blue-600 animate__animated animate__fadeIn">
-                        <img class=" mx-auto rounded-md" src="images/customerOne.jpg" alt="User Image"
-                            style="height: 150px; width: 150px; ">
-                        <h3 class="mt-4 text-lg font-semibold">Harry</h3>
-                        <div class="flex justify-center mt-2 text-yellow-500">
-                            <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                            Quam, hic earum incidunt voluptatibus iusto eveniet?</p>
-                        <div class="flex justify-center mt-4 space-x-3 text-gray-500">
-                            <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-instagram text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-youtube text-blue-600"></i></a>
-                        </div>
+                    <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+                        <blockquote class="rounded-lg bg-blue-300 p-6 shadow-sm sm:p-8">
+                            <div class="flex items-center gap-4">
+                                <img alt="" src="./images/customerOne.jpg" class="size-5 rounded-full object-cover "
+                                    style="border-radius: 50%; height: 130px; width: 130px;" />
+                                <div>
+                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                    </div>
+
+                                    <p class="mt-0.5 text-lg font-medium text-gray-900">Rose Starr</p>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-gray-800">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt.
+                            </p>
+                        </blockquote>
                     </div>
 
-                    <div
-                        class="testimonial-card w-full max-w-xs bg-white rounded-lg shadow-md p-6 text-center border border-blue-600 animate__animated animate__fadeIn">
-                        <img class=" mx-auto rounded-md" src="images/customerTwo.jpg" alt="User Image"
-                            style="height: 150px; width: 150px; ">
-                        <h3 class="mt-4 text-lg font-semibold">Willy</h3>
-                        <div class="flex justify-center mt-2 text-yellow-500">
-                            <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit...</p>
-                        <div class="flex justify-center mt-4 space-x-3 text-gray-500">
-                            <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-instagram text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-youtube text-blue-600"></i></a>
-                        </div>
+                    <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+                        <blockquote class="rounded-lg bg-blue-300 p-6 shadow-sm sm:p-8">
+                            <div class="flex items-center gap-4">
+                                <img alt="" src="./images/customerOne.jpg" class="size-5 rounded-full object-cover "
+                                    style="border-radius: 50%; height: 130px; width: 130px;" />
+                                <div>
+                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                    </div>
+
+                                    <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-gray-800">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt,
+                                a
+                                consequuntur recusandae ab saepe illo est quia obcaecati neque.
+                            </p>
+                        </blockquote>
                     </div>
 
-                    <div
-                        class="testimonial-card w-full max-w-xs bg-white rounded-lg shadow-md p-6 text-center border border-blue-600 animate__animated animate__fadeIn">
-                        <img class=" mx-auto rounded-md" src="images/customerTwo.jpg" alt="User Image"
-                            style="height: 150px; width: 150px; ">
-                        <h3 class="mt-4 text-lg font-semibold">Willy</h3>
-                        <div class="flex justify-center mt-2 text-yellow-500">
-                            <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Cumque non laudantium suscipit architecto fuga itaque recusandae sapiente.</p>
-                        <div class="flex justify-center mt-4 space-x-3 text-gray-500">
-                            <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-instagram text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-youtube text-blue-600"></i></a>
-                        </div>
+                    <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+                        <blockquote class="rounded-lg bg-blue-300 p-6 shadow-sm sm:p-8">
+                            <div class="flex items-center gap-4">
+                                <img alt="" src="./images/customerTwo.jpg" class="size-5 rounded-full object-cover "
+                                    style="border-radius: 50%; height: 130px; width: 130px;" />
+                                <div>
+                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                    </div>
+
+                                    <p class="mt-0.5 text-lg font-medium text-gray-900">Rose Starr</p>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-gray-800">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit.
+                            </p>
+                        </blockquote>
                     </div>
 
-                    <div
-                        class="testimonial-card w-full max-w-xs bg-white rounded-lg shadow-md p-6 text-center border border-blue-600 animate__animated animate__fadeIn">
-                        <img class=" mx-auto rounded-md" src="images/customerTwo.jpg" alt="User Image"
-                            style="height: 150px; width: 150px; ">
-                        <h3 class="mt-4 text-lg font-semibold">Willy</h3>
-                        <div class="flex justify-center mt-2 text-yellow-500">
-                            <span>&#9733; &#9733; &#9733; &#9733; &#9733;</span>
-                        </div>
-                        <p class="mt-4 text-gray-700 text-sm">Lorem ipsum dolor sit amet consectetur, adipisicing
-                            elit...</p>
-                        <div class="flex justify-center mt-4 space-x-3 text-gray-500">
-                            <a href="#"><i class="fab fa-facebook text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-twitter text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-instagram text-blue-600"></i></a>
-                            <a href="#"><i class="fab fa-youtube text-blue-600"></i></a>
-                        </div>
+                    <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+                        <blockquote class="rounded-lg bg-blue-300 p-6 shadow-sm sm:p-8">
+                            <div class="flex items-center gap-4">
+                                <img alt="" src="./images/customerOne.jpg" class="size-5 rounded-full object-cover "
+                                    style="border-radius: 50%; height: 130px; width: 130px;" />
+                                <div>
+                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                    </div>
+
+                                    <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-gray-800">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt,
+                                a
+                                consequuntur recusandae ab saepe illo est quia obcaecati neque.
+                            </p>
+                        </blockquote>
+                    </div>
+
+                    <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
+                        <blockquote class="rounded-lg bg-blue-300 p-6 shadow-sm sm:p-8">
+                            <div class="flex items-center gap-4">
+                                <img alt="" src="./images/customerOne.jpg" class="size-5 rounded-full object-cover "
+                                    style="border-radius: 50%; height: 130px; width: 130px;" />
+                                <div>
+                                    <div class="flex justify-center gap-0.5 text-green-500">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                        <img src="./icons/star.png" alt="" class="h-5">
+                                    </div>
+
+                                    <p class="mt-0.5 text-lg font-medium text-gray-900">Rose Starr</p>
+                                </div>
+                            </div>
+
+                            <p class="mt-4 text-gray-800">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos distinctio atque
+                                corporis
+                                officiis debitis cumque.
+                            </p>
+                        </blockquote>
+                    </div>
+
+
+
+                    <div class="mt-6 flex items-center justify-center gap-4">
+                        <button aria-label="Previous slide" id="keen-slider-previous"
+                            class="text-gray-600 transition-colors hover:text-gray-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+
+                        <p class="w-16 text-center text-sm text-gray-700">
+                            <span id="keen-slider-active"></span>
+                            /
+                            <span id="keen-slider-count"></span>
+                        </p>
+
+                        <button aria-label="Next slide" id="keen-slider-next"
+                            class="text-gray-600 transition-colors hover:text-gray-900">
+                            <svg class="size-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
-
-            <div class="flex justify-center mt-8 space-x-4">
-                <button id="carouselPrev"
-                    class="p-2 rounded-full bg-blue-100 text-blue-900 hover:bg-blue-200 focus:outline-none animate__animated animate__fadeInLeft">
-                    &#8592;
-                </button>
-                <button id="carouselNext"
-                    class="p-2 rounded-full bg-blue-100 text-blue-900 hover:bg-blue-200 focus:outline-none animate__animated animate__fadeInRight">
-                    &#8594;
-                </button>
-            </div>
-        </section>
-    </div>
-
-    <br>
+    </section>
 
 
     <!-- why choose us-->
 
-    <section class="bg-gray-100 flex items-center justify-center min-h-screen ">
-        <div class="container mx-auto p-6 md:flex items-center space-y-6 md:space-y-0 ">
-            <div class="md:w-1/2 space-y-4 animate__animated animate__fadeInLeft">
+    <section class="bg-gray-100 flex items-center justify-center min-h-[60vh] ">
+        <div class="container mx-auto pt-10 md:flex items-center space-y-6 md:space-y-0 ">
+            <div class="md:w-1/2 space-y-4 animate__animated animate__fadeInLeft pl-10 lg:pl-10 ">
                 <br>
                 <p class="text-m uppercase text-gray-500 font-semibold">Why Choose Us</p>
                 <h1 class="text-4xl font-bold text-gray-800">
@@ -856,11 +971,8 @@
                 <p class="text-gray-600">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque, nemo eaque repellat assumenda
                     distinctio sequi temporibus accusantium blanditiis cumque non ipsum eligendi hic exercitationem
-                    natus optio. Ea cumque fugiat illo, consequuntur quibusdam laudantium, impedit quae, reprehenderit
-                    recusandae soluta saepe nam sed praesentium pariatur ullam asperiores dolores eaque? Fugit,
-                    consequuntur rem.
+                    natus optio. Ea cumque fugiat illo.
                 </p>
-                <p class="text-blue-500 text-sm">CALL ANYTIME... DAY OR NIGHT</p>
                 <div class="flex items-center ">
                     <div class=" text-white text-2xl">
                         <div class="rounded-full w-12 h-12 flex items-center justify-center">
@@ -872,12 +984,12 @@
                     </div>
                 </div>
                 <a href="./pages/contactUs.html"><button
-                        class="mt-4 px-6 py-3 bg-buttonPrimary text-white font-semibold rounded transition duration-300 ease-in-out mb-5 transform transition duration-300 ease-in-out hover:bg-red-700 hover:scale-105 hover:shadow-lg">
+                        class="mt-4 px-6 mb-10 py-3 bg-buttonPrimary text-white font-semibold rounded transition duration-300 ease-in-out mb-5 transform transition duration-300 ease-in-out hover:bg-red-700 hover:scale-105 hover:shadow-lg">
                         Schedule a Service Call
                     </button></a>
             </div>
             <div class="md:w-1/2 flex justify-center animate__animated animate__fadeInRight">
-                <img src="images/personImageTwo-removebg-preview.png" alt="Plumber" class="w-3/4 ">
+                <img src="images/personImageTwo-removebg-preview.png" alt="Plumber" class="w-3/4 self-end ">
             </div>
         </div>
     </section>
@@ -998,9 +1110,10 @@
                     <a href="./pages/contactUs.html" class="text-white ">Contact us</a>
                     <a href="./pages/aboutUs.html" class="text-white ">About Us</a>
                     <a href="./pages/areaServed.html" class="text-white ">Area Served</a>
-                    <a href="./pages/services.html" class="text-white ">Services</a>
+                    <a href="./pages/ourservices.html" class="text-white ">Services</a>
                     <a href="./pages/blog.html" class="text-white ">Blog</a>
                     <a href="./pages/sitemap.html" class="text-white ">Sitemap</a>
+                    <a href="./pages/gallery.html" class="text-white ">Gallery</a>
                 </div>
             </div>
 
@@ -1039,5 +1152,73 @@
     <script src="./script/script.js"></script>
     </section>
 </body>
+
+
+
+
+<script type="module">
+    import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'
+
+    const keenSliderActive = document.getElementById('keen-slider-active')
+    const keenSliderCount = document.getElementById('keen-slider-count')
+
+    const keenSlider = new KeenSlider(
+        '#keen-slider',
+        {
+            loop: true,
+            defaultAnimation: {
+                duration: 750,
+            },
+            slides: {
+                origin: 'center',
+                perView: 1,
+                spacing: 16,
+            },
+            breakpoints: {
+                '(min-width: 640px)': {
+                    slides: {
+                        origin: 'center',
+                        perView: 1.5,
+                        spacing: 16,
+                    },
+                },
+                '(min-width: 768px)': {
+                    slides: {
+                        origin: 'center',
+                        perView: 1.75,
+                        spacing: 16,
+                    },
+                },
+                '(min-width: 1024px)': {
+                    slides: {
+                        origin: 'center',
+                        perView: 3,
+                        spacing: 16,
+                    },
+                },
+            },
+            created(slider) {
+                slider.slides[slider.track.details.rel].classList.remove('opacity-40')
+
+                keenSliderActive.innerText = slider.track.details.rel + 1
+                keenSliderCount.innerText = slider.slides.length
+            },
+            slideChanged(slider) {
+                slider.slides.forEach((slide) => slide.classList.add('opacity-40'))
+
+                slider.slides[slider.track.details.rel].classList.remove('opacity-40')
+
+                keenSliderActive.innerText = slider.track.details.rel + 1
+            },
+        },
+        []
+    )
+
+    const keenSliderPrevious = document.getElementById('keen-slider-previous')
+    const keenSliderNext = document.getElementById('keen-slider-next')
+
+    keenSliderPrevious.addEventListener('click', () => keenSlider.prev())
+    keenSliderNext.addEventListener('click', () => keenSlider.next())
+</script>
 
 </html>

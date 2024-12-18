@@ -19,7 +19,7 @@
 
     <!-- Navbar -->
     <nav
-        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40 ">
+        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40">
         <a href="../index.html">
             <div class="flex items-center">
                 <img src="../images/logo.png" alt="Logo" class="h-10 w-10 mr-3">
@@ -27,9 +27,8 @@
             </div>
         </a>
 
-        <!-- Hamburger -->
-
-        <div class="lg:hidden absolute right-6">
+        <!-- Hamburger menu -->
+        <div class="lg:hidden absolute right-6 hamburger-menu hidden">
             <button id="menu-toggle" class="text-black">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -38,35 +37,36 @@
             </button>
         </div>
 
-        <!-- Desktop Menu  -->
-        <ul class="hidden lg:flex space-x-6 text-lg text-white">
-            <li><a href="../index.html" class="hover:text-black">Home</a></li>
-            <li><a href="aboutUs.html" class="hover:text-black">About Us</a></li>
+        <!-- Desktop Navbar -->
+        <ul class="hidden lg:flex space-x-6 ml-12 text-lg text-white desktop-navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+
+            <!-- Services Dropdown -->
             <li class="relative group">
-                <a href="services.html" class="hover:text-black">Services</a>
+                <a href="ourservices.html">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a>
-                    </li>
+                    <li><a href="plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing
+                            Services</a></li>
                     <li><a href="installationService.html" class="block px-4 py-2 hover:bg-gray-200">Installation
                             Services</a></li>
                     <li><a href="specializedPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Specialized
-                            Plumbing
-                            Services</a></li>
+                            Plumbing Services</a></li>
                     <li><a href="residentialServices.html" class="block px-4 py-2 hover:bg-gray-200">Residential
                             Services</a></li>
-                    <li><a href="commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing
-                            Services</a></li>
+                    <li><a href="commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial
+                            Plumbing Services</a></li>
                     <li><a href="maintenanceServices.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance
                             Services</a></li>
                 </ul>
             </li>
 
+            <!-- Area Served Dropdown -->
             <li class="relative group">
-                <a href="areaServed.html" class="hover:text-black">Area Served</a>
+                <a href="areaServed.html">Area Served</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
                     <li><a href="areaServedOne.html" class="block px-4 py-2 hover:bg-gray-200">New York Metro
-                            Area</a>
-                    </li>
+                            Area</a></li>
                     <li><a href="areaServedTwo.html" class="block px-4 py-2 hover:bg-gray-200">Albany</a></li>
                     <li><a href="areaServedThree.html" class="block px-4 py-2 hover:bg-gray-200">Yonkers</a>
                     </li>
@@ -78,17 +78,20 @@
                 </ul>
             </li>
 
-            <li><a href="blog.html" class="hover:text-black">Blog</a></li>
-            <li><a href="gallery.html" class="hover:text-black">Gallery</a></li>
-            <li><a href="contactUs.html" class="hover:text-black">Contact Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
 
+        <!-- Contact and Button -->
         <div class="flex items-center space-x-4">
-            <div class="hidden lg:block text-gray-200">Call: 800 555 284</div>
-            <a href="contactUs.html"><button
-                    class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+            <div class="hidden lg:block text-gray-200 phone-hidden">Call: 800 555 284</div>
+            <a href="contactUs.html">
+                <button
+                    class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:font-bold hover:bg-red-600 hover:scale-105 hover:shadow-lg btn-hidden">
                     Book Service
-                </button></a>
+                </button>
+            </a>
         </div>
     </nav>
 
@@ -98,7 +101,7 @@
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
         <div class="dropdown-item">
-            <a href="services.html" class="text-white hover:text-gray-300">Services</a>
+            <a href="ourservices.html" class="text-white hover:text-gray-300">Services</a>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
                 <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing Services</a>
                 <a href="installationService.html" class="block text-white hover:text-gray-300">Installation
@@ -137,12 +140,14 @@
 
 
     <!-- About Us -->
+
     <div class="flex items-center justify-center mt-20" style="height: 450px;">
         <div class="relative h-full w-full bg-cover bg-center"
             style="background-image: url('../images/aboutImage.png');">
             <div class="absolute inset-0 bg-black bg-opacity-50"></div>
             <div class="relative flex flex-col items-center justify-center h-full text-center text-white px-4">
-                <h1 class="text-4xl md:text-4xl font-bold">About Us</h1>
+                <h1 class="text-4xl md:text-5xl font-bold">About Us</h1>
+                <p class="mt-2">Delivering trusted plumbing solutions.</p>
             </div>
         </div>
     </div>
@@ -151,7 +156,7 @@
     <!-- About Us Section -->
 
     <div
-        class="flex flex-col md:flex-row items-center justify-center pt-10 bg-white py-0 px-6 md:px-16 lg:px-24 space-y-8 md:space-y-0 md:space-x-64 bg-blue-100">
+        class="flex flex-col md:flex-row h-full-[70vh] items-center justify-center pt-1 bg-white py-0 px-6 md:px-16 lg:px-24 space-y-8 md:space-y-0 md:space-x-64 bg-blue-100">
         <div class="flex-1 ml-10 ">
             <div class="text-4xl mb-4 w-12 h-12">
                 <img src="../icons/quote-left.png" alt="">
@@ -171,21 +176,44 @@
 
         <div class="flex-1 md:order-2">
             <img src="../images/personAboutUs.png" alt="CEO Image" class="w-[50px]"
-                style="height: 40rem; object-contain;">
+                style="height: 35rem; object-contain">
         </div>
     </div>
+
+
+    <!-- Counter Section -->
+
+    <div class="bg-logo mb-10">
+        <div class="grid grid-cols-2 gap-8 md:flex md:flex-row justify-around items-center my-16 px-6">
+            <div class="col-span-1 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white" id="years">0</h2>
+                <p class="text-gray-200 text-lg mt-2">Years<br />Experience</p>
+            </div>
+
+            <div class="col-span-1 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white" id="projects">0</h2>
+                <p class="text-gray-200 text-lg mt-2">Projects<br />Completed</p>
+            </div>
+
+            <div class="col-span-1 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-white" id="customers">0</h2>
+                <p class="text-gray-200 text-lg mt-2">Satisfied<br />Customers</p>
+            </div>
+        </div>
+    </div>
+
 
     <!-- Why Choose us -->
 
     <div
-        class="flex flex-col md:flex-row items-center justify-center bg-white pt-10 px-6 md:px-16 lg:px-24 space-y-8 md:space-y-0 md:space-x-8">
+        class="flex flex-col md:flex-row items-center justify-center bg-white pt-3 md:px-16 lg:px-24 space-y-8 md:space-y-0 md:space-x-8">
         <div class="flex-1 w-full md:w-1/2">
-            <img src="../images/chooseUs-removebg-preview.png" alt="Why Choose us Image"
-                class="max-w-[460px] max-h-[580px] mx-auto lg:max-w-[400px] lg:max-h-[500px]">
+            <img src="../images/why_chooseUs.png" alt="Why Choose us Image"
+                class="max-w-[460px] max-h-[400px] mx-auto lg:max-w-[400px] lg:max-h-[400px] ">
         </div>
 
-        <div class="flex-1 w-full md:w-1/2 space-y-6 pt-5 md:pr-20 ">
-            <h2 class="text-3xl font-bold text-gray-800">
+        <div class="flex-1 w-full md:w-1/2 space-y-6 pt-5 md:pr-20 pl-6 pr-5">
+            <h2 class="text-4xl font-bold text-gray-800">
                 <span class="text-blue-500">Why</span> Choose Us
             </h2>
             <p class="text-md text-gray-700">
@@ -195,7 +223,8 @@
             <p class="text-gray-700">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo commodi impedit doloribus ad, placeat
                 repudiandae.
-                Alias deleniti optio, tempore nisi incidunt vel quibusdam doloremque cumque, consequuntur veniam quam
+                Alias deleniti optio, tempore nisi incidunt vel quibusdam doloremque cumque, consequuntur veniam
+                quam
                 consequatur.
             </p>
 
@@ -203,20 +232,13 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo commodi impedit doloribus ad, placeat
                 repudiandae.
             </p>
-
-            <div class="flex flex-wrap justify-between pt-2 md:pt-4 pb-7">
-                <div class="flex flex-col items-center text-center">
-                    <p class="text-3xl font-bold text-blue-500">25</p>
-                    <p class="text-sm text-gray-600">Years <br>Experience</p>
-                </div>
-                <div class="flex flex-col items-center text-center">
-                    <p class="text-3xl font-bold text-blue-500">25</p>
-                    <p class="text-sm text-gray-600">Projects <br>Completed</p>
-                </div>
-                <div class="flex flex-col items-center text-center">
-                    <p class="text-3xl font-bold text-blue-500">100+</p>
-                    <p class="text-sm text-gray-600">Satisfied <br> Customers</p>
-                </div>
+            <div class="mt-10">
+                <a href="contactUs.html">
+                    <button
+                        class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:font-bold hover:bg-red-600 hover:scale-105 hover:shadow-lg btn-hidden">
+                        Book Now
+                    </button>
+                </a>
             </div>
         </div>
     </div>
@@ -224,54 +246,56 @@
 
     <!-- What we do -->
 
-    <div class="bg-cover bg-center bg-no-repeat bg-fixed"
-        style="background-image: url('../images/whatWeDo.png.jpg'); min-height: 100vh;">
-
-        <div class="bg-black bg-opacity-60 min-h-screen flex items-center justify-center">
-            <div class="w-full max-w-4xl px-4 text-center text-white">
+    <div class="bg-cover bg-center bg-no-repeat bg-fixed "
+        style="background-image: url(../images/whatWeDo.png.jpg); height:750px">
+        <div class="bg-black bg-opacity-60 h-full flex items-center justify-center ">
+            <div class="w-full max-w-7xl px-4 text-center text-white ">
                 <div class="mb-10">
-                    <h3 class="text-light uppercase font-bold text-4xl mb-7">What We Do</h3>
-                    <h2 class="text-2xl font-bold">We Offer <span style="color: #FFF689;">Reliable Services</span> for
-                        Most Plumbing Systems</h2>
+                    <h3 class="text-light uppercase font-bold text-4xl mb-7 ">What We Do</h3>
+                    <h2 class="text-2xl font-semibold mt-5 mb-20">We Offer <span style="color: #FFF689;">Reliable
+                            Services</span> for Most Plumbing Systems</h2>
                 </div>
 
-                <div class="flex flex-wrap justify-around">
-                    <div class="w-1/2 sm:w-1/4 p-4">
+                <div class="flex flex-wrap justify-center">
+                    <div class="w-1/2 sm:w-1/4 lg:w-1/4">
                         <div id="circle1"
                             class="progress-container relative rounded-full w-32 h-32 flex items-center justify-center">
-                            <p class="absolute text-4xl font-bold " style="color: #FFF689;">45%</p>
+                            <p class="absolute text-4xl font-bold" style="color: #FFF689;">45%</p>
                         </div>
-                        <p class="text-lg font-bold mt-4">Energy Consumption goes to plumbing</p>
+                        <p class="md:text-lg mt-4 mb-4"><span class="font-semibold">Energy Consumption</span> goes to
+                            plumbing</p>
                     </div>
 
-                    <div class="w-1/2 sm:w-1/4 p-4">
+                    <div class="w-1/2 sm:w-1/4 lg:w-1/4">
                         <div id="circle2"
                             class="progress-container relative rounded-full w-32 h-32 flex items-center justify-center">
                             <p class="absolute text-4xl font-bold" style="color: #FFF689;">90%</p>
                         </div>
-                        <p class="text-lg font-bold mt-4">Average indoor spend time by individual</p>
+                        <p class="md:text-lg mt-4 mb-4"><span class="font-semibold">Average indoor</span> spend time by
+                            individual</p>
                     </div>
 
-                    <div class="w-1/2 sm:w-1/4 p-4">
+                    <div class="w-1/2 sm:w-1/4 lg:w-1/4">
                         <div id="circle3"
                             class="progress-container relative rounded-full w-32 h-32 flex items-center justify-center">
-                            <p class="absolute text-4xl font-bold " style="color: #FFF689;">50%</p>
+                            <p class="absolute text-4xl font-bold" style="color: #FFF689;">50%</p>
                         </div>
-                        <p class="text-lg font-bold mt-4">Lower your HVAC costs with maintenance</p>
+                        <p class="md:text-lg mt-4 mb-4">Lower your <span class="font-semibold">HVAC costs</span> with
+                            maintenance</p>
                     </div>
 
-                    <div class="w-1/2 sm:w-1/4 p-4">
+                    <div class="w-1/2 sm:w-1/4 lg:w-1/4 ">
                         <div id="circle4"
                             class="progress-container relative rounded-full w-32 h-32 flex items-center justify-center">
-                            <p class="absolute text-4xl font-bold " style="color: #FFF689;">40%</p>
+                            <p class="absolute text-4xl font-bold" style="color: #FFF689;">40%</p>
                         </div>
-                        <p class="text-lg font-bold mt-4">Lower monthly costs with variable faucets</p>
+                        <p class="md:text-lg mt-4 mb-4">Lower monthly costs with variable <span
+                                class="font-semibold">faucets</span></p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!--  Area Served -->
 
@@ -337,10 +361,6 @@
     </div>
 
 
-
-
-
-
     <!-- Footer Map -->
 
     <div class="relative w-full  overflow-hidden rounded-lg shadow-md" style="height: 450px;">
@@ -394,9 +414,10 @@
                     <a href="contactUs.html" class="text-white ">Contact us</a>
                     <a href="aboutUs.html" class="text-white ">About Us</a>
                     <a href="areaServed.html" class="text-white ">Area Served</a>
-                    <a href="services.html" class="text-white ">Services</a>
+                    <a href="ourservices.html" class="text-white ">Services</a>
                     <a href="blog.html" class="text-white ">Blog</a>
                     <a href="sitemap.html" class="text-white ">Sitemap</a>
+                    <a href="gallery.html" class="text-white ">Gallery</a>
                 </div>
             </div>
 
@@ -422,8 +443,10 @@
     </div>
 
 </body>
+
 <script>
-    // Progress Bars
+
+    // About Us Progress Bars
     function createCircle(containerId, value) {
         const circle = new ProgressBar.Circle(containerId, {
             color: '#FFF689',
@@ -449,6 +472,48 @@
     createCircle('#circle2', 0.9);
     createCircle('#circle3', 0.5);
     createCircle('#circle4', 0.4);
+
+
+
+    // About us counter
+
+    const counters = [
+        { id: "years", target: 25 },
+        { id: "projects", target: 25 },
+        { id: "customers", target: 100 }
+    ];
+
+    const animateCounters = () => {
+        counters.forEach(counter => {
+            const element = document.getElementById(counter.id);
+            const target = counter.target;
+            let current = 0;
+            const duration = 2000;
+            const startTime = performance.now();
+
+            const updateCounter = (timestamp) => {
+                const elapsedTime = timestamp - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+                current = Math.floor(progress * target);
+
+                if (counter.id === "customers") {
+                    element.innerText = current + "+";
+                } else {
+                    element.innerText = current;
+                }
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                }
+            };
+
+            requestAnimationFrame(updateCounter);
+        });
+    };
+
+    window.addEventListener("DOMContentLoaded", animateCounters);
+
+
 </script>
 
 </html>

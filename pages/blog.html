@@ -17,10 +17,10 @@
 
 <body class="mt-0 flex flex-col">
 
-
     <!-- Navbar -->
+
     <nav
-        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40 ">
+        class="bg-logo text-light w-full flex justify-between items-center py-6 px-8 shadow-xl z-40 fixed top-0 left-0 mb-40">
         <a href="../index.html">
             <div class="flex items-center">
                 <img src="../images/logo.png" alt="Logo" class="h-10 w-10 mr-3">
@@ -28,8 +28,8 @@
             </div>
         </a>
 
-        <!-- Hamburger -->
-        <div class="lg:hidden absolute right-6">
+        <!-- Hamburger menu -->
+        <div class="lg:hidden absolute right-6 hamburger-menu hidden">
             <button id="menu-toggle" class="text-black">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
@@ -38,35 +38,36 @@
             </button>
         </div>
 
-        <!-- Desktop Menu  -->
-        <ul class="hidden lg:flex space-x-6 text-lg text-white">
-            <li><a href="../index.html" class="hover:text-black">Home</a></li>
-            <li><a href="aboutUs.html" class="hover:text-black">About Us</a></li>
+        <!-- Desktop Navbar -->
+        <ul class="hidden lg:flex space-x-6 ml-12 text-lg text-white desktop-navbar">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+
+            <!-- Services Dropdown -->
             <li class="relative group">
-                <a href="services.html" class="hover:text-black">Services</a>
+                <a href="ourservices.html">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
-                    <li><a href="plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing Services</a>
-                    </li>
+                    <li><a href="plumbingServices.html" class="block px-4 py-2 hover:bg-gray-200">Plumbing
+                            Services</a></li>
                     <li><a href="installationService.html" class="block px-4 py-2 hover:bg-gray-200">Installation
                             Services</a></li>
                     <li><a href="specializedPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Specialized
-                            Plumbing
-                            Services</a></li>
+                            Plumbing Services</a></li>
                     <li><a href="residentialServices.html" class="block px-4 py-2 hover:bg-gray-200">Residential
                             Services</a></li>
-                    <li><a href="commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial Plumbing
-                            Services</a></li>
+                    <li><a href="commercialPlumbing.html" class="block px-4 py-2 hover:bg-gray-200">Commercial
+                            Plumbing Services</a></li>
                     <li><a href="maintenanceServices.html" class="block px-4 py-2 hover:bg-gray-200">Maintenance
                             Services</a></li>
                 </ul>
             </li>
 
+            <!-- Area Served Dropdown -->
             <li class="relative group">
-                <a href="areaServed.html" class="hover:text-black">Area Served</a>
+                <a href="areaServed.html">Area Served</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
                     <li><a href="areaServedOne.html" class="block px-4 py-2 hover:bg-gray-200">New York Metro
-                            Area</a>
-                    </li>
+                            Area</a></li>
                     <li><a href="areaServedTwo.html" class="block px-4 py-2 hover:bg-gray-200">Albany</a></li>
                     <li><a href="areaServedThree.html" class="block px-4 py-2 hover:bg-gray-200">Yonkers</a>
                     </li>
@@ -78,27 +79,32 @@
                 </ul>
             </li>
 
-            <li><a href="blog.html" class="hover:text-black">Blog</a></li>
-            <li><a href="gallery.html" class="hover:text-black">Gallery</a></li>
-            <li><a href="contactUs.html" class="hover:text-black">Contact Us</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
         </ul>
 
+        <!-- Contact and Button -->
         <div class="flex items-center space-x-4">
-            <div class="hidden lg:block text-gray-200">Call: 800 555 284</div>
-            <a href="contactUs.html"><button
-                    class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+            <div class="hidden lg:block text-gray-200 phone-hidden">Call: 800 555 284</div>
+            <a href="contactUs.html">
+                <button
+                    class="bg-red-600 text-white px-4 py-2 rounded lg:block hidden transform transition duration-300 ease-in-out hover:font-bold hover:bg-red-600 hover:scale-105 hover:shadow-lg btn-hidden">
                     Book Service
-                </button></a>
+                </button>
+            </a>
         </div>
     </nav>
 
+
     <!-- Mobile Dropdown Menu -->
+
     <div id="dropdown-menu"
         class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
         <div class="dropdown-item">
-            <a href="services.html" class="text-white hover:text-gray-300">Services</a>
+            <a href="ourservices.html" class="text-white hover:text-gray-300">Services</a>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
                 <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing Services</a>
                 <a href="installationService.html" class="block text-white hover:text-gray-300">Installation
@@ -137,6 +143,7 @@
 
 
     <!-- Blog -->
+
     <div class="flex items-center justify-center mt-20" style="height: 450px;">
         <div class="relative h-full w-full bg-cover bg-center"
             style="background-image: url('../images/blogImage.png');">
@@ -149,186 +156,180 @@
 
 
     <!-- Blog Post -->
+
     <section class="py-10 mt-10 mb-10">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                 <!-- First Blog Card -->
                 <div
-                    class="bg-white border-2 overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogOne.html"><img src="../images/blogImageOne.png" alt="Blog Image"
-                            class="w-full h-48 object-cover" /></a>
-                    <div class="p-4">
+                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
+                    <a href="blogOne.html">
+                        <img src="../images/blogImageOne.png" alt="Blog Image" class="w-full h-48 object-cover" />
+                    </a>
+                    <div class="p-4 flex-grow">
                         <p class="text-sm text-gray-500">January 10, 2018 · 3 Comments</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">
-                            The Best Water Filters of 2018 – Our Choice
+                        <h2 class="text-lg font-semibold text-gray-800 mt-2">The Best Water Filters of 2018 – Our Choice
                         </h2>
                         <p class="text-sm text-gray-600 mt-2">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga incidunt corporis accusamus
                             commodi necessitatibus, sed quo voluptatem obcaecati dicta vel.
                         </p>
-                        <div class="flex items-center mt-3 space-x-2 text-gray-500 ">
-                            <a href="#" class="text-blue-500 ">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="text-blue-400 ">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-green-500 ">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="p-3 flex space-x-3 pl-5">
+                        <a href="#" class="text-blue-500 text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-green-500 text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Second Blog Card -->
                 <div
-                    class="bg-white border-2 overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogTwo.html"><img src="../images/blogImageTwo.png" alt="Blog Image"
-                            class="w-full h-48 object-cover" /></a>
-                    <div class="p-4">
+                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
+                    <a href="blogTwo.html">
+                        <img src="../images/blogImageTwo.png" alt="Blog Image" class="w-full h-48 object-cover" />
+                    </a>
+                    <div class="p-4 flex-grow">
                         <p class="text-sm text-gray-500">January 9, 2018 · 1 Comment</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">
-                            Your Faucets Could Be Making Your Home Unsafe
-                        </h2>
+                        <h2 class="text-lg font-semibold text-gray-800 mt-2">Your Faucets Could Be Making Your Home
+                            Unsafe</h2>
                         <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, itaque architecto
-                            vitae perferendis quasi, ipsum nam, nisi possimus doloribus quos incidunt. Veniam
-                            blanditiis, quo suscipit incidunt ab pariatur animi sequi deserunt molestias voluptatum.
-
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis iste asperiores porro
+                            fugiat fuga facere dolorum nostrum saepe quas, consequuntur qui, similique cupiditate
+                            provident ratione ab, dicta possimus minus?
                         </p>
-                        <div class="flex items-center mt-3 space-x-2 text-gray-500 ">
-                            <a href="#" class="text-blue-500 ">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="text-blue-400 ">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-green-500 ">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="p-3 flex space-x-3 pl-5">
+                        <a href="#" class="text-blue-500 text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-green-500 text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Third Blog Card -->
                 <div
-                    class="bg-white border-2 overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogThree.html"><img src="../images/blogImageThree.png" alt="Blog Image"
-                            class="w-full h-48 object-cover" /></a>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500">January 9, 2018 · 3 Comments</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">
-                            Different Types of Plumbing Control
-                        </h2>
+                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
+                    <a href="blogThree.html">
+                        <img src="../images/blogImageThree.png" alt="Blog Image" class="w-full h-48 object-cover" />
+                    </a>
+                    <div class="p-4 flex-grow">
+                        <p class="text-sm text-gray-500">January 8, 2018 · 2 Comments</p>
+                        <h2 class="text-lg font-semibold text-gray-800 mt-2">Why You Should Invest in a Good Water
+                            Heater</h2>
                         <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus veritatis reprehenderit
-                            voluptatem, officia ducimus dolore quaerat amet provident vitae dignissimos magni a
-                            accusantium eos possimus sapiente temporibus saepe corporis corrupti aperiam ea. Dolores ex
-                            explicabo rem tenetur delectus modi sapiente beatae veniam vero similique, illo illum
-                            laudantium, quaerat deleniti porro dignissimos iste sunt? Dolorem ducimus quasi laboriosam
-                            corrupti, laborum quo?
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque maximus orci.
                         </p>
-                        <div class="flex items-center mt-3 space-x-2 text-gray-500 ">
-                            <a href="#" class="text-blue-500 ">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="text-blue-400 ">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-green-500 ">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="p-3 flex space-x-3 pl-5">
+                        <a href="#" class="text-blue-500 text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-green-500 text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Fourth Blog Card -->
                 <div
-                    class="bg-white border-2 overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogFour.html"><img src="../images/blogImageFour.png" alt="Blog Image"
-                            class="w-full h-48 object-cover" /></a>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500">January 9, 2018 · 1 Comment</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">
-                            What’s Wrong With Your Water Heater?
+                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
+                    <a href="blogFour.html">
+                        <img src="../images/blogImageFour.png" alt="Blog Image" class="w-full h-48 object-cover" />
+                    </a>
+                    <div class="p-4 flex-grow">
+                        <p class="text-sm text-gray-500">January 7, 2018 · 5 Comments</p>
+                        <h2 class="text-lg font-semibold text-gray-800 mt-2">How to Choose the Right Plumbing Fixtures
                         </h2>
                         <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt dolorum dolore veniam at
-                            laudantium suscipit dolor sequi delectus quis non, vero assumenda praesentium ipsum
-                            consectetur, doloremque sunt nobis! Quam error sapiente id atque, consectetur sit nam et
-                            animi amet dolor incidunt veritatis accusamus nihil qui praesentium! Ab quidem debitis
-                            possimus.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dolor sed lorem suscipit
+                            tincidunt ac eu enim.
                         </p>
-                        <div class="flex items-center mt-3 space-x-2 text-gray-500 ">
-                            <a href="#" class="text-blue-500 ">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="text-blue-400 ">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-green-500 ">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="p-3 flex space-x-3 pl-5">
+                        <a href="#" class="text-blue-500 text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-green-500 text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
 
                 <!-- Fifth Blog Card -->
                 <div
-                    class="bg-white border-2 overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogFive.html"><img src="../images/blogFive.png" alt="Blog Image"
-                            class="w-full h-48 object-cover" /></a>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500">January 9, 2018 · 1 Comment</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">
-                            4 Tips to Get Your Plumbing Ready for Fall
-                        </h2>
+                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
+                    <a href="blogFive.html">
+                        <img src="../images/blogFive.png" alt="Blog Image" class="w-full h-48 object-cover" />
+                    </a>
+                    <div class="p-4 flex-grow">
+                        <p class="text-sm text-gray-500">January 6, 2018 · 4 Comments</p>
+                        <h2 class="text-lg font-semibold text-gray-800 mt-2">Tips for Maintaining Your Home’s Plumbing
+                            System</h2>
                         <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam quidem sunt aut deleniti,
-                            similique quaerat nemo nobis! Laudantium possimus, perferendis sequi ea aut illo blanditiis
-                            accusantium officia voluptas magnam? Porro.
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus molestiae
+                            consequuntur ea. Facere aut asperiores aspernatur fugit, deleniti ut in, soluta sunt iusto
+                            voluptatem molestiae recusandae accusamus, voluptas obcaecati reprehenderit nisi voluptates.
                         </p>
-                        <div class="flex items-center mt-3 space-x-2 text-gray-500 ">
-                            <a href="#" class="text-blue-500 ">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="text-blue-400 ">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-green-500 ">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="p-3 flex space-x-3 pl-5">
+                        <a href="#" class="text-blue-500 text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-green-500 text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
 
+                <!-- Sixth Blog Card -->
                 <div
-                    class="bg-white border-2 overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogSix.html"><img src="../images/blogSix.png" alt="Blog Image"
-                            class="w-full h-48 object-cover" /></a>
-                    <div class="p-4">
-                        <p class="text-sm text-gray-500">January 9, 2018 · 1 Comment</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">
-                            How To Buy the Right Water Filters
+                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
+                    <a href="blogSix.html">
+                        <img src="../images/blogSix.png" alt="Blog Image" class="w-full h-48 object-cover" />
+                    </a>
+                    <div class="p-4 flex-grow">
+                        <p class="text-sm text-gray-500">January 5, 2018 · 6 Comments</p>
+                        <h2 class="text-lg font-semibold text-gray-800 mt-2">How to Fix a Leaking Faucet in Your Home
                         </h2>
                         <p class="text-sm text-gray-600 mt-2">
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore tenetur corrupti aliquam
-                            optio accusantium ex dignissimos obcaecati magnam animi voluptatibus.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra, purus a sollicitudin
+                            lobortis, ligula arcu vehicula ante.
                         </p>
-                        <div class="flex items-center mt-3 space-x-2 text-gray-500 ">
-                            <a href="#" class="text-blue-500 ">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                            <a href="#" class="text-blue-400 ">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="text-green-500 ">
-                                <i class="fab fa-whatsapp"></i>
-                            </a>
-                        </div>
+                    </div>
+                    <div class="p-3 flex space-x-3 pl-5">
+                        <a href="#" class="text-blue-500 text-2xl">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-blue-400 text-2xl">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-green-500 text-2xl">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -387,9 +388,10 @@
                     <a href="contactUs.html" class="text-white ">Contact us</a>
                     <a href="aboutUs.html" class="text-white ">About Us</a>
                     <a href="areaServed.html" class="text-white ">Area Served</a>
-                    <a href="services.html" class="text-white ">Services</a>
+                    <a href="ourservices.html" class="text-white ">Services</a>
                     <a href="blog.html" class="text-white ">Blog</a>
                     <a href="sitemap.html" class="text-white ">Sitemap</a>
+                    <a href="gallery.html" class="text-white ">Gallery</a>
                 </div>
             </div>
 

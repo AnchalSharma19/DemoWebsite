@@ -59,6 +59,9 @@ html {
     background-color: var(--bgButtonSecondary);
 }
 
+li a:hover {
+    font-weight: bold;
+}
 
 
 #dropdown-menu {
@@ -367,5 +370,59 @@ ul li ul li a:hover {
 @media (min-width: 768px) and (max-width: 1023px) {
     .testimonial-card {
         min-width: calc((100% - 4rem) / 2);
+    }
+}
+
+
+.keen-slider__slide blockquote {
+    height: 300px;
+    /* Set the desired fixed height */
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+/*  screens 1176px or smaller */
+@media (max-width: 1176px) {
+    .desktop-navbar {
+        display: none !important;
+    }
+
+    .hamburger-menu {
+        display: block !important;
+    }
+
+    .btn-hidden,
+    .phone-hidden {
+        display: none !important;
+    }
+}
+
+/*  screens larger than 1176px */
+@media (min-width: 1177px) {
+    .desktop-navbar {
+        display: flex !important;
+    }
+
+    .hamburger-menu {
+        display: none !important;
+    }
+
+    .btn-hidden,
+    .phone-hidden {
+        display: inline-block !important;
+    }
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+
+    /* Reduce height of the Hero section */
+    .hero-section {
+        min-height: 20vh;
+        /* Adjust this value as needed */
     }
 }

@@ -140,63 +140,6 @@ document.querySelectorAll('.counter').forEach(counter => {
 });
 
 
-// CUSTOMER REVIEW
-const carousel = document.getElementById('carousel');
-const carouselPrev = document.getElementById('carouselPrev');
-const carouselNext = document.getElementById('carouselNext');
-
-let current = 0;
-let visibleCards = getVisibleCards();
-const totalItems = carousel.children.length;
-
-function getVisibleCards() {
-    const screenWidth = window.innerWidth;
-    if (screenWidth >= 1024) {
-        return 3; // Laptop/Desktop
-    } else if (screenWidth >= 768) {
-        return 2; // Tablet
-    } else {
-        return 1; // Mobile
-    }
-}
-
-
-function updateCarousel() {
-    const cardWidth = carousel.children[0].offsetWidth + 32;
-    carousel.style.transform = `translateX(-${current * cardWidth}px)`;
-}
-
-
-carouselNext.addEventListener('click', () => {
-    if (current + visibleCards < totalItems) {
-        current += visibleCards;
-    } else {
-        current = 0;
-    }
-    updateCarousel();
-});
-
-
-carouselPrev.addEventListener('click', () => {
-    if (current - visibleCards >= 0) {
-        current -= visibleCards;
-    } else {
-        current = totalItems - visibleCards;
-    }
-    updateCarousel();
-});
-
-
-window.addEventListener('resize', () => {
-    visibleCards = getVisibleCards();
-    current = 0;
-    updateCarousel();
-});
-
-
-updateCarousel();
-
-
 
 AOS.init({
     offset: 200,
@@ -295,3 +238,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+
+
