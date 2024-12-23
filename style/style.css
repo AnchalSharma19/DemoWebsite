@@ -64,6 +64,8 @@ li a:hover {
 }
 
 
+/* Dropdown styling */
+
 #dropdown-menu {
     display: none;
     position: fixed;
@@ -77,7 +79,6 @@ li a:hover {
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 9999;
-    /* Ensure dropdown is above other elements */
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -180,7 +181,7 @@ ul li ul li a:hover {
 }
 
 
-
+/*  Navbar */
 
 .navbar {
     position: fixed;
@@ -198,8 +199,8 @@ ul li ul li a:hover {
 }
 
 
+/* Small screen styles for the hamburger items */
 
-/* Small screen styles for the hamburger menu items */
 @media (max-width: 768px) {
     #dropdown-menu {
         width: 70%;
@@ -253,7 +254,7 @@ ul li ul li a:hover {
 
 
 
-/* Service */
+/* Service Carousel Home Page*/
 
 .carousel-dot {
     transition: background-color 0.3s;
@@ -276,7 +277,6 @@ ul li ul li a:hover {
 }
 
 
-/* Fade-in animation on load */
 .opacity-0 {
     opacity: 0;
 }
@@ -285,15 +285,6 @@ ul li ul li a:hover {
     opacity: 1;
 }
 
-/* Accordion icon rotation */
-.rotate-45 {
-    transform: rotate(45deg);
-}
-
-/* Transition for max-height */
-.transition-max-height {
-    transition: max-height 0.3s ease-out;
-}
 
 
 .carousel {
@@ -357,34 +348,18 @@ ul li ul li a:hover {
 }
 
 
-.testimonial-card {
-    min-width: calc((100% - 4rem) / 1);
-}
-
-@media (min-width: 1024px) {
-    .testimonial-card {
-        min-width: calc((100% - 8rem) / 3);
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .testimonial-card {
-        min-width: calc((100% - 4rem) / 2);
-    }
-}
-
+/* Customer Review Home Page */
 
 .keen-slider__slide blockquote {
     height: 300px;
-    /* Set the desired fixed height */
     display: flex;
     flex-direction: column;
 
 }
 
 
-
 /*  screens 1176px or smaller */
+
 @media (max-width: 1176px) {
     .desktop-navbar {
         display: none !important;
@@ -401,6 +376,7 @@ ul li ul li a:hover {
 }
 
 /*  screens larger than 1176px */
+
 @media (min-width: 1177px) {
     .desktop-navbar {
         display: flex !important;
@@ -417,12 +393,10 @@ ul li ul li a:hover {
 }
 
 
-
+/* Tab Responsiveness */
 @media (min-width: 1024px) and (max-width: 1366px) {
 
-    /* Reduce height of the Hero section */
     .hero-section {
         min-height: 20vh;
-        /* Adjust this value as needed */
     }
 }

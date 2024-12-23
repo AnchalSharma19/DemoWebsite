@@ -43,7 +43,6 @@
             </div>
         </a>
 
-        <!-- Hamburger menu -->
         <div class="lg:hidden absolute right-6 hamburger-menu hidden">
             <button id="menu-toggle" class="text-black">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
@@ -58,7 +57,6 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="./pages/aboutUs.html">About Us</a></li>
 
-            <!-- Services Dropdown -->
             <li class="relative group">
                 <a href="./pages/ourservices.html">Services</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
@@ -77,7 +75,6 @@
                 </ul>
             </li>
 
-            <!-- Area Served Dropdown -->
             <li class="relative group">
                 <a href="./pages/areaServed.html">Area Served</a>
                 <ul class="absolute hidden group-hover:block bg-white shadow-lg mt-2">
@@ -99,7 +96,6 @@
             <li><a href="./pages/contactUs.html">Contact Us</a></li>
         </ul>
 
-        <!-- Contact and Button -->
         <div class="flex items-center space-x-4">
             <div class="hidden lg:block text-gray-200 phone-hidden">Call: 800 555 284</div>
             <a href="./pages/contactUs.html">
@@ -171,13 +167,13 @@
                 The <span class="text-blue-400">Plumber</span> <br> You Deserve
             </h1>
 
-            <div
-                class="flex flex-col items-center text-center space-y-4 sm:flex-row sm:justify-start sm:items-center sm:text-left sm:space-y-0 pt-3">
+            <div class="flex items-center space-x-4 pt-3 ml-10 md:ml-0">
                 <div class="rounded-full p-2 w-12 h-12 flex items-center justify-center">
                     <img src="icons/telephone.png" alt="Phone Icon" class="w-8 h-8">
                 </div>
-                <span class="text-xl font-semibold ">1-800-555-284</span>
+                <span class="text-xl font-semibold">1-800-555-284</span>
             </div>
+
             <br>
             <a href="./pages/contactUs.html">
                 <button
@@ -455,6 +451,7 @@
 
 
     <!-- Blog -->
+
     <section
         class="cards-section flex flex-col items-center justify-center text-white relative pt-16 pb-16 bg-cover bg-center"
         style="background-image: url('images/bgScrewBackground.png');">
@@ -753,7 +750,7 @@
             <div class="mt-8">
                 <div id="keen-slider" class="keen-slider">
                     <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
-                        <blockquote class="rounded-lg bg-blue-200 p-6 shadow-sm sm:p-8">
+                        <blockquote class="rounded-lg bg-blue-300 p-6 shadow-sm sm:p-8">
                             <div class="flex items-center gap-4">
                                 <img alt="" src="./images/customerOne.jpg" class="size-5 rounded-full object-cover "
                                     style="border-radius: 50%; height: 130px; width: 130px;" />
@@ -924,7 +921,6 @@
                     </div>
 
 
-
                     <div class="mt-6 flex items-center justify-center gap-4">
                         <button aria-label="Previous slide" id="keen-slider-previous"
                             class="text-gray-600 transition-colors hover:text-gray-900">
@@ -954,7 +950,7 @@
     </section>
 
 
-    <!-- why choose us-->
+    <!-- Why choose us-->
 
     <section class="bg-gray-100 flex items-center justify-center min-h-[60vh] ">
         <div class="container mx-auto pt-10 md:flex items-center space-y-6 md:space-y-0 ">
@@ -1027,7 +1023,6 @@
                     </div>
                 </div>
 
-                <!-- Contact Info Section -->
                 <div class="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="bg-gray-800 bg-opacity-90 p-6 rounded-lg text-left animate__animated animate__fadeInUp">
                         <div class="text-blue-400 mb-2">📍</div>
@@ -1056,7 +1051,7 @@
     </section>
 
 
-    <!-- Footer Map -->
+    <!-- Map -->
 
     <div class="relative w-full  overflow-hidden shadow-md" style="height: 450px;">
         <iframe
@@ -1130,7 +1125,6 @@
         </div>
     </div>
 
-    <!-- Copyright Section -->
     <div class="text-center text-m text-white bg-blue-500 py-5">
         <p>Copyright © 2024 by Company. All Rights Reserved.</p>
         <a href="./pages/privacyPolicy.html">Privacy & Policy</a>
@@ -1138,8 +1132,8 @@
     </div>
 
 
-
     <!-- Scripts -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
         integrity="sha512-pfaGz+K2+dTb8n6yxL2bZ9bEZb9qynRu9ui7e4/s0Em0fVlxkgjxd38fLnJIAEYek+1PCAg0YuNZoAfkIBpXg=="
         crossorigin="anonymous"></script>
@@ -1151,10 +1145,11 @@
 
     <script src="./script/script.js"></script>
     </section>
+
 </body>
 
 
-
+<!-- Customer Review Slider Home Page -->
 
 <script type="module">
     import KeenSlider from 'https://cdn.jsdelivr.net/npm/keen-slider@6.8.6/+esm'

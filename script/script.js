@@ -6,16 +6,16 @@ AOS.init({
 });
 
 
+// Navbar 
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const dropdownMenu = document.getElementById('dropdown-menu');
 
     if (menuToggle && dropdownMenu) {
-        // Toggle the dropdown menu when the hamburger button is clicked
         menuToggle.addEventListener('click', (event) => {
-            event.stopPropagation(); // Prevent event from propagating
-            dropdownMenu.classList.toggle('hidden'); // Toggle visibility
-            dropdownMenu.classList.toggle('show');   // Add/Remove show class for visibility
+            event.stopPropagation();
+            dropdownMenu.classList.toggle('hidden');
+            dropdownMenu.classList.toggle('show');
         });
 
         document.addEventListener('click', (event) => {
@@ -38,7 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Services 
+// Services Carousel
+
 function goToSlide(slideIndex) {
     const carouselTrack = document.getElementById('carouselTrack');
     const dots = document.querySelectorAll('.carousel-dot');
@@ -56,7 +57,6 @@ window.addEventListener('load', () => {
         }, 100);
     });
 });
-
 
 
 const carouselTrack = document.getElementById('carouselTrack');
@@ -79,7 +79,7 @@ function nextSlide() {
 updateSlide(currentSlide);
 
 
-// Swipe functionality
+// Swipe functionality ( Service Carousel)
 let startX = 0;
 let currentX = 0;
 let isDragging = false;
@@ -119,8 +119,7 @@ carouselTrack.addEventListener('touchend', handleTouchEnd);
 
 
 
-
-// Select all elements with the 'counter' class
+// Counter (Plumbing Care Section)
 document.querySelectorAll('.counter').forEach(counter => {
     const updateCount = () => {
         const target = +counter.getAttribute('data-count');
@@ -140,13 +139,6 @@ document.querySelectorAll('.counter').forEach(counter => {
 });
 
 
-
-AOS.init({
-    offset: 200,
-    duration: 800,
-    easing: 'ease-in-out',
-    once: true,
-});
 
 // Parallax effect
 document.addEventListener("scroll", function () {
@@ -178,7 +170,6 @@ function toggleAccordion(id) {
 }
 
 
-
 // Fade-in animation on load
 window.addEventListener('DOMContentLoaded', () => {
     const section = document.getElementById('fade-in-section');
@@ -200,31 +191,7 @@ function toggleAccordion(index) {
     }
 }
 
-
-document.addEventListener('DOMContentLoaded', function () {
-    new Splide('#testimonial-carousel', {
-        type: 'loop',
-        perPage: 1,
-        autoplay: true,
-        interval: 5000,
-        pauseOnHover: false,
-    }).mount();
-});
-
-// service page
-
-const { motion } = framerMotion;
-document.querySelectorAll('[id^="card"]').forEach(card => {
-    card.addEventListener('mouseover', () => {
-        card.style.transform = 'scale(1.05)';
-        card.style.transition = 'transform 0.3s ease-in-out';
-    });
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'scale(1)';
-    });
-});
-
-
+// Sidebar
 document.addEventListener("DOMContentLoaded", () => {
     const menuItems = document.querySelectorAll("#sidebar-menu a");
 
@@ -238,7 +205,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
 
 
 
