@@ -95,28 +95,39 @@
 
     <!-- Mobile Dropdown Menu -->
 
+
     <div id="dropdown-menu"
         class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
+
         <div class="dropdown-item">
             <a href="ourservices.html" class="text-white hover:text-gray-300">Services</a>
+            <span class="dropdown-icon text-white cursor-pointer ml-5"
+                onclick="toggleDropdown('servicesDropdown')">&#9660;</span>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
-                <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing Services</a>
+                <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing
+                    Services</a>
                 <a href="installationService.html" class="block text-white hover:text-gray-300">Installation
                     Services</a>
-                <a href="specializedPlumbing.html" class="block text-white hover:text-gray-300">Specialized Plumbing
+                <a href="specializedPlumbing.html" class="block text-white hover:text-gray-300">Specialized
+                    Plumbing
                     Services</a>
-                <a href="residentialServices.html" class="block text-white hover:text-gray-300">Residential Services</a>
-                <a href="commercialPlumbing.html" class="block text-white hover:text-gray-300">Commercial Plumbing
+                <a href="residentialServices.html" class="block text-white hover:text-gray-300">Residential
                     Services</a>
-                <a href="maintenanceServices.html" class="block text-white hover:text-gray-300">Maintenance Services</a>
+                <a href="commercialPlumbing.html" class="block text-white hover:text-gray-300">Commercial
+                    Plumbing
+                    Services</a>
+                <a href="maintenanceServices.html" class="block text-white hover:text-gray-300">Maintenance
+                    Services</a>
             </div>
         </div>
 
         <div class="dropdown-item">
             <a href="areaServed.html" class="text-white hover:text-gray-300">Area Served</a>
-            <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
+            <span class="dropdown-icon text-white cursor-pointer ml-5"
+                onclick="toggleDropdown('areaServedDropdown')">&#9660;</span>
+            <div class="ml-4 space-y-2 hidden" id="areaServedDropdown">
                 <a href="areaServedOne.html" class="block text-white hover:text-gray-300">New York Metro
                     Area</a>
                 <a href="areaServedTwo.html" class="block text-white hover:text-gray-300">Albany</a>
@@ -131,9 +142,12 @@
         <a href="gallery.html" class="dropdown-item text-white hover:text-gray-300">Gallery</a>
         <a href="contactUs.html" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
         <div class="flex justify-center">
-            <button
-                class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">Book
-                Service</button>
+            <a href="contactUs.html">
+                <button
+                    class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Book Service
+                </button>
+            </a>
         </div>
     </div>
 
@@ -153,70 +167,70 @@
 
     <div class="container mx-auto py-10 px-4 lg:px-8 mt-10 mb-10 pt-0 md:pt-5">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-            <aside class="lg:col-span-4 space-y-6">
-                <div class="bg-gray-50 shadow-lg rounded-lg p-6 border-l-4 border-blue-600">
-                    <h2 class="text-lg font-bold text-gray-800 mb-4">Service Areas</h2>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="areaServedOne.html"
-                                class="block px-4 py-3 bg-blue-100 text-blue-600 font-medium rounded-lg hover:bg-blue-200">
-                                New York Metro Area
-                            </a>
-                        </li>
-                        <li>
-                            <a href="areaServedTwo.html"
-                                class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                                Albany
-                            </a>
-                        </li>
-                        <li>
-                            <a href="areaServedThree.html"
-                                class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                                Yonkers
-                            </a>
-                        </li>
-                        <li>
-                            <a href="areaServedFour.html"
-                                class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                                Buffalo
-                            </a>
-                        </li>
-                        <li>
-                            <a href="areaServedFive.html"
-                                class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                                Syracuse
-                            </a>
-                        </li>
-                        <li>
-                            <a href="areaServedSix.html"
-                                class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
-                                Rochester
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="bg-black text-white rounded-lg p-6 shadow-lg flex items-center">
-                    <img src="../icons/telephone.png" alt="Phone" class="h-12 w-12 mr-4">
-                    <div>
-                        <h3 class="text-lg font-semibold">Talk to an Expert</h3>
-                        <p class="mt-1">Call us at 800 555 284</p>
-                    </div>
-                </div>
-            </aside>
-
-            <main class="lg:col-span-8 space-y-8">
-                <div class="relative  rounded-lg  overflow-hidden">
-                    <img src="../images/areaServedsix.png.jpg" alt="City View" class="w-full h-96 object-cover">
-                    <div class="mt-6 p-6 bg-white rounded-lg shadow-lg">
-                        <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Magnam, tenetur explicabo! Quaerat magni harum beatae quae facere eveniet. Cumque autem
-                            dignissimos iusto eum temporibus iste harum nihil ducimus sunt labore aut ipsum sequi
-                            facilis possimus, nam delectus voluptatibus dicta sint?</p>
-                    </div>
-                </div>
-            </main>
+            <aside class="lg:col-span-4 space-y-6 order-last lg:order-first"">
+                <div class=" bg-gray-50 shadow-lg rounded-lg p-6 border-l-4 border-blue-600">
+                <h2 class="text-lg font-bold text-gray-800 mb-4">Service Areas</h2>
+                <ul class="space-y-2">
+                    <li>
+                        <a href="areaServedOne.html"
+                            class="block px-4 py-3 bg-blue-100 text-blue-600 font-medium rounded-lg hover:bg-blue-200">
+                            New York Metro Area
+                        </a>
+                    </li>
+                    <li>
+                        <a href="areaServedTwo.html"
+                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
+                            Albany
+                        </a>
+                    </li>
+                    <li>
+                        <a href="areaServedThree.html"
+                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
+                            Yonkers
+                        </a>
+                    </li>
+                    <li>
+                        <a href="areaServedFour.html"
+                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
+                            Buffalo
+                        </a>
+                    </li>
+                    <li>
+                        <a href="areaServedFive.html"
+                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
+                            Syracuse
+                        </a>
+                    </li>
+                    <li>
+                        <a href="areaServedSix.html"
+                            class="block px-4 py-3 bg-blue-100 text-blue-700 font-medium rounded-lg hover:bg-blue-200">
+                            Rochester
+                        </a>
+                    </li>
+                </ul>
         </div>
+
+        <div class="bg-black text-white rounded-lg p-6 shadow-lg flex items-center">
+            <img src="../icons/telephone.png" alt="Phone" class="h-12 w-12 mr-4">
+            <div>
+                <h3 class="text-lg font-semibold">Talk to an Expert</h3>
+                <p class="mt-1">Call us at 800 555 284</p>
+            </div>
+        </div>
+        </aside>
+
+        <main class="lg:col-span-8 space-y-8">
+            <div class="relative  rounded-lg  overflow-hidden">
+                <img src="../images/areaServedsix.png.jpg" alt="City View" class="w-full h-96 object-cover">
+                <div class="mt-6 p-6 bg-white rounded-lg shadow-lg">
+                    <p class="text-lg text-gray-800">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Magnam, tenetur explicabo! Quaerat magni harum beatae quae facere eveniet. Cumque autem
+                        dignissimos iusto eum temporibus iste harum nihil ducimus sunt labore aut ipsum sequi
+                        facilis possimus, nam delectus voluptatibus dicta sint?</p>
+                </div>
+            </div>
+        </main>
+    </div>
     </div>
 
 

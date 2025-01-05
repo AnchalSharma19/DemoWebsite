@@ -95,28 +95,39 @@
 
     <!-- Mobile Dropdown Menu -->
 
+
     <div id="dropdown-menu"
         class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
+
         <div class="dropdown-item">
             <a href="ourservices.html" class="text-white hover:text-gray-300">Services</a>
+            <span class="dropdown-icon text-white cursor-pointer ml-5"
+                onclick="toggleDropdown('servicesDropdown')">&#9660;</span>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
-                <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing Services</a>
+                <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing
+                    Services</a>
                 <a href="installationService.html" class="block text-white hover:text-gray-300">Installation
                     Services</a>
-                <a href="specializedPlumbing.html" class="block text-white hover:text-gray-300">Specialized Plumbing
+                <a href="specializedPlumbing.html" class="block text-white hover:text-gray-300">Specialized
+                    Plumbing
                     Services</a>
-                <a href="residentialServices.html" class="block text-white hover:text-gray-300">Residential Services</a>
-                <a href="commercialPlumbing.html" class="block text-white hover:text-gray-300">Commercial Plumbing
+                <a href="residentialServices.html" class="block text-white hover:text-gray-300">Residential
                     Services</a>
-                <a href="maintenanceServices.html" class="block text-white hover:text-gray-300">Maintenance Services</a>
+                <a href="commercialPlumbing.html" class="block text-white hover:text-gray-300">Commercial
+                    Plumbing
+                    Services</a>
+                <a href="maintenanceServices.html" class="block text-white hover:text-gray-300">Maintenance
+                    Services</a>
             </div>
         </div>
 
         <div class="dropdown-item">
             <a href="areaServed.html" class="text-white hover:text-gray-300">Area Served</a>
-            <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
+            <span class="dropdown-icon text-white cursor-pointer ml-5"
+                onclick="toggleDropdown('areaServedDropdown')">&#9660;</span>
+            <div class="ml-4 space-y-2 hidden" id="areaServedDropdown">
                 <a href="areaServedOne.html" class="block text-white hover:text-gray-300">New York Metro
                     Area</a>
                 <a href="areaServedTwo.html" class="block text-white hover:text-gray-300">Albany</a>
@@ -131,12 +142,14 @@
         <a href="gallery.html" class="dropdown-item text-white hover:text-gray-300">Gallery</a>
         <a href="contactUs.html" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
         <div class="flex justify-center">
-            <a href="contactUs.html"><button
-                    class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">Book
-                    Service</button></a>
+            <a href="contactUs.html">
+                <button
+                    class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Book Service
+                </button>
+            </a>
         </div>
     </div>
-
 
     <!-- Sitemap -->
 

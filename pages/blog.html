@@ -94,28 +94,39 @@
 
     <!-- Mobile Dropdown Menu -->
 
+
     <div id="dropdown-menu"
         class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
+
         <div class="dropdown-item">
             <a href="ourservices.html" class="text-white hover:text-gray-300">Services</a>
+            <span class="dropdown-icon text-white cursor-pointer ml-5"
+                onclick="toggleDropdown('servicesDropdown')">&#9660;</span>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
-                <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing Services</a>
+                <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing
+                    Services</a>
                 <a href="installationService.html" class="block text-white hover:text-gray-300">Installation
                     Services</a>
-                <a href="specializedPlumbing.html" class="block text-white hover:text-gray-300">Specialized Plumbing
+                <a href="specializedPlumbing.html" class="block text-white hover:text-gray-300">Specialized
+                    Plumbing
                     Services</a>
-                <a href="residentialServices.html" class="block text-white hover:text-gray-300">Residential Services</a>
-                <a href="commercialPlumbing.html" class="block text-white hover:text-gray-300">Commercial Plumbing
+                <a href="residentialServices.html" class="block text-white hover:text-gray-300">Residential
                     Services</a>
-                <a href="maintenanceServices.html" class="block text-white hover:text-gray-300">Maintenance Services</a>
+                <a href="commercialPlumbing.html" class="block text-white hover:text-gray-300">Commercial
+                    Plumbing
+                    Services</a>
+                <a href="maintenanceServices.html" class="block text-white hover:text-gray-300">Maintenance
+                    Services</a>
             </div>
         </div>
 
         <div class="dropdown-item">
             <a href="areaServed.html" class="text-white hover:text-gray-300">Area Served</a>
-            <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
+            <span class="dropdown-icon text-white cursor-pointer ml-5"
+                onclick="toggleDropdown('areaServedDropdown')">&#9660;</span>
+            <div class="ml-4 space-y-2 hidden" id="areaServedDropdown">
                 <a href="areaServedOne.html" class="block text-white hover:text-gray-300">New York Metro
                     Area</a>
                 <a href="areaServedTwo.html" class="block text-white hover:text-gray-300">Albany</a>
@@ -130,12 +141,14 @@
         <a href="gallery.html" class="dropdown-item text-white hover:text-gray-300">Gallery</a>
         <a href="contactUs.html" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
         <div class="flex justify-center">
-            <a href="contactUs.html"><button
-                    class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">Book
-                    Service</button></a>
+            <a href="contactUs.html">
+                <button
+                    class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Book Service
+                </button>
+            </a>
         </div>
     </div>
-
 
     <!-- Blog Section -->
 
@@ -149,185 +162,148 @@
         </div>
     </div>
 
-
-    <section class="py-10 mt-10 mb-10">
+    <section class="py-10 mt-5 mb-5">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-                <!-- First Blog Card -->
+                <!-- Blog Card 1 -->
+                <a href="blogOne.html" class="group block">
+                    <div
+                        class="bg-white border rounded-lg shadow-md flex flex-col h-full overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="../images/BlogOne.png" alt="Blog Image" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow flex flex-col">
+                            <p class="text-sm text-gray-500">January 10, 2018 · 3 Comments</p>
+                            <h2 class="text-lg font-semibold text-gray-800 mt-2 group-hover:text-blue-500">
+                                The Best Water Filters of 2018 – Our Choice
+                            </h2>
+                            <p class="text-sm text-gray-600 mt-2 flex-grow">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem sed doloremque
+                                magni aliquid iste debitis recusandae accusantium animi quibusdam impedit mollitia.
+                            </p>
+                        </div>
+                        <div class="p-4 flex space-x-3">
+                            <i class="fab fa-facebook text-blue-500 text-xl"></i>
+                            <i class="fab fa-twitter text-blue-400 text-xl"></i>
+                            <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                        </div>
+                    </div>
+                </a>
 
-                <div
-                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogOne.html">
-                        <img src="../images/blogImageOne.png" alt="Blog Image" class="w-full h-48 object-cover" />
-                    </a>
-                    <div class="p-4 flex-grow">
-                        <p class="text-sm text-gray-500">January 10, 2018 · 3 Comments</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">The Best Water Filters of 2018 – Our Choice
-                        </h2>
-                        <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga incidunt corporis accusamus
-                            commodi necessitatibus, sed quo voluptatem obcaecati dicta vel.
-                        </p>
+                <!-- Blog Card 2 -->
+                <a href="blogTwo.html" class="group block">
+                    <div
+                        class="bg-white border rounded-lg shadow-md flex flex-col h-full overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="../images/BlogTwo.png" alt="Blog Image" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow flex flex-col">
+                            <p class="text-sm text-gray-500">January 9, 2018 · 1 Comment</p>
+                            <h2 class="text-lg font-semibold text-gray-800 mt-2 group-hover:text-blue-500">
+                                Your Faucets Could Be Making Your Home Unsafe
+                            </h2>
+                            <p class="text-sm text-gray-600 mt-2 flex-grow">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis iste asperiores
+                                porro fugiat.
+                            </p>
+                        </div>
+                        <div class="p-4 flex space-x-3">
+                            <i class="fab fa-facebook text-blue-500 text-xl"></i>
+                            <i class="fab fa-twitter text-blue-400 text-xl"></i>
+                            <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                        </div>
                     </div>
-                    <div class="p-3 flex space-x-3 pl-5">
-                        <a href="#" class="text-blue-500 text-2xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-blue-400 text-2xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-green-500 text-2xl">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
+                </a>
 
-                <!-- Second Blog Card -->
+                <!-- Blog Card 3 -->
+                <a href="blogThree.html" class="group block">
+                    <div
+                        class="bg-white border rounded-lg shadow-md flex flex-col h-full overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="../images/BlogThree.png" alt="Blog Image" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow flex flex-col">
+                            <p class="text-sm text-gray-500">January 8, 2018 · 2 Comments</p>
+                            <h2 class="text-lg font-semibold text-gray-800 mt-2 group-hover:text-blue-500">
+                                Why You Should Invest in a Good Water Heater
+                            </h2>
+                            <p class="text-sm text-gray-600 mt-2 flex-grow">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint ut dolore voluptas fugiat
+                                quis quibusdam, in aliquam voluptates.
+                            </p>
+                        </div>
+                        <div class="p-4 flex space-x-3">
+                            <i class="fab fa-facebook text-blue-500 text-xl"></i>
+                            <i class="fab fa-twitter text-blue-400 text-xl"></i>
+                            <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                        </div>
+                    </div>
+                </a>
 
-                <div
-                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogTwo.html">
-                        <img src="../images/blogImageTwo.png" alt="Blog Image" class="w-full h-48 object-cover" />
-                    </a>
-                    <div class="p-4 flex-grow">
-                        <p class="text-sm text-gray-500">January 9, 2018 · 1 Comment</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">Your Faucets Could Be Making Your Home
-                            Unsafe</h2>
-                        <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod facilis iste asperiores porro
-                            fugiat fuga facere dolorum nostrum saepe quas, consequuntur qui, similique cupiditate
-                            provident ratione ab, dicta possimus minus?
-                        </p>
+                <!-- Blog Card 4 -->
+                <a href="blogFour.html" class="group block">
+                    <div
+                        class="bg-white border rounded-lg shadow-md flex flex-col h-full overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="../images/blogImageFour.png" alt="Blog Image" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow flex flex-col">
+                            <p class="text-sm text-gray-500">January 7, 2018 · 5 Comments</p>
+                            <h2 class="text-lg font-semibold text-gray-800 mt-2 group-hover:text-blue-500">
+                                How to Save Money on Plumbing Repairs
+                            </h2>
+                            <p class="text-sm text-gray-600 mt-2 flex-grow">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem quas ipsa debitis
+                                porro, cupiditate amet.
+                            </p>
+                        </div>
+                        <div class="p-4 flex space-x-3">
+                            <i class="fab fa-facebook text-blue-500 text-xl"></i>
+                            <i class="fab fa-twitter text-blue-400 text-xl"></i>
+                            <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                        </div>
                     </div>
-                    <div class="p-3 flex space-x-3 pl-5">
-                        <a href="#" class="text-blue-500 text-2xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-blue-400 text-2xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-green-500 text-2xl">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
+                </a>
 
-                <!-- Third Blog Card -->
+                <!-- Blog Card 5 -->
+                <a href="blogFive.html" class="group block">
+                    <div
+                        class="bg-white border rounded-lg shadow-md flex flex-col h-full overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="../images/blogFive.png" alt="Blog Image" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow flex flex-col">
+                            <p class="text-sm text-gray-500">January 6, 2018 · 7 Comments</p>
+                            <h2 class="text-lg font-semibold text-gray-800 mt-2 group-hover:text-blue-500">
+                                Tips to Maintain Your Home's Water Quality
+                            </h2>
+                            <p class="text-sm text-gray-600 mt-2 flex-grow">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti, aperiam modi est eius
+                                distinctio natus ab enim tenetur! Vero esse ipsum magni aliquid ipsam molestias quidem
+                                distinctio officia eaque animi!
+                            </p>
+                        </div>
+                        <div class="p-4 flex space-x-3">
+                            <i class="fab fa-facebook text-blue-500 text-xl"></i>
+                            <i class="fab fa-twitter text-blue-400 text-xl"></i>
+                            <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                        </div>
+                    </div>
+                </a>
 
-                <div
-                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogThree.html">
-                        <img src="../images/blogImageThree.png" alt="Blog Image" class="w-full h-48 object-cover" />
-                    </a>
-                    <div class="p-4 flex-grow">
-                        <p class="text-sm text-gray-500">January 8, 2018 · 2 Comments</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">Why You Should Invest in a Good Water
-                            Heater</h2>
-                        <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin scelerisque maximus orci.
-                        </p>
+                <!-- Blog Card 6 -->
+                <a href="blogSix.html" class="group block">
+                    <div
+                        class="bg-white border rounded-lg shadow-md flex flex-col h-full overflow-hidden transform hover:scale-105 transition duration-300">
+                        <img src="../images/blogSix.png" alt="Blog Image" class="w-full h-48 object-cover">
+                        <div class="p-4 flex-grow flex flex-col">
+                            <p class="text-sm text-gray-500">January 5, 2018 · 4 Comments</p>
+                            <h2 class="text-lg font-semibold text-gray-800 mt-2 group-hover:text-blue-500">
+                                Best Practices for Plumbing in 2024
+                            </h2>
+                            <p class="text-sm text-gray-600 mt-2 flex-grow">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel labore corrupti dolor
+                                suscipit nisi!
+                            </p>
+                        </div>
+                        <div class="p-4 flex space-x-3">
+                            <i class="fab fa-facebook text-blue-500 text-xl"></i>
+                            <i class="fab fa-twitter text-blue-400 text-xl"></i>
+                            <i class="fab fa-whatsapp text-green-500 text-xl"></i>
+                        </div>
                     </div>
-                    <div class="p-3 flex space-x-3 pl-5">
-                        <a href="#" class="text-blue-500 text-2xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-blue-400 text-2xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-green-500 text-2xl">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Fourth Blog Card -->
-
-                <div
-                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogFour.html">
-                        <img src="../images/blogImageFour.png" alt="Blog Image" class="w-full h-48 object-cover" />
-                    </a>
-                    <div class="p-4 flex-grow">
-                        <p class="text-sm text-gray-500">January 7, 2018 · 5 Comments</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">How to Choose the Right Plumbing Fixtures
-                        </h2>
-                        <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec dolor sed lorem suscipit
-                            tincidunt ac eu enim.
-                        </p>
-                    </div>
-                    <div class="p-3 flex space-x-3 pl-5">
-                        <a href="#" class="text-blue-500 text-2xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-blue-400 text-2xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-green-500 text-2xl">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Fifth Blog Card -->
-
-                <div
-                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogFive.html">
-                        <img src="../images/blogFive.png" alt="Blog Image" class="w-full h-48 object-cover" />
-                    </a>
-                    <div class="p-4 flex-grow">
-                        <p class="text-sm text-gray-500">January 6, 2018 · 4 Comments</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">Tips for Maintaining Your Home’s Plumbing
-                            System</h2>
-                        <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus molestiae
-                            consequuntur ea. Facere aut asperiores aspernatur fugit, deleniti ut in, soluta sunt iusto
-                            voluptatem molestiae recusandae accusamus, voluptas obcaecati reprehenderit nisi voluptates.
-                        </p>
-                    </div>
-                    <div class="p-3 flex space-x-3 pl-5">
-                        <a href="#" class="text-blue-500 text-2xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-blue-400 text-2xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-green-500 text-2xl">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Sixth Blog Card -->
-
-                <div
-                    class="bg-white border-2 flex flex-col justify-between transform hover:-translate-y-2 transition-all duration-300">
-                    <a href="blogSix.html">
-                        <img src="../images/blogSix.png" alt="Blog Image" class="w-full h-48 object-cover" />
-                    </a>
-                    <div class="p-4 flex-grow">
-                        <p class="text-sm text-gray-500">January 5, 2018 · 6 Comments</p>
-                        <h2 class="text-lg font-semibold text-gray-800 mt-2">How to Fix a Leaking Faucet in Your Home
-                        </h2>
-                        <p class="text-sm text-gray-600 mt-2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla viverra, purus a sollicitudin
-                            lobortis, ligula arcu vehicula ante.
-                        </p>
-                    </div>
-                    <div class="p-3 flex space-x-3 pl-5">
-                        <a href="#" class="text-blue-500 text-2xl">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                        <a href="#" class="text-blue-400 text-2xl">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="text-green-500 text-2xl">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
+                </a>
 
             </div>
         </div>

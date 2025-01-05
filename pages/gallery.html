@@ -95,28 +95,39 @@
 
     <!-- Mobile Dropdown Menu -->
 
+
     <div id="dropdown-menu"
         class="fixed lg:hidden bg-blue-800 text-lg space-y-4 py-8 px-8 w-full mt-0 rounded-lg shadow-xl hidden">
         <a href="../index.html" class="dropdown-item text-white hover:text-gray-300">Home</a>
         <a href="aboutUs.html" class="dropdown-item text-white hover:text-gray-300">About Us</a>
+
         <div class="dropdown-item">
             <a href="ourservices.html" class="text-white hover:text-gray-300">Services</a>
+            <span class="dropdown-icon text-white cursor-pointer ml-5"
+                onclick="toggleDropdown('servicesDropdown')">&#9660;</span>
             <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
-                <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing Services</a>
+                <a href="plumbingServices.html" class="block text-white hover:text-gray-300">Plumbing
+                    Services</a>
                 <a href="installationService.html" class="block text-white hover:text-gray-300">Installation
                     Services</a>
-                <a href="specializedPlumbing.html" class="block text-white hover:text-gray-300">Specialized Plumbing
+                <a href="specializedPlumbing.html" class="block text-white hover:text-gray-300">Specialized
+                    Plumbing
                     Services</a>
-                <a href="residentialServices.html" class="block text-white hover:text-gray-300">Residential Services</a>
-                <a href="commercialPlumbing.html" class="block text-white hover:text-gray-300">Commercial Plumbing
+                <a href="residentialServices.html" class="block text-white hover:text-gray-300">Residential
                     Services</a>
-                <a href="maintenanceServices.html" class="block text-white hover:text-gray-300">Maintenance Services</a>
+                <a href="commercialPlumbing.html" class="block text-white hover:text-gray-300">Commercial
+                    Plumbing
+                    Services</a>
+                <a href="maintenanceServices.html" class="block text-white hover:text-gray-300">Maintenance
+                    Services</a>
             </div>
         </div>
 
         <div class="dropdown-item">
             <a href="areaServed.html" class="text-white hover:text-gray-300">Area Served</a>
-            <div class="ml-4 space-y-2 hidden" id="servicesDropdown">
+            <span class="dropdown-icon text-white cursor-pointer ml-5"
+                onclick="toggleDropdown('areaServedDropdown')">&#9660;</span>
+            <div class="ml-4 space-y-2 hidden" id="areaServedDropdown">
                 <a href="areaServedOne.html" class="block text-white hover:text-gray-300">New York Metro
                     Area</a>
                 <a href="areaServedTwo.html" class="block text-white hover:text-gray-300">Albany</a>
@@ -131,12 +142,14 @@
         <a href="gallery.html" class="dropdown-item text-white hover:text-gray-300">Gallery</a>
         <a href="contactUs.html" class="dropdown-item text-white hover:text-gray-300">Contact Us</a>
         <div class="flex justify-center">
-            <a href="contactUs.html"><button
-                    class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">Book
-                    Service</button></a>
+            <a href="contactUs.html">
+                <button
+                    class="bg-red-700 text-white px-4 py-2 rounded transform transition duration-300 ease-in-out hover:bg-red-600 hover:scale-105 hover:shadow-lg">
+                    Book Service
+                </button>
+            </a>
         </div>
     </div>
-
 
     <!-- Gallery -->
 
@@ -152,20 +165,17 @@
 
     <!-- Gallery Cards-->
 
-    <section class="p-4 mt-20 ml-20 mr-20 mb-20">
-        <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+    <section class="p-4 mt-10 md:ml-20 md:mr-20 mb-20 ml-5 mr-5">
+        <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 
             <div class="relative group overflow-hidden rounded-lg shadow-lg">
                 <img src="../images/galleryOne.png" alt="Repair Inspections & Testing"
                     class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div
-                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
-                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
-                            <span class="text-blue-500 text-lg">&rarr;</span>
-                        </div>
-                        <span class="text-lg font-bold">Repair</span>
-                        <span class="text-sm">Inspections & Testing</span>
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class="  text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <span class="text-2xl font-bold">Repair</span>
+                        <span class="text-lg">Inspections</span>
                     </div>
                 </div>
             </div>
@@ -175,13 +185,10 @@
                 <img src="../images/galleryTwo.png" alt="Electrical Maintenance"
                     class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div
-                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
-                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
-                            <span class="text-blue-500 text-lg">&rarr;</span>
-                        </div>
-                        <span class="text-lg font-bold">Electrical</span>
-                        <span class="text-sm">Maintenance</span>
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class=" text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <span class="text-2xl font-bold">Electrical</span>
+                        <span class="text-lg">Maintenance</span>
                     </div>
                 </div>
             </div>
@@ -191,13 +198,10 @@
                 <img src="../images/galleryThree.png" alt="Safety Testing"
                     class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div
-                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
-                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
-                            <span class="text-blue-500 text-lg">&rarr;</span>
-                        </div>
-                        <span class="text-lg font-bold">Safety</span>
-                        <span class="text-sm">Testing</span>
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class=" text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <span class="text-2xl font-bold">Safety</span>
+                        <span class="text-lg">Testing</span>
                     </div>
                 </div>
             </div>
@@ -207,13 +211,10 @@
                 <img src="../images/galleryFour.png" alt="Industrial Tools"
                     class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div
-                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
-                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
-                            <span class="text-blue-500 text-lg">&rarr;</span>
-                        </div>
-                        <span class="text-lg font-bold">Industrial</span>
-                        <span class="text-sm">Tools</span>
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class=" text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <span class="text-2xl font-bold">Industrial</span>
+                        <span class="text-lg">Tools</span>
                     </div>
                 </div>
             </div>
@@ -223,13 +224,10 @@
                 <img src="../images/galleryFive.png" alt="Wiring Installation"
                     class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div
-                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
-                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
-                            <span class="text-blue-500 text-lg">&rarr;</span>
-                        </div>
-                        <span class="text-lg font-bold">Wiring</span>
-                        <span class="text-sm">Installation</span>
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class=" text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <span class="text-2xl font-bold">Wiring</span>
+                        <span class="text-lg">Installation</span>
                     </div>
                 </div>
             </div>
@@ -239,13 +237,10 @@
                 <img src="../images/gallerySix.png" alt="High Voltage Safety"
                     class="w-full h-96 object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div
-                    class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div class="bg-blue-500 text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
-                        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center mb-2">
-                            <span class="text-blue-500 text-lg">&rarr;</span>
-                        </div>
-                        <span class="text-lg font-bold">High Voltage</span>
-                        <span class="text-sm">Safety</span>
+                    class="absolute inset-0 bg-blue-500 bg-opacity-70 rounded-lg flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div class=" text-white w-40 h-40 flex flex-col items-center justify-center rounded-md">
+                        <span class="text-2xl font-bold">High Voltage</span>
+                        <span class="text-lg">Safety</span>
                     </div>
                 </div>
             </div>

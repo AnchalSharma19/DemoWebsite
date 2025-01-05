@@ -400,3 +400,12 @@ ul li ul li a:hover {
         min-height: 20vh;
     }
 }
+
+/* Mobile dropdown */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: block;
+}
